@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024-02-06 Tue 15:45 -->
+<!-- 2024-02-06 Tue 18:10 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>SPL Problem Set</title>
@@ -16,744 +16,744 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org262ab0c">Operator</a>
+<li><a href="#org1753e72">Operator</a>
 <ul>
-<li><a href="#org43feb36">01</a></li>
-<li><a href="#org4f7be0e">02</a></li>
-<li><a href="#orgd39b157">03</a></li>
-<li><a href="#orgd378f3b">04</a></li>
-<li><a href="#orgf21b96d">05</a></li>
-<li><a href="#orge0ff8d1">06</a></li>
-<li><a href="#orga2cb49c">07</a></li>
-<li><a href="#org36c9612">08</a></li>
-<li><a href="#org5a715bc">09</a></li>
-<li><a href="#org8df0647">10</a></li>
-<li><a href="#orge75f5c6">11</a></li>
-<li><a href="#org7e105b0">12</a></li>
-<li><a href="#org7a3476e">13</a></li>
-<li><a href="#orgfcbed69">14</a></li>
-<li><a href="#orgb39c556">15</a></li>
+<li><a href="#org7e402bd">01</a></li>
+<li><a href="#orgee12323">02</a></li>
+<li><a href="#org8ef9990">03</a></li>
+<li><a href="#org6e12794">04</a></li>
+<li><a href="#org8429c7b">05</a></li>
+<li><a href="#orgb9423b3">06</a></li>
+<li><a href="#org09bfc99">07</a></li>
+<li><a href="#org15a378e">08</a></li>
+<li><a href="#org98699f7">09</a></li>
+<li><a href="#orgd21ec49">10</a></li>
+<li><a href="#org74a586f">11</a></li>
+<li><a href="#org3938594">12</a></li>
+<li><a href="#org8a4b8bb">13</a></li>
+<li><a href="#org6e9840a">14</a></li>
+<li><a href="#org7e84883">15</a></li>
 </ul>
 </li>
-<li><a href="#orgb5091a5">Condition</a>
+<li><a href="#org54a983e">C -nondition</a>
 <ul>
-<li><a href="#org7827d27">01</a></li>
-<li><a href="#orgf70b6f0">02</a></li>
-<li><a href="#orgbe6383f">03</a></li>
-<li><a href="#orgf67d867">04</a></li>
-<li><a href="#orgaa9a245">05</a></li>
-<li><a href="#org6cf4092">06</a></li>
-<li><a href="#org714b2a9">07</a></li>
-<li><a href="#orgd06b002">08</a></li>
-<li><a href="#orgafe4ca4">09</a></li>
-<li><a href="#orge5f84d6">10</a></li>
-<li><a href="#orgcee9a28">11</a></li>
-<li><a href="#org009a909">12</a></li>
-<li><a href="#orgfdca51f">13</a></li>
-<li><a href="#orgf5223d9">14</a></li>
-<li><a href="#org3287b93">15</a></li>
+<li><a href="#orga522190">01</a></li>
+<li><a href="#orgb3d52c4">02</a></li>
+<li><a href="#orgfc4aadd">03</a></li>
+<li><a href="#org7920a74">04</a></li>
+<li><a href="#org0a5437e">05</a></li>
+<li><a href="#org0fd57db">06</a></li>
+<li><a href="#org411ec33">07</a></li>
+<li><a href="#org9cb61fa">08</a></li>
+<li><a href="#orgf265617">09</a></li>
+<li><a href="#org32885ef">10</a></li>
+<li><a href="#orgea3ed69">11</a></li>
+<li><a href="#orge16de65">12</a></li>
+<li><a href="#orgdb238a9">13</a></li>
+<li><a href="#org490847b">14</a></li>
+<li><a href="#orgbd8c9ab">15</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org262ab0c" class="outline-2">
-<h2 id="org262ab0c">Operator</h2>
-<div class="outline-text-2" id="text-org262ab0c">
+<div id="outline-container-org1753e72" class="outline-2">
+<h2 id="org1753e72">Operator</h2>
+<div class="outline-text-2" id="text-org1753e72">
 </div>
-<div id="outline-container-org43feb36" class="outline-3">
-<h3 id="org43feb36">01</h3>
-<div class="outline-text-3" id="text-org43feb36">
+<div id="outline-container-org7e402bd" class="outline-3">
+<h3 id="org7e402bd">01</h3>
+<div class="outline-text-3" id="text-org7e402bd">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    float x, y;
-    scanf("%f %f", &amp;x, &amp;y);
-
-    printf("Addition: %.2f\n", x+y);
-    printf("Substraction: %.2f\n", x-y);
-    printf("Multiplication: %.2f\n", x*y);
-    printf("Quotient: %d\n", (int)(x/y));
-    printf("Remainder: %d\n", (int)x % (int)y);
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    float x, y;
+<span class="linenr"> 5: </span>    scanf("%f %f", &amp;x, &amp;y);
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    printf("Addition: %.2f\n", x+y);
+<span class="linenr"> 8: </span>    printf("Substraction: %.2f\n", x-y);
+<span class="linenr"> 9: </span>    printf("Multiplication: %.2f\n", x*y);
+<span class="linenr">10: </span>    printf("Quotient: %d\n", (int)(x/y));
+<span class="linenr">11: </span>    printf("Remainder: %d\n", (int)x % (int)y);
+<span class="linenr">12: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org4f7be0e" class="outline-3">
-<h3 id="org4f7be0e">02</h3>
-<div class="outline-text-3" id="text-org4f7be0e">
+<div id="outline-container-orgee12323" class="outline-3">
+<h3 id="orgee12323">02</h3>
+<div class="outline-text-3" id="text-orgee12323">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    float r;
-    scanf("%f", &amp;r);
-    printf("Area: %.2f\n", 2*3.14159*r);
-}
+<pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
+<span class="linenr">2: </span>
+<span class="linenr">3: </span>int main(void) {
+<span class="linenr">4: </span>    float r;
+<span class="linenr">5: </span>    scanf("%f", &amp;r);
+<span class="linenr">6: </span>    printf("Area: %.2f\n", 2*3.14159*r);
+<span class="linenr">7: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd39b157" class="outline-3">
-<h3 id="orgd39b157">03</h3>
-<div class="outline-text-3" id="text-orgd39b157">
+<div id="outline-container-org8ef9990" class="outline-3">
+<h3 id="org8ef9990">03</h3>
+<div class="outline-text-3" id="text-org8ef9990">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    float a, b;
-    scanf("%f%f", &amp;a, &amp;b);
-    printf("x = %f\n", (3.31 * a*a + 2.01 * b*b*b) / (7.16 * b*b + 2.01 * a*a*a));
-}
+<pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
+<span class="linenr">2: </span>
+<span class="linenr">3: </span>int main(void) {
+<span class="linenr">4: </span>    float a, b;
+<span class="linenr">5: </span>    scanf("%f%f", &amp;a, &amp;b);
+<span class="linenr">6: </span>    printf("x = %f\n", (3.31 * a*a + 2.01 * b*b*b) / (7.16 * b*b + 2.01 * a*a*a));
+<span class="linenr">7: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd378f3b" class="outline-3">
-<h3 id="orgd378f3b">04</h3>
-<div class="outline-text-3" id="text-orgd378f3b">
+<div id="outline-container-org6e12794" class="outline-3">
+<h3 id="org6e12794">04</h3>
+<div class="outline-text-3" id="text-org6e12794">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int x;
-    scanf("%d", &amp;x);
-
-    int tmp = x;
-    printf("%d\n", tmp++);
-    tmp = x;
-    printf("%d\n", ++tmp);
-    tmp = x;
-    printf("%d\n", tmp--);
-    tmp = x;
-    printf("%d\n", --tmp);
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    int x;
+<span class="linenr"> 5: </span>    scanf("%d", &amp;x);
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    int tmp = x;
+<span class="linenr"> 8: </span>    printf("%d\n", tmp++);
+<span class="linenr"> 9: </span>    tmp = x;
+<span class="linenr">10: </span>    printf("%d\n", ++tmp);
+<span class="linenr">11: </span>    tmp = x;
+<span class="linenr">12: </span>    printf("%d\n", tmp--);
+<span class="linenr">13: </span>    tmp = x;
+<span class="linenr">14: </span>    printf("%d\n", --tmp);
+<span class="linenr">15: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgf21b96d" class="outline-3">
-<h3 id="orgf21b96d">05</h3>
-<div class="outline-text-3" id="text-orgf21b96d">
+<div id="outline-container-org8429c7b" class="outline-3">
+<h3 id="org8429c7b">05</h3>
+<div class="outline-text-3" id="text-org8429c7b">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int x, y;
-    scanf("%d%d", &amp;x, &amp;y);
-
-    int tmp = x;
-    printf("Incremented value: %d\n", tmp += y);
-    tmp = x;
-    printf("Decremented value: %d\n", tmp -= y);
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    int x, y;
+<span class="linenr"> 5: </span>    scanf("%d%d", &amp;x, &amp;y);
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    int tmp = x;
+<span class="linenr"> 8: </span>    printf("Incremented value: %d\n", tmp += y);
+<span class="linenr"> 9: </span>    tmp = x;
+<span class="linenr">10: </span>    printf("Decremented value: %d\n", tmp -= y);
+<span class="linenr">11: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orge0ff8d1" class="outline-3">
-<h3 id="orge0ff8d1">06</h3>
-<div class="outline-text-3" id="text-orge0ff8d1">
+<div id="outline-container-orgb9423b3" class="outline-3">
+<h3 id="orgb9423b3">06</h3>
+<div class="outline-text-3" id="text-orgb9423b3">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int x, y;
-    scanf("%d%d", &amp;x, &amp;y);
-
-    int tmp = x;
-    printf("Multiplication: %d\n", tmp *= y);
-    tmp = x;
-    printf("Division: %d\n", tmp /= y);
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    int x, y;
+<span class="linenr"> 5: </span>    scanf("%d%d", &amp;x, &amp;y);
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    int tmp = x;
+<span class="linenr"> 8: </span>    printf("Multiplication: %d\n", tmp *= y);
+<span class="linenr"> 9: </span>    tmp = x;
+<span class="linenr">10: </span>    printf("Division: %d\n", tmp /= y);
+<span class="linenr">11: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orga2cb49c" class="outline-3">
-<h3 id="orga2cb49c">07</h3>
-<div class="outline-text-3" id="text-orga2cb49c">
+<div id="outline-container-org09bfc99" class="outline-3">
+<h3 id="org09bfc99">07</h3>
+<div class="outline-text-3" id="text-org09bfc99">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int i;
-    float f;
-    scanf("%d %f", &amp;i, &amp;f);
-
-    float floati = i;
-    int intf = f;
-
-    printf("Assignment: %f assigned to an int produces %d\n", f, intf);
-    printf("Assignment: %d assigned to an int produces %f\n", i, floati);
-
-    printf("Types casting: (float) %d produces %f\n", i, floati);
-    printf("Types casting: (int) %f produces %d\n", f, intf);
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    int i;
+<span class="linenr"> 5: </span>    float f;
+<span class="linenr"> 6: </span>    scanf("%d %f", &amp;i, &amp;f);
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    float floati = i;
+<span class="linenr"> 9: </span>    int intf = f;
+<span class="linenr">10: </span>
+<span class="linenr">11: </span>    printf("Assignment: %f assigned to an int produces %d\n", f, intf);
+<span class="linenr">12: </span>    printf("Assignment: %d assigned to an int produces %f\n", i, floati);
+<span class="linenr">13: </span>
+<span class="linenr">14: </span>    printf("Types casting: (float) %d produces %f\n", i, floati);
+<span class="linenr">15: </span>    printf("Types casting: (int) %f produces %d\n", f, intf);
+<span class="linenr">16: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org36c9612" class="outline-3">
-<h3 id="org36c9612">08</h3>
-<div class="outline-text-3" id="text-org36c9612">
+<div id="outline-container-org15a378e" class="outline-3">
+<h3 id="org15a378e">08</h3>
+<div class="outline-text-3" id="text-org15a378e">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int a, b;
-    scanf("%d%d", &amp;a, &amp;b);
-    (a &gt; b) ? printf("Max: %d\n", a) : printf("Max: %d\n", b);
-}
+<pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
+<span class="linenr">2: </span>
+<span class="linenr">3: </span>int main(void) {
+<span class="linenr">4: </span>    int a, b;
+<span class="linenr">5: </span>    scanf("%d%d", &amp;a, &amp;b);
+<span class="linenr">6: </span>    (a &gt; b) ? printf("Max: %d\n", a) : printf("Max: %d\n", b);
+<span class="linenr">7: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org5a715bc" class="outline-3">
-<h3 id="org5a715bc">09</h3>
-<div class="outline-text-3" id="text-org5a715bc">
+<div id="outline-container-org98699f7" class="outline-3">
+<h3 id="org98699f7">09</h3>
+<div class="outline-text-3" id="text-org98699f7">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int a, b, c;
-    scanf("%d%d%d", &amp;a, &amp;b, &amp;c);
-    printf("x = %d\n", a - b / 3 + c * 2 - 1);
-    printf("y = %d\n", a - (b / ( 3 + c ) * 2) - 1);
-    printf("z = %d\n", a - ((b / 3) + c * 2) - 1);
-}
+<pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
+<span class="linenr">2: </span>
+<span class="linenr">3: </span>int main(void) {
+<span class="linenr">4: </span>    int a, b, c;
+<span class="linenr">5: </span>    scanf("%d%d%d", &amp;a, &amp;b, &amp;c);
+<span class="linenr">6: </span>    printf("x = %d\n", a - b / 3 + c * 2 - 1);
+<span class="linenr">7: </span>    printf("y = %d\n", a - (b / ( 3 + c ) * 2) - 1);
+<span class="linenr">8: </span>    printf("z = %d\n", a - ((b / 3) + c * 2) - 1);
+<span class="linenr">9: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org8df0647" class="outline-3">
-<h3 id="org8df0647">10</h3>
-<div class="outline-text-3" id="text-org8df0647">
+<div id="outline-container-orgd21ec49" class="outline-3">
+<h3 id="orgd21ec49">10</h3>
+<div class="outline-text-3" id="text-orgd21ec49">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int a, b, c;
-    scanf("%d%d%d", &amp;a, &amp;b, &amp;c);
-
-    printf("a) %d\n", (a+b) &lt;= 80);
-    printf("b) %d\n", !(a+b));
-    printf("c) %d\n", c != 0);
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    int a, b, c;
+<span class="linenr"> 5: </span>    scanf("%d%d%d", &amp;a, &amp;b, &amp;c);
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    printf("a) %d\n", (a+b) &lt;= 80);
+<span class="linenr"> 8: </span>    printf("b) %d\n", !(a+b));
+<span class="linenr"> 9: </span>    printf("c) %d\n", c != 0);
+<span class="linenr">10: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orge75f5c6" class="outline-3">
-<h3 id="orge75f5c6">11</h3>
-<div class="outline-text-3" id="text-orge75f5c6">
+<div id="outline-container-org74a586f" class="outline-3">
+<h3 id="org74a586f">11</h3>
+<div class="outline-text-3" id="text-org74a586f">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int a, b, c;
-    scanf("%d%d%d", &amp;a, &amp;b, &amp;c);
-
-    printf("1) %d\n", (a+b) &lt;= 80 &amp;&amp; c &gt;= 0);
-    printf("2) %d\n", (a-b) == 0 || c != 0);
-    printf("3) %d\n", a != b || !(b &lt; c) &amp;&amp; c &gt; 0);
-    printf("4) %d\n", (a != b || !(b &lt; c)) &amp;&amp; c &gt; 0);
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    int a, b, c;
+<span class="linenr"> 5: </span>    scanf("%d%d%d", &amp;a, &amp;b, &amp;c);
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    printf("1) %d\n", (a+b) &lt;= 80 &amp;&amp; c &gt;= 0);
+<span class="linenr"> 8: </span>    printf("2) %d\n", (a-b) == 0 || c != 0);
+<span class="linenr"> 9: </span>    printf("3) %d\n", a != b || !(b &lt; c) &amp;&amp; c &gt; 0);
+<span class="linenr">10: </span>    printf("4) %d\n", (a != b || !(b &lt; c)) &amp;&amp; c &gt; 0);
+<span class="linenr">11: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org7e105b0" class="outline-3">
-<h3 id="org7e105b0">12</h3>
-<div class="outline-text-3" id="text-org7e105b0">
+<div id="outline-container-org3938594" class="outline-3">
+<h3 id="org3938594">12</h3>
+<div class="outline-text-3" id="text-org3938594">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-#include &lt;math.h&gt;
-
-int main(void) {
-    int a, b, c;
-    scanf("%d%d%d", &amp;a, &amp;b, &amp;c);
-
-    int determinant = b*b - 4*a*c;
-    if (determinant &lt; 0) {
-        printf("Imaginary\n");
-        return 0;
-    }
-
-    float x1 = (-b + sqrt(determinant)) / (2*a);
-    float x2 = (-b - sqrt(determinant)) / (2*a);
-    printf("%.2f %.2f\n", x1, x2);
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>#include &lt;math.h&gt;
+<span class="linenr"> 3: </span>
+<span class="linenr"> 4: </span>int main(void) {
+<span class="linenr"> 5: </span>    int a, b, c;
+<span class="linenr"> 6: </span>    scanf("%d%d%d", &amp;a, &amp;b, &amp;c);
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    int determinant = b*b - 4*a*c;
+<span class="linenr"> 9: </span>    if (determinant &lt; 0) {
+<span class="linenr">10: </span>        printf("Imaginary\n");
+<span class="linenr">11: </span>        return 0;
+<span class="linenr">12: </span>    }
+<span class="linenr">13: </span>
+<span class="linenr">14: </span>    float x1 = (-b + sqrt(determinant)) / (2*a);
+<span class="linenr">15: </span>    float x2 = (-b - sqrt(determinant)) / (2*a);
+<span class="linenr">16: </span>    printf("%.2f %.2f\n", x1, x2);
+<span class="linenr">17: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org7a3476e" class="outline-3">
-<h3 id="org7a3476e">13</h3>
-<div class="outline-text-3" id="text-org7a3476e">
+<div id="outline-container-org8a4b8bb" class="outline-3">
+<h3 id="org8a4b8bb">13</h3>
+<div class="outline-text-3" id="text-org8a4b8bb">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-#include &lt;math.h&gt;
-
-int main(void) {
-    float x;
-    scanf("%f", &amp;x);
-
-    float rads = x * 3.14159 / 180;
-    printf("%f\n", 2*pow(cos(rads), 2) - sqrt(3)*sin(sin(rads)) + log10(x/2));
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>#include &lt;math.h&gt;
+<span class="linenr"> 3: </span>
+<span class="linenr"> 4: </span>int main(void) {
+<span class="linenr"> 5: </span>    float x;
+<span class="linenr"> 6: </span>    scanf("%f", &amp;x);
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    float rads = x * 3.14159 / 180;
+<span class="linenr"> 9: </span>    printf("%f\n", 2*pow(cos(rads), 2) - sqrt(3)*sin(sin(rads)) + log10(x/2));
+<span class="linenr">10: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgfcbed69" class="outline-3">
-<h3 id="orgfcbed69">14</h3>
-<div class="outline-text-3" id="text-orgfcbed69">
+<div id="outline-container-org6e9840a" class="outline-3">
+<h3 id="org6e9840a">14</h3>
+<div class="outline-text-3" id="text-org6e9840a">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-#include &lt;math.h&gt;
-
-int main(void) {
-    float x;
-    scanf("%f", &amp;x);
-
-    printf("A = %.0f, B = %.0f, C = %.2f\n", ceil(x), floor(x), fabs(x));
-}
+<pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
+<span class="linenr">2: </span>#include &lt;math.h&gt;
+<span class="linenr">3: </span>
+<span class="linenr">4: </span>int main(void) {
+<span class="linenr">5: </span>    float x;
+<span class="linenr">6: </span>    scanf("%f", &amp;x);
+<span class="linenr">7: </span>
+<span class="linenr">8: </span>    printf("A = %.0f, B = %.0f, C -n = %.2f\n", ceil(x), floor(x), fabs(x));
+<span class="linenr">9: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgb39c556" class="outline-3">
-<h3 id="orgb39c556">15</h3>
-<div class="outline-text-3" id="text-orgb39c556">
+<div id="outline-container-org7e84883" class="outline-3">
+<h3 id="org7e84883">15</h3>
+<div class="outline-text-3" id="text-org7e84883">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    printf("Size of int in byte(s) = %lu\n", sizeof(int));
-    printf("Size of float in byte(s) = %lu\n", sizeof(float));
-    printf("Size of double in byte(s) = %lu\n", sizeof(double));
-    printf("Size of char in byte(s) = %lu\n", sizeof(char));
-}
+<pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
+<span class="linenr">2: </span>
+<span class="linenr">3: </span>int main(void) {
+<span class="linenr">4: </span>    printf("Size of int in byte(s) = %lu\n", sizeof(int));
+<span class="linenr">5: </span>    printf("Size of float in byte(s) = %lu\n", sizeof(float));
+<span class="linenr">6: </span>    printf("Size of double in byte(s) = %lu\n", sizeof(double));
+<span class="linenr">7: </span>    printf("Size of char in byte(s) = %lu\n", sizeof(char));
+<span class="linenr">8: </span>}
 </pre>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgb5091a5" class="outline-2">
-<h2 id="orgb5091a5">Condition</h2>
-<div class="outline-text-2" id="text-orgb5091a5">
+<div id="outline-container-org54a983e" class="outline-2">
+<h2 id="org54a983e">C -nondition</h2>
+<div class="outline-text-2" id="text-org54a983e">
 </div>
-<div id="outline-container-org7827d27" class="outline-3">
-<h3 id="org7827d27">01</h3>
-<div class="outline-text-3" id="text-org7827d27">
+<div id="outline-container-orga522190" class="outline-3">
+<h3 id="orga522190">01</h3>
+<div class="outline-text-3" id="text-orga522190">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    float n;
-    scanf("%f", &amp;n);
-    (n &lt; 0) ? printf("Negative\n") : printf("Positive\n");
-}
+<pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
+<span class="linenr">2: </span>
+<span class="linenr">3: </span>int main(void) {
+<span class="linenr">4: </span>    float n;
+<span class="linenr">5: </span>    scanf("%f", &amp;n);
+<span class="linenr">6: </span>    (n &lt; 0) ? printf("Negative\n") : printf("Positive\n");
+<span class="linenr">7: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgf70b6f0" class="outline-3">
-<h3 id="orgf70b6f0">02</h3>
-<div class="outline-text-3" id="text-orgf70b6f0">
+<div id="outline-container-orgb3d52c4" class="outline-3">
+<h3 id="orgb3d52c4">02</h3>
+<div class="outline-text-3" id="text-orgb3d52c4">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int n;
-    scanf("%d", &amp;n);
-    (n % 2 == 0) ? printf("Even\n") : printf("Odd\n");
-}
+<pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
+<span class="linenr">2: </span>
+<span class="linenr">3: </span>int main(void) {
+<span class="linenr">4: </span>    int n;
+<span class="linenr">5: </span>    scanf("%d", &amp;n);
+<span class="linenr">6: </span>    (n % 2 == 0) ? printf("Even\n") : printf("Odd\n");
+<span class="linenr">7: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgbe6383f" class="outline-3">
-<h3 id="orgbe6383f">03</h3>
-<div class="outline-text-3" id="text-orgbe6383f">
+<div id="outline-container-orgfc4aadd" class="outline-3">
+<h3 id="orgfc4aadd">03</h3>
+<div class="outline-text-3" id="text-orgfc4aadd">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int dig;
-    scanf("%d", &amp;dig);
-
-    switch (dig) {
-    case 0:
-        printf("zero\n");
-        break;
-    case 1:
-        printf("one\n");
-        break;
-    case 2:
-        printf("two\n");
-        break;
-    case 3:
-        printf("three\n");
-        break;
-    case 4:
-        printf("four\n");
-        break;
-    case 5:
-        printf("five\n");
-        break;
-    case 6:
-        printf("six\n");
-        break;
-    case 7:
-        printf("seven\n");
-        break;
-    case 8:
-        printf("eight\n");
-        break;
-    case 9:
-        printf("nine\n");
-        break;
-    }
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    int dig;
+<span class="linenr"> 5: </span>    scanf("%d", &amp;dig);
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    switch (dig) {
+<span class="linenr"> 8: </span>    case 0:
+<span class="linenr"> 9: </span>        printf("zero\n");
+<span class="linenr">10: </span>        break;
+<span class="linenr">11: </span>    case 1:
+<span class="linenr">12: </span>        printf("one\n");
+<span class="linenr">13: </span>        break;
+<span class="linenr">14: </span>    case 2:
+<span class="linenr">15: </span>        printf("two\n");
+<span class="linenr">16: </span>        break;
+<span class="linenr">17: </span>    case 3:
+<span class="linenr">18: </span>        printf("three\n");
+<span class="linenr">19: </span>        break;
+<span class="linenr">20: </span>    case 4:
+<span class="linenr">21: </span>        printf("four\n");
+<span class="linenr">22: </span>        break;
+<span class="linenr">23: </span>    case 5:
+<span class="linenr">24: </span>        printf("five\n");
+<span class="linenr">25: </span>        break;
+<span class="linenr">26: </span>    case 6:
+<span class="linenr">27: </span>        printf("six\n");
+<span class="linenr">28: </span>        break;
+<span class="linenr">29: </span>    case 7:
+<span class="linenr">30: </span>        printf("seven\n");
+<span class="linenr">31: </span>        break;
+<span class="linenr">32: </span>    case 8:
+<span class="linenr">33: </span>        printf("eight\n");
+<span class="linenr">34: </span>        break;
+<span class="linenr">35: </span>    case 9:
+<span class="linenr">36: </span>        printf("nine\n");
+<span class="linenr">37: </span>        break;
+<span class="linenr">38: </span>    }
+<span class="linenr">39: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgf67d867" class="outline-3">
-<h3 id="orgf67d867">04</h3>
-<div class="outline-text-3" id="text-orgf67d867">
+<div id="outline-container-org7920a74" class="outline-3">
+<h3 id="org7920a74">04</h3>
+<div class="outline-text-3" id="text-org7920a74">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int a, b, c;
-    scanf("%d %d %d", &amp;a, &amp;b, &amp;c);
-
-    if (a+b+c == 180 &amp;&amp; a*b*c &gt; 0)
-        printf("Yes\n");
-    else
-        printf("No\n");
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    int a, b, c;
+<span class="linenr"> 5: </span>    scanf("%d %d %d", &amp;a, &amp;b, &amp;c);
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    if (a+b+c == 180 &amp;&amp; a*b*c &gt; 0)
+<span class="linenr"> 8: </span>        printf("Yes\n");
+<span class="linenr"> 9: </span>    else
+<span class="linenr">10: </span>        printf("No\n");
+<span class="linenr">11: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgaa9a245" class="outline-3">
-<h3 id="orgaa9a245">05</h3>
-<div class="outline-text-3" id="text-orgaa9a245">
+<div id="outline-container-org0a5437e" class="outline-3">
+<h3 id="org0a5437e">05</h3>
+<div class="outline-text-3" id="text-org0a5437e">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-#include &lt;math.h&gt;
-
-int main(void) {
-    int n;
-    scanf("%d", &amp;n);
-
-    if (pow(2, (int)log2(n)) == n)
-        printf("Yes\n");
-    else
-        printf("No\n");
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>#include &lt;math.h&gt;
+<span class="linenr"> 3: </span>
+<span class="linenr"> 4: </span>int main(void) {
+<span class="linenr"> 5: </span>    int n;
+<span class="linenr"> 6: </span>    scanf("%d", &amp;n);
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    if (pow(2, (int)log2(n)) == n)
+<span class="linenr"> 9: </span>        printf("Yes\n");
+<span class="linenr">10: </span>    else
+<span class="linenr">11: </span>        printf("No\n");
+<span class="linenr">12: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org6cf4092" class="outline-3">
-<h3 id="org6cf4092">06</h3>
-<div class="outline-text-3" id="text-org6cf4092">
+<div id="outline-container-org0fd57db" class="outline-3">
+<h3 id="org0fd57db">06</h3>
+<div class="outline-text-3" id="text-org0fd57db">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int n;
-    scanf("%d", &amp;n);
-
-    if (!n) {
-        printf("Zero not valid!\n");
-        return 0;
-    } else if (n &lt; 0) {
-        printf("Negative not valid!\n");
-        return 0;
-    }
-
-    if (pow(2, (int)log2(n)) == n)
-        printf("Yes\n");
-    else
-        printf("No\n");
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    int n;
+<span class="linenr"> 5: </span>    scanf("%d", &amp;n);
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    if (!n) {
+<span class="linenr"> 8: </span>        printf("Zero not valid!\n");
+<span class="linenr"> 9: </span>        return 0;
+<span class="linenr">10: </span>    } else if (n &lt; 0) {
+<span class="linenr">11: </span>        printf("Negative not valid!\n");
+<span class="linenr">12: </span>        return 0;
+<span class="linenr">13: </span>    }
+<span class="linenr">14: </span>
+<span class="linenr">15: </span>    if (pow(2, (int)log2(n)) == n)
+<span class="linenr">16: </span>        printf("Yes\n");
+<span class="linenr">17: </span>    else
+<span class="linenr">18: </span>        printf("No\n");
+<span class="linenr">19: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org714b2a9" class="outline-3">
-<h3 id="org714b2a9">07</h3>
-<div class="outline-text-3" id="text-org714b2a9">
+<div id="outline-container-org411ec33" class="outline-3">
+<h3 id="org411ec33">07</h3>
+<div class="outline-text-3" id="text-org411ec33">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int x, y;
-    scanf("%d %d", &amp;x, &amp;y);
-
-    if (x &gt; y)
-        printf("%d is greater than %d\n", x, y);
-    else if (x &lt; y)
-        printf("%d is less than %d\n", x, y);
-    else
-        printf("%d is equal to %d\n", x, y);
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    int x, y;
+<span class="linenr"> 5: </span>    scanf("%d %d", &amp;x, &amp;y);
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    if (x &gt; y)
+<span class="linenr"> 8: </span>        printf("%d is greater than %d\n", x, y);
+<span class="linenr"> 9: </span>    else if (x &lt; y)
+<span class="linenr">10: </span>        printf("%d is less than %d\n", x, y);
+<span class="linenr">11: </span>    else
+<span class="linenr">12: </span>        printf("%d is equal to %d\n", x, y);
+<span class="linenr">13: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd06b002" class="outline-3">
-<h3 id="orgd06b002">08</h3>
-<div class="outline-text-3" id="text-orgd06b002">
+<div id="outline-container-org9cb61fa" class="outline-3">
+<h3 id="org9cb61fa">08</h3>
+<div class="outline-text-3" id="text-org9cb61fa">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int year;
-    scanf("%d", &amp;year);
-
-    ((year%4 == 0 &amp;&amp; year%100 != 0) || (year%400 == 0)) ?
-        printf("Yes\n") : printf("No\n");
-}
+<pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
+<span class="linenr">2: </span>
+<span class="linenr">3: </span>int main(void) {
+<span class="linenr">4: </span>    int year;
+<span class="linenr">5: </span>    scanf("%d", &amp;year);
+<span class="linenr">6: </span>
+<span class="linenr">7: </span>    ((year%4 == 0 &amp;&amp; year%100 != 0) || (year%400 == 0)) ?
+<span class="linenr">8: </span>        printf("Yes\n") : printf("No\n");
+<span class="linenr">9: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgafe4ca4" class="outline-3">
-<h3 id="orgafe4ca4">09</h3>
-<div class="outline-text-3" id="text-orgafe4ca4">
+<div id="outline-container-orgf265617" class="outline-3">
+<h3 id="orgf265617">09</h3>
+<div class="outline-text-3" id="text-orgf265617">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    char ch;
-    scanf(" %c", &amp;ch);
-
-    if (ch &gt;= '0' &amp;&amp; ch &lt;= '9')
-        printf("Digit\n");
-    else if ((ch &gt;= 'A' &amp;&amp; ch &lt;= 'Z') || (ch &gt;= 'a' &amp;&amp; ch &lt;= 'z'))
-        printf("Alphabet\n");
-    else
-        printf("Special\n");
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    char ch;
+<span class="linenr"> 5: </span>    scanf(" %c", &amp;ch);
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    if (ch &gt;= '0' &amp;&amp; ch &lt;= '9')
+<span class="linenr"> 8: </span>        printf("Digit\n");
+<span class="linenr"> 9: </span>    else if ((ch &gt;= 'A' &amp;&amp; ch &lt;= 'Z') || (ch &gt;= 'a' &amp;&amp; ch &lt;= 'z'))
+<span class="linenr">10: </span>        printf("Alphabet\n");
+<span class="linenr">11: </span>    else
+<span class="linenr">12: </span>        printf("Special\n");
+<span class="linenr">13: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orge5f84d6" class="outline-3">
-<h3 id="orge5f84d6">10</h3>
-<div class="outline-text-3" id="text-orge5f84d6">
+<div id="outline-container-org32885ef" class="outline-3">
+<h3 id="org32885ef">10</h3>
+<div class="outline-text-3" id="text-org32885ef">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    float a, b;
-    char op;
-    scanf("%f %c %f", &amp;a, &amp;op, &amp;b);
-
-    switch (op) {
-    case '+':
-        printf("Addition: %.2f\n", a+b);
-        break;
-    case '-':
-        printf("Substraction: %.2f\n", a-b);
-        break;
-    case '*':
-        printf("Multiplication: %.2f\n", a*b);
-        break;
-    case '/':
-        printf("Division: ");
-        if (!b) {
-            printf("Zero as divisor is not valid!\n");
-            return 0;
-        }
-        printf("%.2f\n", a/b);
-        break;
-    }
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    float a, b;
+<span class="linenr"> 5: </span>    char op;
+<span class="linenr"> 6: </span>    scanf("%f %c %f", &amp;a, &amp;op, &amp;b);
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    switch (op) {
+<span class="linenr"> 9: </span>    case '+':
+<span class="linenr">10: </span>        printf("Addition: %.2f\n", a+b);
+<span class="linenr">11: </span>        break;
+<span class="linenr">12: </span>    case '-':
+<span class="linenr">13: </span>        printf("Substraction: %.2f\n", a-b);
+<span class="linenr">14: </span>        break;
+<span class="linenr">15: </span>    case '*':
+<span class="linenr">16: </span>        printf("Multiplication: %.2f\n", a*b);
+<span class="linenr">17: </span>        break;
+<span class="linenr">18: </span>    case '/':
+<span class="linenr">19: </span>        printf("Division: ");
+<span class="linenr">20: </span>        if (!b) {
+<span class="linenr">21: </span>            printf("Zero as divisor is not valid!\n");
+<span class="linenr">22: </span>            return 0;
+<span class="linenr">23: </span>        }
+<span class="linenr">24: </span>        printf("%.2f\n", a/b);
+<span class="linenr">25: </span>        break;
+<span class="linenr">26: </span>    }
+<span class="linenr">27: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgcee9a28" class="outline-3">
-<h3 id="orgcee9a28">11</h3>
-<div class="outline-text-3" id="text-orgcee9a28">
+<div id="outline-container-orgea3ed69" class="outline-3">
+<h3 id="orgea3ed69">11</h3>
+<div class="outline-text-3" id="text-orgea3ed69">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    float marks;
-    scanf("%f", &amp;marks);
-
-    if (marks &gt;= 90 &amp;&amp; marks &lt;= 100)
-        printf("Grade: A\n");
-    else if (marks &gt;= 86)
-        printf("Grade: A-\n");
-    else if (marks &gt;= 82)
-        printf("Grade: B+\n");
-    else if (marks &gt;= 78)
-        printf("Grade: B\n");
-    else if (marks &gt;= 74)
-        printf("Grade: B-\n");
-    else if (marks &gt;= 70)
-        printf("Grade: C+\n");
-    else if (marks &gt;= 66)
-        printf("Grade: C\n");
-    else if (marks &gt;= 62)
-        printf("Grade: C-\n");
-    else if (marks &gt;= 58)
-        printf("Grade: D+\n");
-    else if (marks &gt;= 55)
-        printf("Grade: D\n");
-    else if (marks &lt; 55)
-        printf("Grade: F\n");
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    float marks;
+<span class="linenr"> 5: </span>    scanf("%f", &amp;marks);
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    if (marks &gt;= 90 &amp;&amp; marks &lt;= 100)
+<span class="linenr"> 8: </span>        printf("Grade: A\n");
+<span class="linenr"> 9: </span>    else if (marks &gt;= 86)
+<span class="linenr">10: </span>        printf("Grade: A-\n");
+<span class="linenr">11: </span>    else if (marks &gt;= 82)
+<span class="linenr">12: </span>        printf("Grade: B+\n");
+<span class="linenr">13: </span>    else if (marks &gt;= 78)
+<span class="linenr">14: </span>        printf("Grade: B\n");
+<span class="linenr">15: </span>    else if (marks &gt;= 74)
+<span class="linenr">16: </span>        printf("Grade: B-\n");
+<span class="linenr">17: </span>    else if (marks &gt;= 70)
+<span class="linenr">18: </span>        printf("Grade: C -n+\n");
+<span class="linenr">19: </span>    else if (marks &gt;= 66)
+<span class="linenr">20: </span>        printf("Grade: C -n\n");
+<span class="linenr">21: </span>    else if (marks &gt;= 62)
+<span class="linenr">22: </span>        printf("Grade: C -n-\n");
+<span class="linenr">23: </span>    else if (marks &gt;= 58)
+<span class="linenr">24: </span>        printf("Grade: D+\n");
+<span class="linenr">25: </span>    else if (marks &gt;= 55)
+<span class="linenr">26: </span>        printf("Grade: D\n");
+<span class="linenr">27: </span>    else if (marks &lt; 55)
+<span class="linenr">28: </span>        printf("Grade: F\n");
+<span class="linenr">29: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org009a909" class="outline-3">
-<h3 id="org009a909">12</h3>
-<div class="outline-text-3" id="text-org009a909">
+<div id="outline-container-orge16de65" class="outline-3">
+<h3 id="orge16de65">12</h3>
+<div class="outline-text-3" id="text-orge16de65">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    float a, b;
-    int op;
-    scanf("%f %f %d", &amp;a, &amp;b, &amp;op);
-
-    switch (op) {
-    case 1:
-        printf("Addition: %.2f\n", a+b);
-        break;
-    case 2:
-        printf("Substraction: %.2f\n", a-b);
-        break;
-    case 3:
-        printf("Multiplication: %.2f\n", a*b);
-        break;
-    case 4:
-        printf("Quotient: %d\n", (int)a/b);
-        break;
-    }
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    float a, b;
+<span class="linenr"> 5: </span>    int op;
+<span class="linenr"> 6: </span>    scanf("%f %f %d", &amp;a, &amp;b, &amp;op);
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    switch (op) {
+<span class="linenr"> 9: </span>    case 1:
+<span class="linenr">10: </span>        printf("Addition: %.2f\n", a+b);
+<span class="linenr">11: </span>        break;
+<span class="linenr">12: </span>    case 2:
+<span class="linenr">13: </span>        printf("Substraction: %.2f\n", a-b);
+<span class="linenr">14: </span>        break;
+<span class="linenr">15: </span>    case 3:
+<span class="linenr">16: </span>        printf("Multiplication: %.2f\n", a*b);
+<span class="linenr">17: </span>        break;
+<span class="linenr">18: </span>    case 4:
+<span class="linenr">19: </span>        printf("Quotient: %d\n", (int)a/b);
+<span class="linenr">20: </span>        break;
+<span class="linenr">21: </span>    }
+<span class="linenr">22: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgfdca51f" class="outline-3">
-<h3 id="orgfdca51f">13</h3>
-<div class="outline-text-3" id="text-orgfdca51f">
+<div id="outline-container-orgdb238a9" class="outline-3">
+<h3 id="orgdb238a9">13</h3>
+<div class="outline-text-3" id="text-orgdb238a9">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    float a, b;
-    int op;
-    scanf("%f %f %d", &amp;a, &amp;b, &amp;op);
-
-    switch (op) {
-    case 1:
-        printf("Addition: %.2f\n", a+b);
-        break;
-    case 2:
-        printf("Substraction: %.2f\n", a-b);
-        break;
-    case 3:
-        printf("Multiplication: %.2f\n", a*b);
-        break;
-    case 4:
-        scanf("%d", &amp;op);
-        switch (op) {
-        case 1:
-            printf("Quotient: %d\n", (int)(a/b));
-            break;
-        case 2:
-            printf("Remainder: %d\n", (int)a % (int)b);
-            break;
-        }
-        break;
-    }
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    float a, b;
+<span class="linenr"> 5: </span>    int op;
+<span class="linenr"> 6: </span>    scanf("%f %f %d", &amp;a, &amp;b, &amp;op);
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    switch (op) {
+<span class="linenr"> 9: </span>    case 1:
+<span class="linenr">10: </span>        printf("Addition: %.2f\n", a+b);
+<span class="linenr">11: </span>        break;
+<span class="linenr">12: </span>    case 2:
+<span class="linenr">13: </span>        printf("Substraction: %.2f\n", a-b);
+<span class="linenr">14: </span>        break;
+<span class="linenr">15: </span>    case 3:
+<span class="linenr">16: </span>        printf("Multiplication: %.2f\n", a*b);
+<span class="linenr">17: </span>        break;
+<span class="linenr">18: </span>    case 4:
+<span class="linenr">19: </span>        scanf("%d", &amp;op);
+<span class="linenr">20: </span>        switch (op) {
+<span class="linenr">21: </span>        case 1:
+<span class="linenr">22: </span>            printf("Quotient: %d\n", (int)(a/b));
+<span class="linenr">23: </span>            break;
+<span class="linenr">24: </span>        case 2:
+<span class="linenr">25: </span>            printf("Remainder: %d\n", (int)a % (int)b);
+<span class="linenr">26: </span>            break;
+<span class="linenr">27: </span>        }
+<span class="linenr">28: </span>        break;
+<span class="linenr">29: </span>    }
+<span class="linenr">30: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgf5223d9" class="outline-3">
-<h3 id="orgf5223d9">14</h3>
-<div class="outline-text-3" id="text-orgf5223d9">
+<div id="outline-container-org490847b" class="outline-3">
+<h3 id="org490847b">14</h3>
+<div class="outline-text-3" id="text-org490847b">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    float a, b;
-    int op;
-    scanf("%f %f %d", &amp;a, &amp;b, &amp;op);
-
-    switch (op) {
-    case 1:
-        printf("Addition: %.2f\n", a+b);
-        break;
-    case 2:
-        printf("Substraction: %.2f\n", a-b);
-        break;
-    case 3:
-        printf("Multiplication: %.2f\n", a*b);
-        break;
-    case 4:
-        if (!b) {
-            printf("Error: Divisor is zero\n");
-            return 0;
-        }
-
-        scanf("%d", &amp;op);
-        switch (op) {
-        case 1:
-            printf("Quotient: %d\n", (int)(a/b));
-            break;
-        case 2:
-            printf("Remainder: %d\n", (int)a % (int)b);
-            break;
-        }
-        break;
-    }
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    float a, b;
+<span class="linenr"> 5: </span>    int op;
+<span class="linenr"> 6: </span>    scanf("%f %f %d", &amp;a, &amp;b, &amp;op);
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    switch (op) {
+<span class="linenr"> 9: </span>    case 1:
+<span class="linenr">10: </span>        printf("Addition: %.2f\n", a+b);
+<span class="linenr">11: </span>        break;
+<span class="linenr">12: </span>    case 2:
+<span class="linenr">13: </span>        printf("Substraction: %.2f\n", a-b);
+<span class="linenr">14: </span>        break;
+<span class="linenr">15: </span>    case 3:
+<span class="linenr">16: </span>        printf("Multiplication: %.2f\n", a*b);
+<span class="linenr">17: </span>        break;
+<span class="linenr">18: </span>    case 4:
+<span class="linenr">19: </span>        if (!b) {
+<span class="linenr">20: </span>            printf("Error: Divisor is zero\n");
+<span class="linenr">21: </span>            return 0;
+<span class="linenr">22: </span>        }
+<span class="linenr">23: </span>
+<span class="linenr">24: </span>        scanf("%d", &amp;op);
+<span class="linenr">25: </span>        switch (op) {
+<span class="linenr">26: </span>        case 1:
+<span class="linenr">27: </span>            printf("Quotient: %d\n", (int)(a/b));
+<span class="linenr">28: </span>            break;
+<span class="linenr">29: </span>        case 2:
+<span class="linenr">30: </span>            printf("Remainder: %d\n", (int)a % (int)b);
+<span class="linenr">31: </span>            break;
+<span class="linenr">32: </span>        }
+<span class="linenr">33: </span>        break;
+<span class="linenr">34: </span>    }
+<span class="linenr">35: </span>}
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org3287b93" class="outline-3">
-<h3 id="org3287b93">15</h3>
-<div class="outline-text-3" id="text-org3287b93">
+<div id="outline-container-orgbd8c9ab" class="outline-3">
+<h3 id="orgbd8c9ab">15</h3>
+<div class="outline-text-3" id="text-orgbd8c9ab">
 <div class="org-src-container">
-<pre class="src src-C">#include &lt;stdio.h&gt;
-
-int main(void) {
-    int correct, guess;
-    scanf("%d", &amp;correct);
-
-    for (int i = 1; i &lt;= 3; i++) {
-        scanf("%d", &amp;guess);
-        if (guess == correct) {
-            printf("Right, Player-2 wins!\n");
-            return 0;
-        }
-        printf("Wrong, %d chance(s) left!\n", 3-i);
-    }
-
-    printf("Player-1 wins!\n");
-}
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    int correct, guess;
+<span class="linenr"> 5: </span>    scanf("%d", &amp;correct);
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    for (int i = 1; i &lt;= 3; i++) {
+<span class="linenr"> 8: </span>        scanf("%d", &amp;guess);
+<span class="linenr"> 9: </span>        if (guess == correct) {
+<span class="linenr">10: </span>            printf("Right, Player-2 wins!\n");
+<span class="linenr">11: </span>            return 0;
+<span class="linenr">12: </span>        }
+<span class="linenr">13: </span>        printf("Wrong, %d chance(s) left!\n", 3-i);
+<span class="linenr">14: </span>    }
+<span class="linenr">15: </span>
+<span class="linenr">16: </span>    printf("Player-1 wins!\n");
+<span class="linenr">17: </span>}
 </pre>
 </div>
 </div>
