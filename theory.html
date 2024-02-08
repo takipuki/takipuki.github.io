@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024-02-08 Thu 12:13 -->
+<!-- 2024-02-08 Thu 13:16 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>SPL Problem Set</title>
@@ -16,103 +16,254 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org92dfe1f">Operator</a>
+<li><a href="#org87a3474">Intro</a>
 <ul>
-<li><a href="#orgccdae60">01</a></li>
-<li><a href="#org6ed4a39">02</a></li>
-<li><a href="#org10c76ae">03</a></li>
-<li><a href="#org015805d">04</a></li>
-<li><a href="#org0739a56">05</a></li>
-<li><a href="#org093a2e1">06</a></li>
-<li><a href="#org5c2ac95">07</a></li>
-<li><a href="#org0834d40">08</a></li>
-<li><a href="#orgc213342">09</a></li>
-<li><a href="#org6632c88">10</a></li>
-<li><a href="#orgbd5d297">11</a></li>
-<li><a href="#org3295232">12</a></li>
-<li><a href="#orgcc4ea2d">13</a></li>
-<li><a href="#org0da4b01">14</a></li>
-<li><a href="#org92fd391">15</a></li>
+<li><a href="#org9f6fdd2">09</a></li>
+<li><a href="#orgd358693">10</a></li>
+<li><a href="#org9015a8e">11</a></li>
+<li><a href="#org8564b78">12</a></li>
+<li><a href="#org6ddae9f">13</a></li>
+<li><a href="#org467afa1">14</a></li>
+<li><a href="#orgc4af593">15</a></li>
 </ul>
 </li>
-<li><a href="#orgc35ed61">Condition</a>
+<li><a href="#org2df0329">Operator</a>
 <ul>
-<li><a href="#orgf1398a2">01</a></li>
-<li><a href="#org9b854c1">02</a></li>
-<li><a href="#orgd057f43">03</a></li>
-<li><a href="#org4d7f6b9">04</a></li>
-<li><a href="#orgef37b4e">05</a></li>
-<li><a href="#org410492e">06</a></li>
-<li><a href="#orgb1d988d">07</a></li>
-<li><a href="#org9c3fdde">08</a></li>
-<li><a href="#org654c10d">09</a></li>
-<li><a href="#org0a55472">10</a></li>
-<li><a href="#org9b766c6">11</a></li>
-<li><a href="#orge8cd0b8">12</a></li>
-<li><a href="#orgd17e362">13</a></li>
-<li><a href="#orga0f1989">14</a></li>
-<li><a href="#orgbb546e5">15</a></li>
+<li><a href="#org618643a">01</a></li>
+<li><a href="#orgb807334">02</a></li>
+<li><a href="#org8c9d1de">03</a></li>
+<li><a href="#org2252acd">04</a></li>
+<li><a href="#org1aa3e70">05</a></li>
+<li><a href="#orgaea3de5">06</a></li>
+<li><a href="#org9852218">07</a></li>
+<li><a href="#org418841e">08</a></li>
+<li><a href="#orgfc67ecc">09</a></li>
+<li><a href="#orge6f7016">10</a></li>
+<li><a href="#org73f5d08">11</a></li>
+<li><a href="#org5390c21">12</a></li>
+<li><a href="#orga2025ad">13</a></li>
+<li><a href="#orgf0cfa44">14</a></li>
+<li><a href="#org672a2c8">15</a></li>
 </ul>
 </li>
-<li><a href="#orgd2a4e3d">Loop</a>
+<li><a href="#org6d68d0c">Condition</a>
 <ul>
-<li><a href="#orge1715a7">01</a></li>
-<li><a href="#org44ce6ce">02</a></li>
-<li><a href="#org7b79778">03</a></li>
-<li><a href="#orgc0fce76">04</a></li>
-<li><a href="#orge4ca8be">05</a></li>
-<li><a href="#orgf6d8c38">06</a></li>
-<li><a href="#org79fe0b7">07</a></li>
-<li><a href="#org80dbd90">08</a></li>
-<li><a href="#orgc49b535">09</a></li>
-<li><a href="#org38b306b">10</a></li>
-<li><a href="#orga679084">11</a></li>
-<li><a href="#orgdb392ad">12</a></li>
-<li><a href="#orga3a1856">13</a></li>
-<li><a href="#org4e66fd1">14</a></li>
-<li><a href="#org251299c">15</a></li>
-<li><a href="#org8433cbc">16</a></li>
-<li><a href="#org6aea032">17</a></li>
-<li><a href="#org92e7d9e">18</a></li>
-<li><a href="#orgf0cea80">19</a></li>
-<li><a href="#org83200a3">20</a></li>
+<li><a href="#orgaf719f0">01</a></li>
+<li><a href="#orgff1721d">02</a></li>
+<li><a href="#orga03ff0b">03</a></li>
+<li><a href="#orga41bfab">04</a></li>
+<li><a href="#org2c7962d">05</a></li>
+<li><a href="#org4a3877e">06</a></li>
+<li><a href="#orgb6125e8">07</a></li>
+<li><a href="#orgd24d49e">08</a></li>
+<li><a href="#org163072b">09</a></li>
+<li><a href="#org05dc8c3">10</a></li>
+<li><a href="#org0a37921">11</a></li>
+<li><a href="#org7ed43ae">12</a></li>
+<li><a href="#org9a9e5a2">13</a></li>
+<li><a href="#org866c283">14</a></li>
+<li><a href="#org8642871">15</a></li>
 </ul>
 </li>
-<li><a href="#org4fb1dad">Nested Loop</a>
+<li><a href="#org1e698d1">Loop</a>
 <ul>
-<li><a href="#org0a19373">01</a></li>
-<li><a href="#org343d357">02</a></li>
-<li><a href="#org63f4202">03</a></li>
-<li><a href="#org037ec40">04</a></li>
-<li><a href="#org16feef0">05</a></li>
-<li><a href="#org3d7325c">06</a></li>
-<li><a href="#org8ef2e3e">07</a></li>
-<li><a href="#org6874187">08</a></li>
-<li><a href="#org2e8442b">09</a></li>
-<li><a href="#orgf4b1b79">10</a></li>
-<li><a href="#org852a70b">11</a></li>
-<li><a href="#org5e2fe28">12</a></li>
-<li><a href="#org91ef466">13</a></li>
-<li><a href="#org2088a47">14</a></li>
-<li><a href="#org5d183bc">15</a></li>
-<li><a href="#org615e1c0">16</a></li>
-<li><a href="#org5e8228b">17</a></li>
-<li><a href="#orga28c5a9">18</a></li>
-<li><a href="#org53495b6">19</a></li>
-<li><a href="#org984b6b3">20</a></li>
+<li><a href="#org0fd6e69">01</a></li>
+<li><a href="#org5ad686e">02</a></li>
+<li><a href="#org68f4097">03</a></li>
+<li><a href="#orgb35ae24">04</a></li>
+<li><a href="#org536aa0e">05</a></li>
+<li><a href="#org2915ad1">06</a></li>
+<li><a href="#org66a7bfb">07</a></li>
+<li><a href="#org2bb9daf">08</a></li>
+<li><a href="#org76bde7c">09</a></li>
+<li><a href="#orgd3372ae">10</a></li>
+<li><a href="#orgc360a44">11</a></li>
+<li><a href="#org0c8041b">12</a></li>
+<li><a href="#orgb3169a3">13</a></li>
+<li><a href="#org56f63d0">14</a></li>
+<li><a href="#org136882c">15</a></li>
+<li><a href="#orgd14623e">16</a></li>
+<li><a href="#org7270a63">17</a></li>
+<li><a href="#org6ae55f8">18</a></li>
+<li><a href="#orgb968e23">19</a></li>
+<li><a href="#orge8d3764">20</a></li>
+</ul>
+</li>
+<li><a href="#org06de3c1">Nested Loop</a>
+<ul>
+<li><a href="#orgb165ebe">01</a></li>
+<li><a href="#org69056c8">02</a></li>
+<li><a href="#orgc0b6bfa">03</a></li>
+<li><a href="#org809ad88">04</a></li>
+<li><a href="#org5256a81">05</a></li>
+<li><a href="#org4bccda9">06</a></li>
+<li><a href="#orgad3dca2">07</a></li>
+<li><a href="#org7196313">08</a></li>
+<li><a href="#org6b2e39a">09</a></li>
+<li><a href="#org6d88402">10</a></li>
+<li><a href="#org5f11be5">11</a></li>
+<li><a href="#org8444d08">12</a></li>
+<li><a href="#orge1cf9ee">13</a></li>
+<li><a href="#orgab15f31">14</a></li>
+<li><a href="#org01d354c">15</a></li>
+<li><a href="#orgb95e3b5">16</a></li>
+<li><a href="#org6f4c0ca">17</a></li>
+<li><a href="#orgcb60ebc">18</a></li>
+<li><a href="#orgef557d8">19</a></li>
+<li><a href="#org8a885b4">20</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org92dfe1f" class="outline-2">
-<h2 id="org92dfe1f">Operator</h2>
-<div class="outline-text-2" id="text-org92dfe1f">
+<div id="outline-container-org87a3474" class="outline-2">
+<h2 id="org87a3474">Intro</h2>
+<div class="outline-text-2" id="text-org87a3474">
 </div>
-<div id="outline-container-orgccdae60" class="outline-3">
-<h3 id="orgccdae60">01</h3>
-<div class="outline-text-3" id="text-orgccdae60">
+<div id="outline-container-org9f6fdd2" class="outline-3">
+<h3 id="org9f6fdd2">09</h3>
+<div class="outline-text-3" id="text-org9f6fdd2">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
+<span class="linenr">2: </span>
+<span class="linenr">3: </span>int main(void) {
+<span class="linenr">4: </span>    double d; int b;
+<span class="linenr">5: </span>    d = 3.14; b = 1;
+<span class="linenr">6: </span>    printf("Double value: %f\n", d);
+<span class="linenr">7: </span>    printf("Boolean value: %d\n", b);
+<span class="linenr">8: </span>}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd358693" class="outline-3">
+<h3 id="orgd358693">10</h3>
+<div class="outline-text-3" id="text-orgd358693">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    long int ld;
+<span class="linenr"> 5: </span>    long long int ldd;
+<span class="linenr"> 6: </span>    long double Ld;
+<span class="linenr"> 7: </span>    short hd;
+<span class="linenr"> 8: </span>    ld = 2147484;
+<span class="linenr"> 9: </span>    ldd = 922337;
+<span class="linenr">10: </span>    Ld = 1.1E+4932;
+<span class="linenr">11: </span>    hd = 32767;
+<span class="linenr">12: </span>    printf("long int      : %ld\n", ld);
+<span class="linenr">13: </span>    printf("long long int : %lld\n", lld);
+<span class="linenr">14: </span>    printf("long double   : %Ld\n", Ld);
+<span class="linenr">15: </span>    printf("short         : %hd\n", hd);
+<span class="linenr">16: </span>}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org9015a8e" class="outline-3">
+<h3 id="org9015a8e">11</h3>
+<div class="outline-text-3" id="text-org9015a8e">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    unsigned int u;
+<span class="linenr"> 5: </span>    unsigned long int lu;
+<span class="linenr"> 6: </span>    unsigned long long int llu;
+<span class="linenr"> 7: </span>    unsigned short hu;
+<span class="linenr"> 8: </span>    u = 42;
+<span class="linenr"> 9: </span>    lu = 42943;
+<span class="linenr">10: </span>    llu = 1844674;
+<span class="linenr">11: </span>    hu = 0;
+<span class="linenr">12: </span>    printf("unsigned int           : %u\n", u);
+<span class="linenr">13: </span>    printf("unsigned long int      : %lu\n", lu);
+<span class="linenr">14: </span>    printf("unsigned long long int : %llu\n", llu);
+<span class="linenr">15: </span>    printf("unsigned short         : %hu\n", hu);
+<span class="linenr">16: </span>}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org8564b78" class="outline-3">
+<h3 id="org8564b78">12</h3>
+<div class="outline-text-3" id="text-org8564b78">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
+<span class="linenr">2: </span>
+<span class="linenr">3: </span>int main(void) {
+<span class="linenr">4: </span>    const float pi = 3.14195;
+<span class="linenr">5: </span>    printf("Value of pi: %f\n", pi);
+<span class="linenr">6: </span>}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6ddae9f" class="outline-3">
+<h3 id="org6ddae9f">13</h3>
+<div class="outline-text-3" id="text-org6ddae9f">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
+<span class="linenr">2: </span>
+<span class="linenr">3: </span>#define PI 3.14195
+<span class="linenr">4: </span>
+<span class="linenr">5: </span>int main(void) {
+<span class="linenr">6: </span>    printf("Value of pi: %f\n", PI);
+<span class="linenr">7: </span>}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org467afa1" class="outline-3">
+<h3 id="org467afa1">14</h3>
+<div class="outline-text-3" id="text-org467afa1">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int a = 10;
+<span class="linenr"> 4: </span>
+<span class="linenr"> 5: </span>int main(void) {
+<span class="linenr"> 6: </span>    printf("Global: %d\n", a);
+<span class="linenr"> 7: </span>    int a = 20;
+<span class="linenr"> 8: </span>    printf("Local: %d\n", a);
+<span class="linenr"> 9: </span>
+<span class="linenr">10: </span>    {
+<span class="linenr">11: </span>        extern int a;
+<span class="linenr">12: </span>        printf("Global: %d\n", a);
+<span class="linenr">13: </span>    }
+<span class="linenr">14: </span>}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc4af593" class="outline-3">
+<h3 id="orgc4af593">15</h3>
+<div class="outline-text-3" id="text-orgc4af593">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main(void) {
+<span class="linenr"> 4: </span>    float n; scanf("%f", &amp;n);
+<span class="linenr"> 5: </span>    printf("%f   \n", n);
+<span class="linenr"> 6: </span>    printf("%10f \n", n);
+<span class="linenr"> 7: </span>    printf("%2f  \n", n);
+<span class="linenr"> 8: </span>    printf("%.2f \n", n);
+<span class="linenr"> 9: </span>    printf("%.0f \n", n);
+<span class="linenr">10: </span>    printf("%e   \n", n);
+<span class="linenr">11: </span>}
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2df0329" class="outline-2">
+<h2 id="org2df0329">Operator</h2>
+<div class="outline-text-2" id="text-org2df0329">
+</div>
+<div id="outline-container-org618643a" class="outline-3">
+<h3 id="org618643a">01</h3>
+<div class="outline-text-3" id="text-org618643a">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -130,9 +281,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org6ed4a39" class="outline-3">
-<h3 id="org6ed4a39">02</h3>
-<div class="outline-text-3" id="text-org6ed4a39">
+<div id="outline-container-orgb807334" class="outline-3">
+<h3 id="orgb807334">02</h3>
+<div class="outline-text-3" id="text-orgb807334">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -145,9 +296,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org10c76ae" class="outline-3">
-<h3 id="org10c76ae">03</h3>
-<div class="outline-text-3" id="text-org10c76ae">
+<div id="outline-container-org8c9d1de" class="outline-3">
+<h3 id="org8c9d1de">03</h3>
+<div class="outline-text-3" id="text-org8c9d1de">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -160,9 +311,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org015805d" class="outline-3">
-<h3 id="org015805d">04</h3>
-<div class="outline-text-3" id="text-org015805d">
+<div id="outline-container-org2252acd" class="outline-3">
+<h3 id="org2252acd">04</h3>
+<div class="outline-text-3" id="text-org2252acd">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -183,9 +334,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org0739a56" class="outline-3">
-<h3 id="org0739a56">05</h3>
-<div class="outline-text-3" id="text-org0739a56">
+<div id="outline-container-org1aa3e70" class="outline-3">
+<h3 id="org1aa3e70">05</h3>
+<div class="outline-text-3" id="text-org1aa3e70">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -202,9 +353,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org093a2e1" class="outline-3">
-<h3 id="org093a2e1">06</h3>
-<div class="outline-text-3" id="text-org093a2e1">
+<div id="outline-container-orgaea3de5" class="outline-3">
+<h3 id="orgaea3de5">06</h3>
+<div class="outline-text-3" id="text-orgaea3de5">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -221,9 +372,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org5c2ac95" class="outline-3">
-<h3 id="org5c2ac95">07</h3>
-<div class="outline-text-3" id="text-org5c2ac95">
+<div id="outline-container-org9852218" class="outline-3">
+<h3 id="org9852218">07</h3>
+<div class="outline-text-3" id="text-org9852218">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -245,9 +396,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org0834d40" class="outline-3">
-<h3 id="org0834d40">08</h3>
-<div class="outline-text-3" id="text-org0834d40">
+<div id="outline-container-org418841e" class="outline-3">
+<h3 id="org418841e">08</h3>
+<div class="outline-text-3" id="text-org418841e">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -260,9 +411,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgc213342" class="outline-3">
-<h3 id="orgc213342">09</h3>
-<div class="outline-text-3" id="text-orgc213342">
+<div id="outline-container-orgfc67ecc" class="outline-3">
+<h3 id="orgfc67ecc">09</h3>
+<div class="outline-text-3" id="text-orgfc67ecc">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -277,9 +428,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org6632c88" class="outline-3">
-<h3 id="org6632c88">10</h3>
-<div class="outline-text-3" id="text-org6632c88">
+<div id="outline-container-orge6f7016" class="outline-3">
+<h3 id="orge6f7016">10</h3>
+<div class="outline-text-3" id="text-orge6f7016">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -295,9 +446,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgbd5d297" class="outline-3">
-<h3 id="orgbd5d297">11</h3>
-<div class="outline-text-3" id="text-orgbd5d297">
+<div id="outline-container-org73f5d08" class="outline-3">
+<h3 id="org73f5d08">11</h3>
+<div class="outline-text-3" id="text-org73f5d08">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -314,9 +465,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org3295232" class="outline-3">
-<h3 id="org3295232">12</h3>
-<div class="outline-text-3" id="text-org3295232">
+<div id="outline-container-org5390c21" class="outline-3">
+<h3 id="org5390c21">12</h3>
+<div class="outline-text-3" id="text-org5390c21">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>#include &lt;math.h&gt;
@@ -339,9 +490,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgcc4ea2d" class="outline-3">
-<h3 id="orgcc4ea2d">13</h3>
-<div class="outline-text-3" id="text-orgcc4ea2d">
+<div id="outline-container-orga2025ad" class="outline-3">
+<h3 id="orga2025ad">13</h3>
+<div class="outline-text-3" id="text-orga2025ad">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>#include &lt;math.h&gt;
@@ -357,9 +508,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org0da4b01" class="outline-3">
-<h3 id="org0da4b01">14</h3>
-<div class="outline-text-3" id="text-org0da4b01">
+<div id="outline-container-orgf0cfa44" class="outline-3">
+<h3 id="orgf0cfa44">14</h3>
+<div class="outline-text-3" id="text-orgf0cfa44">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>#include &lt;math.h&gt;
@@ -374,9 +525,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org92fd391" class="outline-3">
-<h3 id="org92fd391">15</h3>
-<div class="outline-text-3" id="text-org92fd391">
+<div id="outline-container-org672a2c8" class="outline-3">
+<h3 id="org672a2c8">15</h3>
+<div class="outline-text-3" id="text-org672a2c8">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -392,13 +543,13 @@
 </div>
 </div>
 
-<div id="outline-container-orgc35ed61" class="outline-2">
-<h2 id="orgc35ed61">Condition</h2>
-<div class="outline-text-2" id="text-orgc35ed61">
+<div id="outline-container-org6d68d0c" class="outline-2">
+<h2 id="org6d68d0c">Condition</h2>
+<div class="outline-text-2" id="text-org6d68d0c">
 </div>
-<div id="outline-container-orgf1398a2" class="outline-3">
-<h3 id="orgf1398a2">01</h3>
-<div class="outline-text-3" id="text-orgf1398a2">
+<div id="outline-container-orgaf719f0" class="outline-3">
+<h3 id="orgaf719f0">01</h3>
+<div class="outline-text-3" id="text-orgaf719f0">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -411,9 +562,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org9b854c1" class="outline-3">
-<h3 id="org9b854c1">02</h3>
-<div class="outline-text-3" id="text-org9b854c1">
+<div id="outline-container-orgff1721d" class="outline-3">
+<h3 id="orgff1721d">02</h3>
+<div class="outline-text-3" id="text-orgff1721d">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -426,9 +577,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgd057f43" class="outline-3">
-<h3 id="orgd057f43">03</h3>
-<div class="outline-text-3" id="text-orgd057f43">
+<div id="outline-container-orga03ff0b" class="outline-3">
+<h3 id="orga03ff0b">03</h3>
+<div class="outline-text-3" id="text-orga03ff0b">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -473,9 +624,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org4d7f6b9" class="outline-3">
-<h3 id="org4d7f6b9">04</h3>
-<div class="outline-text-3" id="text-org4d7f6b9">
+<div id="outline-container-orga41bfab" class="outline-3">
+<h3 id="orga41bfab">04</h3>
+<div class="outline-text-3" id="text-orga41bfab">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -492,9 +643,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgef37b4e" class="outline-3">
-<h3 id="orgef37b4e">05</h3>
-<div class="outline-text-3" id="text-orgef37b4e">
+<div id="outline-container-org2c7962d" class="outline-3">
+<h3 id="org2c7962d">05</h3>
+<div class="outline-text-3" id="text-org2c7962d">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>#include &lt;math.h&gt;
@@ -512,9 +663,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org410492e" class="outline-3">
-<h3 id="org410492e">06</h3>
-<div class="outline-text-3" id="text-org410492e">
+<div id="outline-container-org4a3877e" class="outline-3">
+<h3 id="org4a3877e">06</h3>
+<div class="outline-text-3" id="text-org4a3877e">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -539,9 +690,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgb1d988d" class="outline-3">
-<h3 id="orgb1d988d">07</h3>
-<div class="outline-text-3" id="text-orgb1d988d">
+<div id="outline-container-orgb6125e8" class="outline-3">
+<h3 id="orgb6125e8">07</h3>
+<div class="outline-text-3" id="text-orgb6125e8">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -560,9 +711,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org9c3fdde" class="outline-3">
-<h3 id="org9c3fdde">08</h3>
-<div class="outline-text-3" id="text-org9c3fdde">
+<div id="outline-container-orgd24d49e" class="outline-3">
+<h3 id="orgd24d49e">08</h3>
+<div class="outline-text-3" id="text-orgd24d49e">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -577,9 +728,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org654c10d" class="outline-3">
-<h3 id="org654c10d">09</h3>
-<div class="outline-text-3" id="text-org654c10d">
+<div id="outline-container-org163072b" class="outline-3">
+<h3 id="org163072b">09</h3>
+<div class="outline-text-3" id="text-org163072b">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -598,9 +749,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org0a55472" class="outline-3">
-<h3 id="org0a55472">10</h3>
-<div class="outline-text-3" id="text-org0a55472">
+<div id="outline-container-org05dc8c3" class="outline-3">
+<h3 id="org05dc8c3">10</h3>
+<div class="outline-text-3" id="text-org05dc8c3">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -633,9 +784,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org9b766c6" class="outline-3">
-<h3 id="org9b766c6">11</h3>
-<div class="outline-text-3" id="text-org9b766c6">
+<div id="outline-container-org0a37921" class="outline-3">
+<h3 id="org0a37921">11</h3>
+<div class="outline-text-3" id="text-org0a37921">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -670,9 +821,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orge8cd0b8" class="outline-3">
-<h3 id="orge8cd0b8">12</h3>
-<div class="outline-text-3" id="text-orge8cd0b8">
+<div id="outline-container-org7ed43ae" class="outline-3">
+<h3 id="org7ed43ae">12</h3>
+<div class="outline-text-3" id="text-org7ed43ae">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -700,9 +851,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgd17e362" class="outline-3">
-<h3 id="orgd17e362">13</h3>
-<div class="outline-text-3" id="text-orgd17e362">
+<div id="outline-container-org9a9e5a2" class="outline-3">
+<h3 id="org9a9e5a2">13</h3>
+<div class="outline-text-3" id="text-org9a9e5a2">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -738,9 +889,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orga0f1989" class="outline-3">
-<h3 id="orga0f1989">14</h3>
-<div class="outline-text-3" id="text-orga0f1989">
+<div id="outline-container-org866c283" class="outline-3">
+<h3 id="org866c283">14</h3>
+<div class="outline-text-3" id="text-org866c283">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -781,9 +932,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgbb546e5" class="outline-3">
-<h3 id="orgbb546e5">15</h3>
-<div class="outline-text-3" id="text-orgbb546e5">
+<div id="outline-container-org8642871" class="outline-3">
+<h3 id="org8642871">15</h3>
+<div class="outline-text-3" id="text-org8642871">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -808,13 +959,13 @@
 </div>
 </div>
 
-<div id="outline-container-orgd2a4e3d" class="outline-2">
-<h2 id="orgd2a4e3d">Loop</h2>
-<div class="outline-text-2" id="text-orgd2a4e3d">
+<div id="outline-container-org1e698d1" class="outline-2">
+<h2 id="org1e698d1">Loop</h2>
+<div class="outline-text-2" id="text-org1e698d1">
 </div>
-<div id="outline-container-orge1715a7" class="outline-3">
-<h3 id="orge1715a7">01</h3>
-<div class="outline-text-3" id="text-orge1715a7">
+<div id="outline-container-org0fd6e69" class="outline-3">
+<h3 id="org0fd6e69">01</h3>
+<div class="outline-text-3" id="text-org0fd6e69">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -828,9 +979,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org44ce6ce" class="outline-3">
-<h3 id="org44ce6ce">02</h3>
-<div class="outline-text-3" id="text-org44ce6ce">
+<div id="outline-container-org5ad686e" class="outline-3">
+<h3 id="org5ad686e">02</h3>
+<div class="outline-text-3" id="text-org5ad686e">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -845,9 +996,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org7b79778" class="outline-3">
-<h3 id="org7b79778">03</h3>
-<div class="outline-text-3" id="text-org7b79778">
+<div id="outline-container-org68f4097" class="outline-3">
+<h3 id="org68f4097">03</h3>
+<div class="outline-text-3" id="text-org68f4097">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -862,9 +1013,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgc0fce76" class="outline-3">
-<h3 id="orgc0fce76">04</h3>
-<div class="outline-text-3" id="text-orgc0fce76">
+<div id="outline-container-orgb35ae24" class="outline-3">
+<h3 id="orgb35ae24">04</h3>
+<div class="outline-text-3" id="text-orgb35ae24">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -881,9 +1032,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orge4ca8be" class="outline-3">
-<h3 id="orge4ca8be">05</h3>
-<div class="outline-text-3" id="text-orge4ca8be">
+<div id="outline-container-org536aa0e" class="outline-3">
+<h3 id="org536aa0e">05</h3>
+<div class="outline-text-3" id="text-org536aa0e">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -903,9 +1054,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgf6d8c38" class="outline-3">
-<h3 id="orgf6d8c38">06</h3>
-<div class="outline-text-3" id="text-orgf6d8c38">
+<div id="outline-container-org2915ad1" class="outline-3">
+<h3 id="org2915ad1">06</h3>
+<div class="outline-text-3" id="text-org2915ad1">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -928,9 +1079,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org79fe0b7" class="outline-3">
-<h3 id="org79fe0b7">07</h3>
-<div class="outline-text-3" id="text-org79fe0b7">
+<div id="outline-container-org66a7bfb" class="outline-3">
+<h3 id="org66a7bfb">07</h3>
+<div class="outline-text-3" id="text-org66a7bfb">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -943,9 +1094,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org80dbd90" class="outline-3">
-<h3 id="org80dbd90">08</h3>
-<div class="outline-text-3" id="text-org80dbd90">
+<div id="outline-container-org2bb9daf" class="outline-3">
+<h3 id="org2bb9daf">08</h3>
+<div class="outline-text-3" id="text-org2bb9daf">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -959,9 +1110,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgc49b535" class="outline-3">
-<h3 id="orgc49b535">09</h3>
-<div class="outline-text-3" id="text-orgc49b535">
+<div id="outline-container-org76bde7c" class="outline-3">
+<h3 id="org76bde7c">09</h3>
+<div class="outline-text-3" id="text-org76bde7c">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1010,9 +1161,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org38b306b" class="outline-3">
-<h3 id="org38b306b">10</h3>
-<div class="outline-text-3" id="text-org38b306b">
+<div id="outline-container-orgd3372ae" class="outline-3">
+<h3 id="orgd3372ae">10</h3>
+<div class="outline-text-3" id="text-orgd3372ae">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1028,9 +1179,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orga679084" class="outline-3">
-<h3 id="orga679084">11</h3>
-<div class="outline-text-3" id="text-orga679084">
+<div id="outline-container-orgc360a44" class="outline-3">
+<h3 id="orgc360a44">11</h3>
+<div class="outline-text-3" id="text-orgc360a44">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -1045,9 +1196,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgdb392ad" class="outline-3">
-<h3 id="orgdb392ad">12</h3>
-<div class="outline-text-3" id="text-orgdb392ad">
+<div id="outline-container-org0c8041b" class="outline-3">
+<h3 id="org0c8041b">12</h3>
+<div class="outline-text-3" id="text-org0c8041b">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1067,9 +1218,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orga3a1856" class="outline-3">
-<h3 id="orga3a1856">13</h3>
-<div class="outline-text-3" id="text-orga3a1856">
+<div id="outline-container-orgb3169a3" class="outline-3">
+<h3 id="orgb3169a3">13</h3>
+<div class="outline-text-3" id="text-orgb3169a3">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -1084,9 +1235,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org4e66fd1" class="outline-3">
-<h3 id="org4e66fd1">14</h3>
-<div class="outline-text-3" id="text-org4e66fd1">
+<div id="outline-container-org56f63d0" class="outline-3">
+<h3 id="org56f63d0">14</h3>
+<div class="outline-text-3" id="text-org56f63d0">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1105,9 +1256,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org251299c" class="outline-3">
-<h3 id="org251299c">15</h3>
-<div class="outline-text-3" id="text-org251299c">
+<div id="outline-container-org136882c" class="outline-3">
+<h3 id="org136882c">15</h3>
+<div class="outline-text-3" id="text-org136882c">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>#include &lt;stdio.h&gt;
 <span class="linenr">2: </span>
@@ -1122,9 +1273,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org8433cbc" class="outline-3">
-<h3 id="org8433cbc">16</h3>
-<div class="outline-text-3" id="text-org8433cbc">
+<div id="outline-container-orgd14623e" class="outline-3">
+<h3 id="orgd14623e">16</h3>
+<div class="outline-text-3" id="text-orgd14623e">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1144,9 +1295,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org6aea032" class="outline-3">
-<h3 id="org6aea032">17</h3>
-<div class="outline-text-3" id="text-org6aea032">
+<div id="outline-container-org7270a63" class="outline-3">
+<h3 id="org7270a63">17</h3>
+<div class="outline-text-3" id="text-org7270a63">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1163,9 +1314,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org92e7d9e" class="outline-3">
-<h3 id="org92e7d9e">18</h3>
-<div class="outline-text-3" id="text-org92e7d9e">
+<div id="outline-container-org6ae55f8" class="outline-3">
+<h3 id="org6ae55f8">18</h3>
+<div class="outline-text-3" id="text-org6ae55f8">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>#include &lt;math.h&gt;
@@ -1189,9 +1340,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgf0cea80" class="outline-3">
-<h3 id="orgf0cea80">19</h3>
-<div class="outline-text-3" id="text-orgf0cea80">
+<div id="outline-container-orgb968e23" class="outline-3">
+<h3 id="orgb968e23">19</h3>
+<div class="outline-text-3" id="text-orgb968e23">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>#include &lt;math.h&gt;
@@ -1217,9 +1368,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org83200a3" class="outline-3">
-<h3 id="org83200a3">20</h3>
-<div class="outline-text-3" id="text-org83200a3">
+<div id="outline-container-orge8d3764" class="outline-3">
+<h3 id="orge8d3764">20</h3>
+<div class="outline-text-3" id="text-orge8d3764">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1241,13 +1392,13 @@
 </div>
 </div>
 
-<div id="outline-container-org4fb1dad" class="outline-2">
-<h2 id="org4fb1dad">Nested Loop</h2>
-<div class="outline-text-2" id="text-org4fb1dad">
+<div id="outline-container-org06de3c1" class="outline-2">
+<h2 id="org06de3c1">Nested Loop</h2>
+<div class="outline-text-2" id="text-org06de3c1">
 </div>
-<div id="outline-container-org0a19373" class="outline-3">
-<h3 id="org0a19373">01</h3>
-<div class="outline-text-3" id="text-org0a19373">
+<div id="outline-container-orgb165ebe" class="outline-3">
+<h3 id="orgb165ebe">01</h3>
+<div class="outline-text-3" id="text-orgb165ebe">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1264,9 +1415,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org343d357" class="outline-3">
-<h3 id="org343d357">02</h3>
-<div class="outline-text-3" id="text-org343d357">
+<div id="outline-container-org69056c8" class="outline-3">
+<h3 id="org69056c8">02</h3>
+<div class="outline-text-3" id="text-org69056c8">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1283,9 +1434,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org63f4202" class="outline-3">
-<h3 id="org63f4202">03</h3>
-<div class="outline-text-3" id="text-org63f4202">
+<div id="outline-container-orgc0b6bfa" class="outline-3">
+<h3 id="orgc0b6bfa">03</h3>
+<div class="outline-text-3" id="text-orgc0b6bfa">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1302,9 +1453,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org037ec40" class="outline-3">
-<h3 id="org037ec40">04</h3>
-<div class="outline-text-3" id="text-org037ec40">
+<div id="outline-container-org809ad88" class="outline-3">
+<h3 id="org809ad88">04</h3>
+<div class="outline-text-3" id="text-org809ad88">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1321,9 +1472,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org16feef0" class="outline-3">
-<h3 id="org16feef0">05</h3>
-<div class="outline-text-3" id="text-org16feef0">
+<div id="outline-container-org5256a81" class="outline-3">
+<h3 id="org5256a81">05</h3>
+<div class="outline-text-3" id="text-org5256a81">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1339,9 +1490,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org3d7325c" class="outline-3">
-<h3 id="org3d7325c">06</h3>
-<div class="outline-text-3" id="text-org3d7325c">
+<div id="outline-container-org4bccda9" class="outline-3">
+<h3 id="org4bccda9">06</h3>
+<div class="outline-text-3" id="text-org4bccda9">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1357,9 +1508,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org8ef2e3e" class="outline-3">
-<h3 id="org8ef2e3e">07</h3>
-<div class="outline-text-3" id="text-org8ef2e3e">
+<div id="outline-container-orgad3dca2" class="outline-3">
+<h3 id="orgad3dca2">07</h3>
+<div class="outline-text-3" id="text-orgad3dca2">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1375,9 +1526,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org6874187" class="outline-3">
-<h3 id="org6874187">08</h3>
-<div class="outline-text-3" id="text-org6874187">
+<div id="outline-container-org7196313" class="outline-3">
+<h3 id="org7196313">08</h3>
+<div class="outline-text-3" id="text-org7196313">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1393,9 +1544,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org2e8442b" class="outline-3">
-<h3 id="org2e8442b">09</h3>
-<div class="outline-text-3" id="text-org2e8442b">
+<div id="outline-container-org6b2e39a" class="outline-3">
+<h3 id="org6b2e39a">09</h3>
+<div class="outline-text-3" id="text-org6b2e39a">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1412,9 +1563,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-orgf4b1b79" class="outline-3">
-<h3 id="orgf4b1b79">10</h3>
-<div class="outline-text-3" id="text-orgf4b1b79">
+<div id="outline-container-org6d88402" class="outline-3">
+<h3 id="org6d88402">10</h3>
+<div class="outline-text-3" id="text-org6d88402">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1431,9 +1582,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org852a70b" class="outline-3">
-<h3 id="org852a70b">11</h3>
-<div class="outline-text-3" id="text-org852a70b">
+<div id="outline-container-org5f11be5" class="outline-3">
+<h3 id="org5f11be5">11</h3>
+<div class="outline-text-3" id="text-org5f11be5">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1450,9 +1601,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org5e2fe28" class="outline-3">
-<h3 id="org5e2fe28">12</h3>
-<div class="outline-text-3" id="text-org5e2fe28">
+<div id="outline-container-org8444d08" class="outline-3">
+<h3 id="org8444d08">12</h3>
+<div class="outline-text-3" id="text-org8444d08">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1479,9 +1630,9 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org91ef466" class="outline-3">
-<h3 id="org91ef466">13</h3>
-<div class="outline-text-3" id="text-org91ef466">
+<div id="outline-container-orge1cf9ee" class="outline-3">
+<h3 id="orge1cf9ee">13</h3>
+<div class="outline-text-3" id="text-orge1cf9ee">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -1503,63 +1654,63 @@
 </div>
 </div>
 </div>
-<div id="outline-container-org2088a47" class="outline-3">
-<h3 id="org2088a47">14</h3>
-<div class="outline-text-3" id="text-org2088a47">
+<div id="outline-container-orgab15f31" class="outline-3">
+<h3 id="orgab15f31">14</h3>
+<div class="outline-text-3" id="text-orgab15f31">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org5d183bc" class="outline-3">
-<h3 id="org5d183bc">15</h3>
-<div class="outline-text-3" id="text-org5d183bc">
+<div id="outline-container-org01d354c" class="outline-3">
+<h3 id="org01d354c">15</h3>
+<div class="outline-text-3" id="text-org01d354c">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org615e1c0" class="outline-3">
-<h3 id="org615e1c0">16</h3>
-<div class="outline-text-3" id="text-org615e1c0">
+<div id="outline-container-orgb95e3b5" class="outline-3">
+<h3 id="orgb95e3b5">16</h3>
+<div class="outline-text-3" id="text-orgb95e3b5">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org5e8228b" class="outline-3">
-<h3 id="org5e8228b">17</h3>
-<div class="outline-text-3" id="text-org5e8228b">
+<div id="outline-container-org6f4c0ca" class="outline-3">
+<h3 id="org6f4c0ca">17</h3>
+<div class="outline-text-3" id="text-org6f4c0ca">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orga28c5a9" class="outline-3">
-<h3 id="orga28c5a9">18</h3>
-<div class="outline-text-3" id="text-orga28c5a9">
+<div id="outline-container-orgcb60ebc" class="outline-3">
+<h3 id="orgcb60ebc">18</h3>
+<div class="outline-text-3" id="text-orgcb60ebc">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org53495b6" class="outline-3">
-<h3 id="org53495b6">19</h3>
-<div class="outline-text-3" id="text-org53495b6">
+<div id="outline-container-orgef557d8" class="outline-3">
+<h3 id="orgef557d8">19</h3>
+<div class="outline-text-3" id="text-orgef557d8">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org984b6b3" class="outline-3">
-<h3 id="org984b6b3">20</h3>
-<div class="outline-text-3" id="text-org984b6b3">
+<div id="outline-container-org8a885b4" class="outline-3">
+<h3 id="org8a885b4">20</h3>
+<div class="outline-text-3" id="text-org8a885b4">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr">1: </span>
 </pre>
