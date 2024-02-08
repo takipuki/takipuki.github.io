@@ -31,6 +31,12 @@ body{padding-bottom: 2em;}
     display: inline-block;
     margin-right: 1em;
 }
+pre span.linenr {
+  user-select: none; /* Prevent selection */
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Safari and Chrome */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+}
 
 /* Table styles */
 th{font-family: "Noto Sans",sans-serif !important}
@@ -45,3 +51,4 @@ table {
   width: 55vw!important;
   font-size: 3vw;
 }
+
