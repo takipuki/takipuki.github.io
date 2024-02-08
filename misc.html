@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2024-02-08 Thu 15:30 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Miscellaneous</title>
+<meta name="generator" content="Org Mode" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="clean.css"/>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Miscellaneous</h1>
+
+<div id="outline-container-orgdb5a94a" class="outline-2">
+<h2 id="orgdb5a94a">Convert decimal to base</h2>
+<div class="outline-text-2" id="text-orgdb5a94a">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>char symbols[36]; // maximum base 36; digits (0-9) and alpha (A-Z)
+<span class="linenr"> 4: </span>
+<span class="linenr"> 5: </span>void dec_to_base(int n, int base) {
+<span class="linenr"> 6: </span>    if (!n) return;
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    dec_to_base(n/base, base);
+<span class="linenr"> 9: </span>    putchar(symbols[n % base]);    // least significant bit so printing last
+<span class="linenr">10: </span>}
+<span class="linenr">11: </span>
+<span class="linenr">12: </span>int main(void) {
+<span class="linenr">13: </span>    int base, n;
+<span class="linenr">14: </span>    scanf("%d %d", &amp;base, &amp;n);
+<span class="linenr">15: </span>
+<span class="linenr">16: </span>    if (base &lt; 2 || base &gt; 36) {
+<span class="linenr">17: </span>        printf("Only 2 to 36 bases are supported.\n");
+<span class="linenr">18: </span>        return 0;
+<span class="linenr">19: </span>    }
+<span class="linenr">20: </span>
+<span class="linenr">21: </span>    if (!n) {
+<span class="linenr">22: </span>        printf("0\n");
+<span class="linenr">23: </span>        return 0;
+<span class="linenr">24: </span>    }
+<span class="linenr">25: </span>
+<span class="linenr">26: </span>    // initializing symbols
+<span class="linenr">27: </span>    for (int i = 0; i &lt; base; i++)
+<span class="linenr">28: </span>        symbols[i] = (i &gt;= 10) ? 'A' + i-10 : '0' + i;
+<span class="linenr">29: </span>
+<span class="linenr">30: </span>    dec_to_base(n, base);
+<span class="linenr">31: </span>    putchar('\n');
+<span class="linenr">32: </span>}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
