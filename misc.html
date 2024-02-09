@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024-02-08 Thu 15:30 -->
+<!-- 2024-02-09 Fri 09:18 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Miscellaneous</title>
@@ -13,9 +13,9 @@
 <div id="content" class="content">
 <h1 class="title">Miscellaneous</h1>
 
-<div id="outline-container-orgdb5a94a" class="outline-2">
-<h2 id="orgdb5a94a">Convert decimal to base</h2>
-<div class="outline-text-2" id="text-orgdb5a94a">
+<div id="outline-container-org785a9fb" class="outline-2">
+<h2 id="org785a9fb">Convert decimal to base</h2>
+<div class="outline-text-2" id="text-org785a9fb">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -49,6 +49,32 @@
 <span class="linenr">30: </span>    dec_to_base(n, base);
 <span class="linenr">31: </span>    putchar('\n');
 <span class="linenr">32: </span>}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org02e0a2b" class="outline-2">
+<h2 id="org02e0a2b">Armstrong number</h2>
+<div class="outline-text-2" id="text-org02e0a2b">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>#include &lt;math.h&gt;
+<span class="linenr"> 3: </span>
+<span class="linenr"> 4: </span>int main() {
+<span class="linenr"> 5: </span>    int n; scanf("%d", &amp;n);
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    int n_digs = log10(n) + 1;
+<span class="linenr"> 8: </span>
+<span class="linenr"> 9: </span>    int sum = 0;
+<span class="linenr">10: </span>    for (int i = n; i; i /= 10)
+<span class="linenr">11: </span>        sum += pow(i % 10, n_digs);
+<span class="linenr">12: </span>
+<span class="linenr">13: </span>    if (sum == n)
+<span class="linenr">14: </span>        printf("Yes\n");
+<span class="linenr">15: </span>    else
+<span class="linenr">16: </span>        printf("No\n");
+<span class="linenr">17: </span>}
 </pre>
 </div>
 </div>

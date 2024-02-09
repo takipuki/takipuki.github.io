@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024-02-07 Wed 09:20 -->
+<!-- 2024-02-09 Fri 10:32 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>SPL Lab problem set</title>
@@ -16,24 +16,24 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5fd831a">Assigment 01</a>
+<li><a href="#org9a067ed">Assigment 01</a>
 <ul>
-<li><a href="#org49cef1f">01</a></li>
-<li><a href="#orgfb18dda">02</a></li>
-<li><a href="#orgacfa3fd">03</a></li>
+<li><a href="#orgaacb76a">01</a></li>
+<li><a href="#orgfa40d45">02</a></li>
+<li><a href="#orgf4e90cc">03</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org5fd831a" class="outline-2">
-<h2 id="org5fd831a">Assigment 01</h2>
-<div class="outline-text-2" id="text-org5fd831a">
+<div id="outline-container-org9a067ed" class="outline-2">
+<h2 id="org9a067ed">Assigment 01</h2>
+<div class="outline-text-2" id="text-org9a067ed">
 </div>
-<div id="outline-container-org49cef1f" class="outline-3">
-<h3 id="org49cef1f">01</h3>
-<div class="outline-text-3" id="text-org49cef1f">
+<div id="outline-container-orgaacb76a" class="outline-3">
+<h3 id="orgaacb76a">01</h3>
+<div class="outline-text-3" id="text-orgaacb76a">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -74,9 +74,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgfb18dda" class="outline-3">
-<h3 id="orgfb18dda">02</h3>
-<div class="outline-text-3" id="text-orgfb18dda">
+<div id="outline-container-orgfa40d45" class="outline-3">
+<h3 id="orgfa40d45">02</h3>
+<div class="outline-text-3" id="text-orgfa40d45">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>#include &lt;math.h&gt;
@@ -105,24 +105,25 @@
 <span class="linenr">25: </span>        return 0;
 <span class="linenr">26: </span>    }
 <span class="linenr">27: </span>
-<span class="linenr">28: </span>    if (fabs(a - b) &lt;= ERROR_MARGIN &amp;&amp; fabs(b - c) &lt;= ERROR_MARGIN
-<span class="linenr">29: </span>        &amp;&amp; fabs(c - a) &lt;= ERROR_MARGIN)
-<span class="linenr">30: </span>        printf("Equilateral\n");
-<span class="linenr">31: </span>    else if (fabs(a - b) &lt;= ERROR_MARGIN
-<span class="linenr">32: </span>             || fabs(b - c) &lt;= ERROR_MARGIN
-<span class="linenr">33: </span>             || fabs(c - a) &lt;= ERROR_MARGIN)
-<span class="linenr">34: </span>        printf("Isosceles\n");
-<span class="linenr">35: </span>    else
-<span class="linenr">36: </span>        printf("Scalene\n");
-<span class="linenr">37: </span>}
+<span class="linenr">28: </span>    if (fabs(a - b) &lt;= ERROR_MARGIN
+<span class="linenr">29: </span>        &amp;&amp; fabs(b - c) &lt;= ERROR_MARGIN
+<span class="linenr">30: </span>        &amp;&amp; fabs(c - a) &lt;= ERROR_MARGIN)
+<span class="linenr">31: </span>        printf("Equilateral\n");
+<span class="linenr">32: </span>    else if (fabs(a - b) &lt;= ERROR_MARGIN
+<span class="linenr">33: </span>             || fabs(b - c) &lt;= ERROR_MARGIN
+<span class="linenr">34: </span>             || fabs(c - a) &lt;= ERROR_MARGIN)
+<span class="linenr">35: </span>        printf("Isosceles\n");
+<span class="linenr">36: </span>    else
+<span class="linenr">37: </span>        printf("Scalene\n");
+<span class="linenr">38: </span>}
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgacfa3fd" class="outline-3">
-<h3 id="orgacfa3fd">03</h3>
-<div class="outline-text-3" id="text-orgacfa3fd">
+<div id="outline-container-orgf4e90cc" class="outline-3">
+<h3 id="orgf4e90cc">03</h3>
+<div class="outline-text-3" id="text-orgf4e90cc">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
