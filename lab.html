@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024-02-09 Fri 10:32 -->
+<!-- 2024-02-20 Tue 21:13 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>SPL Lab problem set</title>
@@ -16,24 +16,30 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org9a067ed">Assigment 01</a>
+<li><a href="#org6af8fcf">Assignment 01</a>
 <ul>
-<li><a href="#orgaacb76a">01</a></li>
-<li><a href="#orgfa40d45">02</a></li>
-<li><a href="#orgf4e90cc">03</a></li>
+<li><a href="#org9b153f2">01</a></li>
+<li><a href="#org195505a">02</a></li>
+<li><a href="#orgd338a51">03</a></li>
+</ul>
+</li>
+<li><a href="#orgfe8b927">Assignment 02</a>
+<ul>
+<li><a href="#orgdc71283">01</a></li>
+<li><a href="#orged064de">02</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org9a067ed" class="outline-2">
-<h2 id="org9a067ed">Assigment 01</h2>
-<div class="outline-text-2" id="text-org9a067ed">
+<div id="outline-container-org6af8fcf" class="outline-2">
+<h2 id="org6af8fcf">Assignment 01</h2>
+<div class="outline-text-2" id="text-org6af8fcf">
 </div>
-<div id="outline-container-orgaacb76a" class="outline-3">
-<h3 id="orgaacb76a">01</h3>
-<div class="outline-text-3" id="text-orgaacb76a">
+<div id="outline-container-org9b153f2" class="outline-3">
+<h3 id="org9b153f2">01</h3>
+<div class="outline-text-3" id="text-org9b153f2">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -74,9 +80,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgfa40d45" class="outline-3">
-<h3 id="orgfa40d45">02</h3>
-<div class="outline-text-3" id="text-orgfa40d45">
+<div id="outline-container-org195505a" class="outline-3">
+<h3 id="org195505a">02</h3>
+<div class="outline-text-3" id="text-org195505a">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>#include &lt;math.h&gt;
@@ -121,9 +127,9 @@
 </div>
 </div>
 
-<div id="outline-container-orgf4e90cc" class="outline-3">
-<h3 id="orgf4e90cc">03</h3>
-<div class="outline-text-3" id="text-orgf4e90cc">
+<div id="outline-container-orgd338a51" class="outline-3">
+<h3 id="orgd338a51">03</h3>
+<div class="outline-text-3" id="text-orgd338a51">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
 <span class="linenr"> 2: </span>
@@ -141,6 +147,92 @@
 <span class="linenr">14: </span>    else
 <span class="linenr">15: </span>        printf("No\n");
 <span class="linenr">16: </span>}
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgfe8b927" class="outline-2">
+<h2 id="orgfe8b927">Assignment 02</h2>
+<div class="outline-text-2" id="text-orgfe8b927">
+</div>
+<div id="outline-container-orgdc71283" class="outline-3">
+<h3 id="orgdc71283">01</h3>
+<div class="outline-text-3" id="text-orgdc71283">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main() {
+<span class="linenr"> 4: </span>    int n;
+<span class="linenr"> 5: </span>    printf("Size: ");
+<span class="linenr"> 6: </span>    scanf("%d", &amp;n);
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    int arr[n];
+<span class="linenr"> 9: </span>    printf("Array: ");
+<span class="linenr">10: </span>    for (int i = 0; i &lt; n; i++)
+<span class="linenr">11: </span>        scanf("%d", arr+i);
+<span class="linenr">12: </span>
+<span class="linenr">13: </span>    printf("Leaders: ");
+<span class="linenr">14: </span>    for (int i = 0; i &lt; n; i++) {
+<span class="linenr">15: </span>        int flag = 1;
+<span class="linenr">16: </span>        for (int j = i+1; j &lt; n; j++)
+<span class="linenr">17: </span>            if (arr[j] &gt; arr[i]) {
+<span class="linenr">18: </span>                flag = 0;
+<span class="linenr">19: </span>                break;
+<span class="linenr">20: </span>            }
+<span class="linenr">21: </span>        if (flag)
+<span class="linenr">22: </span>            printf("%d ", arr[i]);
+<span class="linenr">23: </span>    }
+<span class="linenr">24: </span>    putchar('\n');
+<span class="linenr">25: </span>}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orged064de" class="outline-3">
+<h3 id="orged064de">02</h3>
+<div class="outline-text-3" id="text-orged064de">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span>int main() {
+<span class="linenr"> 4: </span>    int n; scanf("%d", &amp;n);
+<span class="linenr"> 5: </span>
+<span class="linenr"> 6: </span>    int arr[n];
+<span class="linenr"> 7: </span>    for (int i = 0; i &lt; n; i++)
+<span class="linenr"> 8: </span>        scanf("%d", arr+i);
+<span class="linenr"> 9: </span>
+<span class="linenr">10: </span>    int a, b; scanf("%d%d", &amp;a, &amp;b);
+<span class="linenr">11: </span>
+<span class="linenr">12: </span>    // sorting indices 0 -&gt; a
+<span class="linenr">13: </span>    for (int i = 0; i &lt;= a; i++) {
+<span class="linenr">14: </span>        for (int j = 1; j &lt;= a-i; j++) {
+<span class="linenr">15: </span>            if (arr[j-1] &gt; arr[j]) {
+<span class="linenr">16: </span>                int tmp = arr[j-1];
+<span class="linenr">17: </span>                arr[j-1] = arr[j];
+<span class="linenr">18: </span>                arr[j] = tmp;
+<span class="linenr">19: </span>            }
+<span class="linenr">20: </span>        }
+<span class="linenr">21: </span>    }
+<span class="linenr">22: </span>
+<span class="linenr">23: </span>    // sorting indices b -&gt; (n-1)
+<span class="linenr">24: </span>    for (int i = b; i &lt; n; i++) {
+<span class="linenr">25: </span>        for (int j = b+1; j &lt; n - (i-b); j++) { // (i-b) is the number
+<span class="linenr">26: </span>            if (arr[j-1] &lt; arr[j]) {            // of already sorted
+<span class="linenr">27: </span>                int tmp = arr[j-1];             // elements at the end
+<span class="linenr">28: </span>                arr[j-1] = arr[j];              // of the array
+<span class="linenr">29: </span>                arr[j] = tmp;
+<span class="linenr">30: </span>            }
+<span class="linenr">31: </span>        }
+<span class="linenr">32: </span>    }
+<span class="linenr">33: </span>
+<span class="linenr">34: </span>    for (int i = 0; i &lt; n; i++)
+<span class="linenr">35: </span>        printf("%d ", arr[i]);
+<span class="linenr">36: </span>    putchar('\n');
+<span class="linenr">37: </span>}
 </pre>
 </div>
 </div>
