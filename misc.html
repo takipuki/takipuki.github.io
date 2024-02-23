@@ -1,80 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024-02-09 Fri 09:18 -->
+<!-- 2024-02-23 Fri 14:35 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Miscellaneous</title>
 <meta name="generator" content="Org Mode" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="clean.css"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
 <div id="content" class="content">
 <h1 class="title">Miscellaneous</h1>
 
-<div id="outline-container-org785a9fb" class="outline-2">
-<h2 id="org785a9fb">Convert decimal to base</h2>
-<div class="outline-text-2" id="text-org785a9fb">
+<div id="outline-container-org6653270" class="outline-2">
+<h2 id="org6653270">Convert decimal to base</h2>
+<div class="outline-text-2" id="text-org6653270">
 <div class="org-src-container">
-<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
 <span class="linenr"> 2: </span>
-<span class="linenr"> 3: </span>char symbols[36]; // maximum base 36; digits (0-9) and alpha (A-Z)
+<span class="linenr"> 3: </span><span class="org-type">char</span> <span class="org-variable-name">symbols</span><span class="org-rainbow-delimiters-depth-1">[</span>36<span class="org-rainbow-delimiters-depth-1">]</span>; <span class="org-comment-delimiter">// </span><span class="org-comment">maximum base 36; digits (0-9) and alpha (A-Z)</span>
 <span class="linenr"> 4: </span>
-<span class="linenr"> 5: </span>void dec_to_base(int n, int base) {
-<span class="linenr"> 6: </span>    if (!n) return;
+<span class="linenr"> 5: </span><span class="org-type">void</span> <span class="org-function-name">dec_to_base</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-type">int</span> <span class="org-variable-name">n</span>, <span class="org-type">int</span> <span class="org-variable-name">base</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 6: </span>    <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-negation-char">!</span>n<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-keyword">return</span>;
 <span class="linenr"> 7: </span>
-<span class="linenr"> 8: </span>    dec_to_base(n/base, base);
-<span class="linenr"> 9: </span>    putchar(symbols[n % base]);    // least significant bit so printing last
-<span class="linenr">10: </span>}
+<span class="linenr"> 8: </span>    dec_to_base<span class="org-rainbow-delimiters-depth-2">(</span>n/base, base<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 9: </span>    putchar<span class="org-rainbow-delimiters-depth-2">(</span>symbols<span class="org-rainbow-delimiters-depth-3">[</span>n % base<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;    <span class="org-comment-delimiter">// </span><span class="org-comment">least significant bit so printing last</span>
+<span class="linenr">10: </span><span class="org-rainbow-delimiters-depth-1">}</span>
 <span class="linenr">11: </span>
-<span class="linenr">12: </span>int main(void) {
-<span class="linenr">13: </span>    int base, n;
-<span class="linenr">14: </span>    scanf("%d %d", &amp;base, &amp;n);
+<span class="linenr">12: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-type">void</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr">13: </span>    <span class="org-type">int</span> <span class="org-variable-name">base</span>, <span class="org-variable-name">n</span>;
+<span class="linenr">14: </span>    scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d %d"</span>, &amp;base, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
 <span class="linenr">15: </span>
-<span class="linenr">16: </span>    if (base &lt; 2 || base &gt; 36) {
-<span class="linenr">17: </span>        printf("Only 2 to 36 bases are supported.\n");
-<span class="linenr">18: </span>        return 0;
-<span class="linenr">19: </span>    }
+<span class="linenr">16: </span>    <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-2">(</span>base &lt; 2 || base &gt; 36<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">17: </span>        printf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"Only 2 to 36 bases are supported.\n"</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">18: </span>        <span class="org-keyword">return</span> 0;
+<span class="linenr">19: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
 <span class="linenr">20: </span>
-<span class="linenr">21: </span>    if (!n) {
-<span class="linenr">22: </span>        printf("0\n");
-<span class="linenr">23: </span>        return 0;
-<span class="linenr">24: </span>    }
+<span class="linenr">21: </span>    <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-negation-char">!</span>n<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">22: </span>        printf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"0\n"</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">23: </span>        <span class="org-keyword">return</span> 0;
+<span class="linenr">24: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
 <span class="linenr">25: </span>
-<span class="linenr">26: </span>    // initializing symbols
-<span class="linenr">27: </span>    for (int i = 0; i &lt; base; i++)
-<span class="linenr">28: </span>        symbols[i] = (i &gt;= 10) ? 'A' + i-10 : '0' + i;
+<span class="linenr">26: </span>    <span class="org-comment-delimiter">// </span><span class="org-comment">initializing symbols</span>
+<span class="linenr">27: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; base; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">28: </span>        symbols<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">]</span> = <span class="org-rainbow-delimiters-depth-2">(</span>i &gt;= 10<span class="org-rainbow-delimiters-depth-2">)</span> ? <span class="org-string">'A'</span> + i-10 : <span class="org-string">'0'</span> + i;
 <span class="linenr">29: </span>
-<span class="linenr">30: </span>    dec_to_base(n, base);
-<span class="linenr">31: </span>    putchar('\n');
-<span class="linenr">32: </span>}
+<span class="linenr">30: </span>    dec_to_base<span class="org-rainbow-delimiters-depth-2">(</span>n, base<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">31: </span>    putchar<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">32: </span><span class="org-rainbow-delimiters-depth-1">}</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org02e0a2b" class="outline-2">
-<h2 id="org02e0a2b">Armstrong number</h2>
-<div class="outline-text-2" id="text-org02e0a2b">
+<div id="outline-container-orgd2c67a1" class="outline-2">
+<h2 id="orgd2c67a1">Armstrong number</h2>
+<div class="outline-text-2" id="text-orgd2c67a1">
 <div class="org-src-container">
-<pre class="src src-C"><span class="linenr"> 1: </span>#include &lt;stdio.h&gt;
-<span class="linenr"> 2: </span>#include &lt;math.h&gt;
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">math.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
 <span class="linenr"> 3: </span>
-<span class="linenr"> 4: </span>int main() {
-<span class="linenr"> 5: </span>    int n; scanf("%d", &amp;n);
+<span class="linenr"> 4: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
 <span class="linenr"> 6: </span>
-<span class="linenr"> 7: </span>    int n_digs = log10(n) + 1;
+<span class="linenr"> 7: </span>    <span class="org-type">int</span> <span class="org-variable-name">n_digs</span> = log10<span class="org-rainbow-delimiters-depth-2">(</span>n<span class="org-rainbow-delimiters-depth-2">)</span> + 1;
 <span class="linenr"> 8: </span>
-<span class="linenr"> 9: </span>    int sum = 0;
-<span class="linenr">10: </span>    for (int i = n; i; i /= 10)
-<span class="linenr">11: </span>        sum += pow(i % 10, n_digs);
+<span class="linenr"> 9: </span>    <span class="org-type">int</span> <span class="org-variable-name">sum</span> = 0;
+<span class="linenr">10: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = n; i; i /= 10<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">11: </span>        sum += pow<span class="org-rainbow-delimiters-depth-2">(</span>i % 10, n_digs<span class="org-rainbow-delimiters-depth-2">)</span>;
 <span class="linenr">12: </span>
-<span class="linenr">13: </span>    if (sum == n)
-<span class="linenr">14: </span>        printf("Yes\n");
-<span class="linenr">15: </span>    else
-<span class="linenr">16: </span>        printf("No\n");
-<span class="linenr">17: </span>}
+<span class="linenr">13: </span>    <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-2">(</span>sum == n<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">14: </span>        printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Yes\n"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">15: </span>    <span class="org-keyword">else</span>
+<span class="linenr">16: </span>        printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"No\n"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">17: </span><span class="org-rainbow-delimiters-depth-1">}</span>
 </pre>
 </div>
 </div>
