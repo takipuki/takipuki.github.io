@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2024-03-09 Sat 20:15 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mid - 22su</title>
+<meta name="generator" content="Org Mode" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="clean.css"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="../clean.css"/>
+<style type="text/css">
+ol { list-style-type: lower-alpha; }
+li { margin: 1em 0; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Mid - 22su</h1>
+
+<div id="outline-container-org8c3a62e" class="outline-2">
+<h2 id="org8c3a62e">01</h2>
+<div class="outline-text-2" id="text-org8c3a62e">
+<ol class="org-ol">
+<li><p>
+Rewrite correcting the errors
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr">1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr">2: </span><span class="org-type">void</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr">3: </span>    <span class="org-type">int</span> <span class="org-variable-name">num1</span> = 5, <span class="org-variable-name">num2</span>; <span class="org-type">char</span> <span class="org-variable-name">chr</span> = <span class="org-string">'q'</span>;
+<span class="linenr">4: </span>    scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;num2<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">5: </span>    num1 = num2 % chr;
+<span class="linenr">6: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Result is = %d "</span>, num1<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">7: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div></li>
+
+<li><code>smallest-val</code> - hyphen not allowed <br>
+<code>while</code> - reserved keyword <br>
+<code>2ndNum</code> - starts with a number <br>
+<code>!New</code> - <code>!</code> is the negate operator <br>
+<code>avg marks</code> space not allowed <br></li>
+
+<li><code>a = 10.0</code> <br>
+<code>b = 10</code> <br>
+<code>c = 12.5</code> <br>
+<code>d = 12</code></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org6f51990" class="outline-2">
+<h2 id="org6f51990">02</h2>
+<div class="outline-text-2" id="text-org6f51990">
+<ol class="org-ol">
+<li><code>num = 1</code>: output: <code>12 5 12</code> <br>
+<br>
+<code>num = 3</code>: output: <code>0 0 0</code></li>
+
+<li><p>
+Trace table
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">i</th>
+<th scope="col" class="org-right">sum</th>
+<th scope="col" class="org-right">b</th>
+<th scope="col" class="org-right">a</th>
+<th scope="col" class="org-right">y</th>
+<th scope="col" class="org-right">x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">0</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">7</td>
+<td class="org-right">8</td>
+<td class="org-right">2</td>
+<td class="org-right">3</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">9</td>
+<td class="org-right">19</td>
+<td class="org-right">27</td>
+<td class="org-right">3</td>
+<td class="org-right">6</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">36</td>
+<td class="org-right">37</td>
+<td class="org-right">64</td>
+<td class="org-right">4</td>
+<td class="org-right">10</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-right">100</td>
+<td class="org-right">61</td>
+<td class="org-right">125</td>
+<td class="org-right">5</td>
+<td class="org-right">15</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-right">225</td>
+<td class="org-right">91</td>
+<td class="org-right">216</td>
+<td class="org-right">6</td>
+<td class="org-right">21</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org90a3098" class="outline-2">
+<h2 id="org90a3098">03</h2>
+<div class="outline-text-2" id="text-org90a3098">
+<ol class="org-ol">
+<li><p>
+Rewrite using do-while
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span><span class="org-type">void</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 3: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span> = 3, <span class="org-variable-name">i</span>, <span class="org-variable-name">j</span>, <span class="org-variable-name">sum</span> = 0;
+<span class="linenr"> 4: </span>
+<span class="linenr"> 5: </span>    i = 0;
+<span class="linenr"> 6: </span>    <span class="org-keyword">do</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr"> 7: </span>        j = 0;
+<span class="linenr"> 8: </span>        <span class="org-keyword">do</span> <span class="org-rainbow-delimiters-depth-3">{</span>
+<span class="linenr"> 9: </span>            <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-4">(</span>i == j<span class="org-rainbow-delimiters-depth-4">)</span> sum += i + j;
+<span class="linenr">10: </span>            <span class="org-keyword">else</span> <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-4">(</span>i &gt; j<span class="org-rainbow-delimiters-depth-4">)</span> sum += i + n;
+<span class="linenr">11: </span>            <span class="org-keyword">else</span> sum += n - j;
+<span class="linenr">12: </span>            j++;
+<span class="linenr">13: </span>        <span class="org-rainbow-delimiters-depth-3">}</span> <span class="org-keyword">while</span> <span class="org-rainbow-delimiters-depth-3">(</span>j &lt;= i<span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">14: </span>        i++;
+<span class="linenr">15: </span>    <span class="org-rainbow-delimiters-depth-2">}</span> <span class="org-keyword">while</span> <span class="org-rainbow-delimiters-depth-2">(</span>i &lt; n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">16: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div></li>
+
+<li><p>
+WAP
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">void</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">float</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%f"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">float</span> <span class="org-variable-name">sum</span> = 0;
+<span class="linenr"> 6: </span>    <span class="org-type">int</span> <span class="org-variable-name">count</span> = 0;
+<span class="linenr"> 7: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span>; n != 0; scanf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-3">)</span><span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr"> 8: </span>        <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-3">(</span>n &gt; 0<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
+<span class="linenr"> 9: </span>            sum += 0;
+<span class="linenr">10: </span>            count++;
+<span class="linenr">11: </span>        <span class="org-rainbow-delimiters-depth-3">}</span>
+<span class="linenr">12: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">13: </span>
+<span class="linenr">14: </span>    <span class="org-type">float</span> <span class="org-variable-name">avg</span> = sum / count;
+<span class="linenr">15: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org065924a" class="outline-2">
+<h2 id="org065924a">04</h2>
+<div class="outline-text-2" id="text-org065924a">
+<ol class="org-ol">
+<li><p>
+Trace table
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">i</th>
+<th scope="col" class="org-right">n</th>
+<th scope="col" class="org-right">F[0]</th>
+<th scope="col" class="org-right">F[1]</th>
+<th scope="col" class="org-right">F[2]</th>
+<th scope="col" class="org-right">F[3]</th>
+<th scope="col" class="org-right">F[4]</th>
+<th scope="col" class="org-right">F[5]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">3</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">3</td>
+<td class="org-right">3</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">3</td>
+<td class="org-right">3</td>
+<td class="org-right">8</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">3</td>
+<td class="org-right">3</td>
+<td class="org-right">8</td>
+<td class="org-right">5</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">3</td>
+<td class="org-right">3</td>
+<td class="org-right">8</td>
+<td class="org-right">5</td>
+<td class="org-right">12</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-right">3</td>
+<td class="org-right">3</td>
+<td class="org-right">8</td>
+<td class="org-right">5</td>
+<td class="org-right">12</td>
+<td class="org-right">7</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-right">3</td>
+<td class="org-right">3</td>
+<td class="org-right">8</td>
+<td class="org-right">5</td>
+<td class="org-right">12</td>
+<td class="org-right">7</td>
+<td class="org-right">16</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table></li>
+
+<li><p>
+WAP
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>
+<span class="linenr"> 6: </span>    <span class="org-type">int</span> <span class="org-variable-name">arr</span><span class="org-rainbow-delimiters-depth-2">[</span>100<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 7: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span> scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;arr<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 8: </span>
+<span class="linenr"> 9: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Index   Value\n"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">10: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"-----   -----\n"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">11: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">12: </span>        printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%5d   %5d\n"</span>, i, arr<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">13: </span>
+<span class="linenr">14: </span>    <span class="org-type">int</span> <span class="org-variable-name">sum</span> = 0;
+<span class="linenr">15: </span>    <span class="org-type">int</span> <span class="org-variable-name">count</span> = 0;
+<span class="linenr">16: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 1; i &lt; n; i += 2<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">17: </span>        sum += arr<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">]</span>;
+<span class="linenr">18: </span>        count++;
+<span class="linenr">19: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">20: </span>
+<span class="linenr">21: </span>    <span class="org-type">float</span> <span class="org-variable-name">avg</span> = <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">float</span><span class="org-rainbow-delimiters-depth-2">)</span>sum / count;
+<span class="linenr">22: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"avg: %f\n"</span>, avg<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">23: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org7aed792" class="outline-2">
+<h2 id="org7aed792">05</h2>
+<div class="outline-text-2" id="text-org7aed792">
+<ol class="org-ol">
+<li><p>
+WAP
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>
+<span class="linenr"> 6: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = n; i &gt; 0; i--<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr"> 7: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">start</span> = 2*i; start &gt;= 2; start -= 2<span class="org-rainbow-delimiters-depth-3">)</span>
+<span class="linenr"> 8: </span>            printf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"%d "</span>, start<span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr"> 9: </span>        putchar<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">10: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">11: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+</div>
+</body>
+</html>
