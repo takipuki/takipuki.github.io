@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024-03-09 Sat 20:15 -->
+<!-- 2024-03-09 Sat 20:26 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mid - 23sp</title>
@@ -19,9 +19,9 @@ li { margin: 1em 0; }
 <div id="content" class="content">
 <h1 class="title">Mid - 23sp</h1>
 
-<div id="outline-container-orgbe63588" class="outline-2">
-<h2 id="orgbe63588">01</h2>
-<div class="outline-text-2" id="text-orgbe63588">
+<div id="outline-container-org94ae45d" class="outline-2">
+<h2 id="org94ae45d">01</h2>
+<div class="outline-text-2" id="text-org94ae45d">
 <ol class="org-ol">
 <li>invalid: 1, 3, 4, 5</li>
 
@@ -33,7 +33,7 @@ li { margin: 1em 0; }
 <li><p>
 <code>b = 10</code>:
 </p>
-<pre class="example" id="orgaa193d8">
+<pre class="example" id="org48f8891">
 SPL
 Spring
 </pre>
@@ -44,7 +44,7 @@ Spring
 <p>
 <code>b = 2</code>:
 </p>
-<pre class="example" id="orgc485749">
+<pre class="example" id="org34e6678">
 Spring
 </pre>
 <p>
@@ -54,33 +54,33 @@ Spring
 </div>
 </div>
 
-<div id="outline-container-org67c0ed9" class="outline-2">
-<h2 id="org67c0ed9">02</h2>
-<div class="outline-text-2" id="text-org67c0ed9">
+<div id="outline-container-org634a226" class="outline-2">
+<h2 id="org634a226">02</h2>
+<div class="outline-text-2" id="text-org634a226">
 <ol class="org-ol">
 <li><p>
 rewrite using switch
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C"><span class="org-type">int</span> <span class="org-variable-name">n</span>, <span class="org-variable-name">a</span>;
-scanf<span class="org-rainbow-delimiters-depth-1">(</span>&#8220;%d %d&#8221;, &amp;n, &amp;a<span class="org-rainbow-delimiters-depth-1">)</span>;
-
-<span class="org-keyword">switch</span> <span class="org-rainbow-delimiters-depth-1">(</span>n &gt; a<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
-<span class="org-keyword">case</span> 1:
-    <span class="org-keyword">switch</span> <span class="org-rainbow-delimiters-depth-2">(</span>n-a &gt; 5<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
-    <span class="org-keyword">case</span> 1:
-        printf<span class="org-rainbow-delimiters-depth-3">(</span>&#8220;Difference is greater than 5\n&#8221;<span class="org-rainbow-delimiters-depth-3">)</span>;
-        <span class="org-keyword">break</span>;
-    <span class="org-keyword">default</span>:
-        printf<span class="org-rainbow-delimiters-depth-3">(</span>&#8220;Difference is less than or equal to 5\n&#8221;<span class="org-rainbow-delimiters-depth-3">)</span>;
-        <span class="org-keyword">break</span>;
-    <span class="org-rainbow-delimiters-depth-2">}</span>
-    <span class="org-keyword">break</span>;
-<span class="org-keyword">default</span>:
-    printf<span class="org-rainbow-delimiters-depth-2">(</span>&#8220;Please give a larger value of n\n&#8221;<span class="org-rainbow-delimiters-depth-2">)</span>;
-    <span class="org-keyword">break</span>;
-<span class="org-rainbow-delimiters-depth-1">}</span>
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-type">int</span> <span class="org-variable-name">n</span>, <span class="org-variable-name">a</span>;
+<span class="linenr"> 2: </span>scanf<span class="org-rainbow-delimiters-depth-1">(</span>&#8220;%d %d&#8221;, &amp;n, &amp;a<span class="org-rainbow-delimiters-depth-1">)</span>;
+<span class="linenr"> 3: </span>
+<span class="linenr"> 4: </span><span class="org-keyword">switch</span> <span class="org-rainbow-delimiters-depth-1">(</span>n &gt; a<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 5: </span><span class="org-keyword">case</span> 1:
+<span class="linenr"> 6: </span>    <span class="org-keyword">switch</span> <span class="org-rainbow-delimiters-depth-2">(</span>n-a &gt; 5<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr"> 7: </span>    <span class="org-keyword">case</span> 1:
+<span class="linenr"> 8: </span>        printf<span class="org-rainbow-delimiters-depth-3">(</span>&#8220;Difference is greater than 5\n&#8221;<span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr"> 9: </span>        <span class="org-keyword">break</span>;
+<span class="linenr">10: </span>    <span class="org-keyword">default</span>:
+<span class="linenr">11: </span>        printf<span class="org-rainbow-delimiters-depth-3">(</span>&#8220;Difference is less than or equal to 5\n&#8221;<span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">12: </span>        <span class="org-keyword">break</span>;
+<span class="linenr">13: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">14: </span>    <span class="org-keyword">break</span>;
+<span class="linenr">15: </span><span class="org-keyword">default</span>:
+<span class="linenr">16: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span>&#8220;Please give a larger value of n\n&#8221;<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">17: </span>    <span class="org-keyword">break</span>;
+<span class="linenr">18: </span><span class="org-rainbow-delimiters-depth-1">}</span>
 </pre>
 </div>
 <p>
@@ -176,41 +176,41 @@ Trace table
 </div>
 </div>
 
-<div id="outline-container-orgd87f473" class="outline-2">
-<h2 id="orgd87f473">03</h2>
-<div class="outline-text-2" id="text-orgd87f473">
+<div id="outline-container-org01e6b4e" class="outline-2">
+<h2 id="org01e6b4e">03</h2>
+<div class="outline-text-2" id="text-org01e6b4e">
 <ol class="org-ol">
 <li><p>
 rewrite with do-while
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgd85fc73"><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
-
-<span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
-    <span class="org-type">int</span> <span class="org-variable-name">weeks</span> = 2, <span class="org-variable-name">days_in_week</span> = 7;
-
-    <span class="org-type">int</span> <span class="org-variable-name">i</span> = 1;
-    <span class="org-keyword">do</span> <span class="org-rainbow-delimiters-depth-2">{</span>
-        printf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"Week: %d\n"</span>, i<span class="org-rainbow-delimiters-depth-3">)</span>;
-
-        <span class="org-type">int</span> <span class="org-variable-name">j</span> = 1;
-        <span class="org-keyword">do</span> <span class="org-rainbow-delimiters-depth-3">{</span>
-            <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-4">(</span>i % 2 == 0<span class="org-rainbow-delimiters-depth-4">)</span> <span class="org-rainbow-delimiters-depth-4">{</span>
-                <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-5">(</span>j % 2 == 0<span class="org-rainbow-delimiters-depth-5">)</span>
-                    printf<span class="org-rainbow-delimiters-depth-5">(</span><span class="org-string">"Day: %d\n"</span>, j<span class="org-rainbow-delimiters-depth-5">)</span>;
-            <span class="org-rainbow-delimiters-depth-4">}</span>
-            <span class="org-keyword">else</span><span class="org-rainbow-delimiters-depth-4">{</span>
-                <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-5">(</span>j % 2 != 0<span class="org-rainbow-delimiters-depth-5">)</span>
-                    printf<span class="org-rainbow-delimiters-depth-5">(</span><span class="org-string">"Day: %d\n"</span>, j<span class="org-rainbow-delimiters-depth-5">)</span>;
-            <span class="org-rainbow-delimiters-depth-4">}</span>
-            j++;
-        <span class="org-rainbow-delimiters-depth-3">}</span> <span class="org-keyword">while</span> <span class="org-rainbow-delimiters-depth-3">(</span>j &lt;= days_in_week<span class="org-rainbow-delimiters-depth-3">)</span>;
-        i++;
-    <span class="org-rainbow-delimiters-depth-2">}</span> <span class="org-keyword">while</span> <span class="org-rainbow-delimiters-depth-2">(</span>i &lt;= weeks<span class="org-rainbow-delimiters-depth-2">)</span>;
-
-    <span class="org-keyword">return</span> 0;
-<span class="org-rainbow-delimiters-depth-1">}</span>
+<pre class="src src-C" id="org9f64a49"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">weeks</span> = 2, <span class="org-variable-name">days_in_week</span> = 7;
+<span class="linenr"> 5: </span>
+<span class="linenr"> 6: </span>    <span class="org-type">int</span> <span class="org-variable-name">i</span> = 1;
+<span class="linenr"> 7: </span>    <span class="org-keyword">do</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr"> 8: </span>        printf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"Week: %d\n"</span>, i<span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr"> 9: </span>
+<span class="linenr">10: </span>        <span class="org-type">int</span> <span class="org-variable-name">j</span> = 1;
+<span class="linenr">11: </span>        <span class="org-keyword">do</span> <span class="org-rainbow-delimiters-depth-3">{</span>
+<span class="linenr">12: </span>            <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-4">(</span>i % 2 == 0<span class="org-rainbow-delimiters-depth-4">)</span> <span class="org-rainbow-delimiters-depth-4">{</span>
+<span class="linenr">13: </span>                <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-5">(</span>j % 2 == 0<span class="org-rainbow-delimiters-depth-5">)</span>
+<span class="linenr">14: </span>                    printf<span class="org-rainbow-delimiters-depth-5">(</span><span class="org-string">"Day: %d\n"</span>, j<span class="org-rainbow-delimiters-depth-5">)</span>;
+<span class="linenr">15: </span>            <span class="org-rainbow-delimiters-depth-4">}</span>
+<span class="linenr">16: </span>            <span class="org-keyword">else</span><span class="org-rainbow-delimiters-depth-4">{</span>
+<span class="linenr">17: </span>                <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-5">(</span>j % 2 != 0<span class="org-rainbow-delimiters-depth-5">)</span>
+<span class="linenr">18: </span>                    printf<span class="org-rainbow-delimiters-depth-5">(</span><span class="org-string">"Day: %d\n"</span>, j<span class="org-rainbow-delimiters-depth-5">)</span>;
+<span class="linenr">19: </span>            <span class="org-rainbow-delimiters-depth-4">}</span>
+<span class="linenr">20: </span>            j++;
+<span class="linenr">21: </span>        <span class="org-rainbow-delimiters-depth-3">}</span> <span class="org-keyword">while</span> <span class="org-rainbow-delimiters-depth-3">(</span>j &lt;= days_in_week<span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">22: </span>        i++;
+<span class="linenr">23: </span>    <span class="org-rainbow-delimiters-depth-2">}</span> <span class="org-keyword">while</span> <span class="org-rainbow-delimiters-depth-2">(</span>i &lt;= weeks<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">24: </span>
+<span class="linenr">25: </span>    <span class="org-keyword">return</span> 0;
+<span class="linenr">26: </span><span class="org-rainbow-delimiters-depth-1">}</span>
 </pre>
 </div>
 <p>
@@ -222,30 +222,30 @@ WAP
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="orgcc044a2"><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
-
-<span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
-    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
-
-    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 1; i &lt;= n; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
-        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; <span class="org-rainbow-delimiters-depth-4">(</span>n-i<span class="org-rainbow-delimiters-depth-4">)</span>*2; j++<span class="org-rainbow-delimiters-depth-3">)</span>
-            putchar<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">' '</span><span class="org-rainbow-delimiters-depth-3">)</span>;
-
-        <span class="org-type">int</span> <span class="org-variable-name">start</span> = 2*i;
-        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; i; j++<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
-            printf<span class="org-rainbow-delimiters-depth-4">(</span><span class="org-string">"%d "</span>, start<span class="org-rainbow-delimiters-depth-4">)</span>;
-            start += 2;
-        <span class="org-rainbow-delimiters-depth-3">}</span>
-
-        start -= 4;
-        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; i-1; j++<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
-            printf<span class="org-rainbow-delimiters-depth-4">(</span><span class="org-string">"%d "</span>, start<span class="org-rainbow-delimiters-depth-4">)</span>;
-            start -= 2;
-        <span class="org-rainbow-delimiters-depth-3">}</span>
-
-        putchar<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-3">)</span>;
-    <span class="org-rainbow-delimiters-depth-2">}</span>
-<span class="org-rainbow-delimiters-depth-1">}</span>
+<pre class="src src-C" id="org702cb89"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>
+<span class="linenr"> 6: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 1; i &lt;= n; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr"> 7: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; <span class="org-rainbow-delimiters-depth-4">(</span>n-i<span class="org-rainbow-delimiters-depth-4">)</span>*2; j++<span class="org-rainbow-delimiters-depth-3">)</span>
+<span class="linenr"> 8: </span>            putchar<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">' '</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr"> 9: </span>
+<span class="linenr">10: </span>        <span class="org-type">int</span> <span class="org-variable-name">start</span> = 2*i;
+<span class="linenr">11: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; i; j++<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
+<span class="linenr">12: </span>            printf<span class="org-rainbow-delimiters-depth-4">(</span><span class="org-string">"%d "</span>, start<span class="org-rainbow-delimiters-depth-4">)</span>;
+<span class="linenr">13: </span>            start += 2;
+<span class="linenr">14: </span>        <span class="org-rainbow-delimiters-depth-3">}</span>
+<span class="linenr">15: </span>
+<span class="linenr">16: </span>        start -= 4;
+<span class="linenr">17: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; i-1; j++<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
+<span class="linenr">18: </span>            printf<span class="org-rainbow-delimiters-depth-4">(</span><span class="org-string">"%d "</span>, start<span class="org-rainbow-delimiters-depth-4">)</span>;
+<span class="linenr">19: </span>            start -= 2;
+<span class="linenr">20: </span>        <span class="org-rainbow-delimiters-depth-3">}</span>
+<span class="linenr">21: </span>
+<span class="linenr">22: </span>        putchar<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">23: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">24: </span><span class="org-rainbow-delimiters-depth-1">}</span>
 </pre>
 </div>
 
@@ -256,49 +256,49 @@ WAP
 </div>
 </div>
 
-<div id="outline-container-org143386f" class="outline-2">
-<h2 id="org143386f">04</h2>
-<div class="outline-text-2" id="text-org143386f">
+<div id="outline-container-orgc43c0b8" class="outline-2">
+<h2 id="orgc43c0b8">04</h2>
+<div class="outline-text-2" id="text-orgc43c0b8">
 <ol class="org-ol">
 <li><p>
 WAP
 </p>
 
 <div class="org-src-container">
-<pre class="src src-C" id="org92a55fe"><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
-
-<span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
-    <span class="org-type">float</span> <span class="org-variable-name">sum_cg3</span> = 0;
-    <span class="org-type">int</span> <span class="org-variable-name">count_cg3</span> = 0;
-
-    <span class="org-type">float</span> <span class="org-variable-name">max</span> = 0;
-    <span class="org-type">float</span> <span class="org-variable-name">min</span> = 5;
-    <span class="org-type">int</span> <span class="org-variable-name">count_max</span> = 0;
-
-    <span class="org-type">float</span> <span class="org-variable-name">tmp</span>;
-    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; 100; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
-        scanf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"%d"</span>, &amp;tmp<span class="org-rainbow-delimiters-depth-3">)</span>;
-
-        <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-3">(</span>tmp &gt; 3<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
-            sum_cg3 += tmp;
-            count_cg3++;
-        <span class="org-rainbow-delimiters-depth-3">}</span>
-
-        <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-3">(</span>tmp &gt; max<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
-            max = tmp;
-            count_max = 1;
-        <span class="org-rainbow-delimiters-depth-3">}</span> <span class="org-keyword">else</span> <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-3">(</span>tmp == max<span class="org-rainbow-delimiters-depth-3">)</span>
-            count_max++;
-
-        <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-3">(</span>tmp &lt; min<span class="org-rainbow-delimiters-depth-3">)</span> min = tmp;
-    <span class="org-rainbow-delimiters-depth-2">}</span>
-
-    <span class="org-type">float</span> <span class="org-variable-name">avg_cg3</span> = sum_cg3 / count_cg3;
-
-    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Average: %.2f\n"</span>, avg_cg3<span class="org-rainbow-delimiters-depth-2">)</span>;
-    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Higest: %.2f and count: %d\n"</span>, max, count_max<span class="org-rainbow-delimiters-depth-2">)</span>;
-    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Lowest: %.2f\n"</span>, min<span class="org-rainbow-delimiters-depth-2">)</span>;
-<span class="org-rainbow-delimiters-depth-1">}</span>
+<pre class="src src-C" id="org575aeaf"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">float</span> <span class="org-variable-name">sum_cg3</span> = 0;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">count_cg3</span> = 0;
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    <span class="org-type">float</span> <span class="org-variable-name">max</span> = 0;
+<span class="linenr"> 8: </span>    <span class="org-type">float</span> <span class="org-variable-name">min</span> = 5;
+<span class="linenr"> 9: </span>    <span class="org-type">int</span> <span class="org-variable-name">count_max</span> = 0;
+<span class="linenr">10: </span>
+<span class="linenr">11: </span>    <span class="org-type">float</span> <span class="org-variable-name">tmp</span>;
+<span class="linenr">12: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; 100; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">13: </span>        scanf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"%d"</span>, &amp;tmp<span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">14: </span>
+<span class="linenr">15: </span>        <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-3">(</span>tmp &gt; 3<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
+<span class="linenr">16: </span>            sum_cg3 += tmp;
+<span class="linenr">17: </span>            count_cg3++;
+<span class="linenr">18: </span>        <span class="org-rainbow-delimiters-depth-3">}</span>
+<span class="linenr">19: </span>
+<span class="linenr">20: </span>        <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-3">(</span>tmp &gt; max<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
+<span class="linenr">21: </span>            max = tmp;
+<span class="linenr">22: </span>            count_max = 1;
+<span class="linenr">23: </span>        <span class="org-rainbow-delimiters-depth-3">}</span> <span class="org-keyword">else</span> <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-3">(</span>tmp == max<span class="org-rainbow-delimiters-depth-3">)</span>
+<span class="linenr">24: </span>            count_max++;
+<span class="linenr">25: </span>
+<span class="linenr">26: </span>        <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-3">(</span>tmp &lt; min<span class="org-rainbow-delimiters-depth-3">)</span> min = tmp;
+<span class="linenr">27: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">28: </span>
+<span class="linenr">29: </span>    <span class="org-type">float</span> <span class="org-variable-name">avg_cg3</span> = sum_cg3 / count_cg3;
+<span class="linenr">30: </span>
+<span class="linenr">31: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Average: %.2f\n"</span>, avg_cg3<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">32: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Higest: %.2f and count: %d\n"</span>, max, count_max<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">33: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Lowest: %.2f\n"</span>, min<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">34: </span><span class="org-rainbow-delimiters-depth-1">}</span>
 </pre>
 </div>
 <p>
@@ -308,9 +308,9 @@ WAP
 </div>
 </div>
 
-<div id="outline-container-org1f9f489" class="outline-2">
-<h2 id="org1f9f489">05</h2>
-<div class="outline-text-2" id="text-org1f9f489">
+<div id="outline-container-orgfbbeb03" class="outline-2">
+<h2 id="orgfbbeb03">05</h2>
+<div class="outline-text-2" id="text-orgfbbeb03">
 <ol class="org-ol">
 <li><p>
 Initializing <code>arr</code> with zeros and <code>k</code> with 15.
