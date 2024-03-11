@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2024-03-11 Mon 17:33 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mid - 23su</title>
+<meta name="generator" content="Org Mode" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="clean.css"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="../clean.css"/>
+<style type="text/css">
+ol { list-style-type: lower-alpha; }
+li { margin: 1em 0; }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Mid - 23su</h1>
+
+<div id="outline-container-orgfd556d0" class="outline-2">
+<h2 id="orgfd556d0">01</h2>
+<div class="outline-text-2" id="text-orgfd556d0">
+<ol class="org-ol">
+<li><code>is-Val</code>: hyphens not allowed <br>
+<code>while</code>: reserved keyword <br>
+<code>CSE 1111</code>: spaces not allowed</li>
+
+<li><code>float a = 5.0</code> <br>
+<code>int b = 0</code> <br>
+<code>int e = 5</code> <br>
+<code>int c = 11 + 5 = 16</code> <br>
+<code>double result = 1.0</code></li>
+
+<li><p>
+<code>a = 0</code>, <code>b = 0</code>:
+</p>
+<pre class="example" id="orgc7b642f">
+Pattern
+FizzBuzz
+</pre>
+
+<p>
+<br>
+<code>a = -1</code>, <code>b = -7</code>:
+</p>
+<pre class="example" id="org48ad914">
+Fizz
+</pre></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orga2d13c0" class="outline-2">
+<h2 id="orga2d13c0">02</h2>
+<div class="outline-text-2" id="text-orga2d13c0">
+<ol class="org-ol">
+<li><p>
+Rewrite using if-else
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span class="org-type">char</span> <span class="org-variable-name">rank</span>;
+scanf<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">"%c"</span>, &amp;rank<span class="org-rainbow-delimiters-depth-1">)</span>;
+<span class="org-type">int</span> <span class="org-variable-name">bonus</span> = 0;
+<span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-1">(</span>rank == <span class="org-string">'p'</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+    bonus += 20;
+    bonus += 20;
+    bonus += 20;
+<span class="org-rainbow-delimiters-depth-1">}</span> <span class="org-keyword">else</span> <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-1">(</span>rank == <span class="org-string">'g'</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+    bonus += 20;
+    bonus += 20;
+<span class="org-rainbow-delimiters-depth-1">}</span> <span class="org-keyword">else</span> <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-1">(</span>rank == <span class="org-string">'s'</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+    bonus += 20;
+<span class="org-rainbow-delimiters-depth-1">}</span> <span class="org-keyword">else</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+    bonus += 10;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+printf<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-string">"\n%d"</span>, bonus<span class="org-rainbow-delimiters-depth-1">)</span>;
+</pre>
+</div></li>
+
+<li><p>
+Trace table
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">j</th>
+<th scope="col" class="org-left">j &gt; i</th>
+<th scope="col" class="org-left">j%2 == 0</th>
+<th scope="col" class="org-right">i</th>
+<th scope="col" class="org-right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">2</td>
+<td class="org-right">10</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">TRUE</td>
+<td class="org-left">TRUE</td>
+<td class="org-right">5</td>
+<td class="org-right">10</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">TRUE</td>
+<td class="org-left">FALSE</td>
+<td class="org-right">7</td>
+<td class="org-right">9</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">TRUE</td>
+<td class="org-left">TRUE</td>
+<td class="org-right">10</td>
+<td class="org-right">9</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">FALSE</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgcd08e61" class="outline-2">
+<h2 id="orgcd08e61">03</h2>
+<div class="outline-text-2" id="text-orgcd08e61">
+<ol class="org-ol">
+<li><p>
+Pattern
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">void</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span> = 4;
+<span class="linenr"> 5: </span>
+<span class="linenr"> 6: </span>    <span class="org-type">int</span> <span class="org-variable-name">spaces</span> = n - 1;
+<span class="linenr"> 7: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr"> 8: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; spaces; j++<span class="org-rainbow-delimiters-depth-3">)</span> putchar<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">' '</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr"> 9: </span>        spaces--;
+<span class="linenr">10: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n+1; j++<span class="org-rainbow-delimiters-depth-3">)</span> putchar<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">'*'</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">11: </span>        putchar<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">12: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">13: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div></li>
+
+<li><p>
+Rewrite using while
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span class="org-type">int</span> <span class="org-variable-name">arr</span><span class="org-rainbow-delimiters-depth-1">[</span>10<span class="org-rainbow-delimiters-depth-1">]</span> = <span class="org-rainbow-delimiters-depth-1">{</span>0<span class="org-rainbow-delimiters-depth-1">}</span>;
+<span class="org-type">int</span> <span class="org-variable-name">k</span> = 15;
+
+<span class="org-type">int</span> <span class="org-variable-name">i</span> = 1;
+<span class="org-keyword">while</span> <span class="org-rainbow-delimiters-depth-1">(</span>i &lt; 6<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+    arr<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">]</span> = ++k-2;
+    k++;
+    i += 2;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+<span class="org-type">int</span> <span class="org-variable-name">c</span> = 0;
+i = 6;
+<span class="org-keyword">while</span> <span class="org-rainbow-delimiters-depth-1">(</span>i &lt; 10<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+    <span class="org-type">int</span> <span class="org-variable-name">j</span> = 9;
+    <span class="org-keyword">while</span> <span class="org-rainbow-delimiters-depth-2">(</span>j &gt;= i<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+        arr<span class="org-rainbow-delimiters-depth-3">[</span>j<span class="org-rainbow-delimiters-depth-3">]</span> = ++c;
+        j--;
+    <span class="org-rainbow-delimiters-depth-2">}</span>
+    i++;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+
+i = 0;
+<span class="org-keyword">while</span> <span class="org-rainbow-delimiters-depth-1">(</span>i &lt; 10<span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+    <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-2">(</span>i%2 == 0<span class="org-rainbow-delimiters-depth-2">)</span> arr<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">]</span> = ++k;
+    i++;
+<span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org10718fe" class="outline-2">
+<h2 id="org10718fe">04</h2>
+<div class="outline-text-2" id="text-org10718fe">
+<ol class="org-ol">
+<li><p>
+WAP
+</p>
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">arr</span><span class="org-rainbow-delimiters-depth-2">[</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span> scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;arr<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 8: </span>
+<span class="linenr"> 9: </span>    <span class="org-type">int</span> <span class="org-variable-name">half</span> = n/2;
+<span class="linenr">10: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; half/2; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">11: </span>        <span class="org-type">int</span> <span class="org-variable-name">tmp</span> = arr<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">]</span>;
+<span class="linenr">12: </span>        arr<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">]</span> = arr<span class="org-rainbow-delimiters-depth-3">[</span>half-1 - i<span class="org-rainbow-delimiters-depth-3">]</span>;
+<span class="linenr">13: </span>        arr<span class="org-rainbow-delimiters-depth-3">[</span>half-1 - i<span class="org-rainbow-delimiters-depth-3">]</span> = tmp;
+<span class="linenr">14: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">15: </span>
+<span class="linenr">16: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = half+1; i &lt; <span class="org-rainbow-delimiters-depth-3">(</span>half+1<span class="org-rainbow-delimiters-depth-3">)</span>+<span class="org-rainbow-delimiters-depth-3">(</span>half/2<span class="org-rainbow-delimiters-depth-3">)</span>; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">17: </span>        <span class="org-type">int</span> <span class="org-variable-name">tmp</span> = arr<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">]</span>;
+<span class="linenr">18: </span>        arr<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">]</span> = arr<span class="org-rainbow-delimiters-depth-3">[</span>n-1 - <span class="org-rainbow-delimiters-depth-4">(</span>i - <span class="org-rainbow-delimiters-depth-5">(</span>half+1<span class="org-rainbow-delimiters-depth-5">)</span><span class="org-rainbow-delimiters-depth-4">)</span><span class="org-rainbow-delimiters-depth-3">]</span>;
+<span class="linenr">19: </span>        arr<span class="org-rainbow-delimiters-depth-3">[</span>n-1 - <span class="org-rainbow-delimiters-depth-4">(</span>i - <span class="org-rainbow-delimiters-depth-5">(</span>half+1<span class="org-rainbow-delimiters-depth-5">)</span><span class="org-rainbow-delimiters-depth-4">)</span><span class="org-rainbow-delimiters-depth-3">]</span> = tmp;
+<span class="linenr">20: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">21: </span>
+<span class="linenr">22: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span> printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d "</span>, arr<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">23: </span>    putchar<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">24: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div></li>
+
+<li>Flowchart</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org74de378" class="outline-2">
+<h2 id="org74de378">05</h2>
+<div class="outline-text-2" id="text-org74de378">
+<ol class="org-ol">
+<li><p>
+Trace table
+</p>
+
+<p>
+Outer loop
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">i</th>
+<th scope="col" class="org-left">i &lt; 3</th>
+<th scope="col" class="org-right">jump</th>
+<th scope="col" class="org-left">A</th>
+<th scope="col" class="org-left">B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">100</td>
+<td class="org-left">3,2,1</td>
+<td class="org-left">10,20,30</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-left">TRUE</td>
+<td class="org-right">9</td>
+<td class="org-left">4,2,1</td>
+<td class="org-left">19,20,30</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">TRUE</td>
+<td class="org-right">13</td>
+<td class="org-left">4,3,1</td>
+<td class="org-left">19,26,30</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">TRUE</td>
+<td class="org-right">16</td>
+<td class="org-left">4,3,2</td>
+<td class="org-left">19,26,33</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">FALSE</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Inner loop for <code>i = 0</code>
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">j</th>
+<th scope="col" class="org-left">j &lt; 3</th>
+<th scope="col" class="org-left">B</th>
+<th scope="col" class="org-right">jump</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-left">TRUE</td>
+<td class="org-left">13,20,30</td>
+<td class="org-right">6</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">TRUE</td>
+<td class="org-left">16,20,30</td>
+<td class="org-right">8</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">TRUE</td>
+<td class="org-left">19,20,30</td>
+<td class="org-right">9</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">FALSE</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Inner loop for <code>i = 1</code>
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">j</th>
+<th scope="col" class="org-left">j &lt; 3</th>
+<th scope="col" class="org-left">B</th>
+<th scope="col" class="org-right">jump</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-left">TRUE</td>
+<td class="org-left">19,22,30</td>
+<td class="org-right">11</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">TRUE</td>
+<td class="org-left">19,24,30</td>
+<td class="org-right">12</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">TRUE</td>
+<td class="org-left">19,26,30</td>
+<td class="org-right">13</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">FALSE</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Inner loop for <code>i = 2</code>
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">j</th>
+<th scope="col" class="org-left">j &lt; 3</th>
+<th scope="col" class="org-left">B</th>
+<th scope="col" class="org-right">jump</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-left">TRUE</td>
+<td class="org-left">19,26,31</td>
+<td class="org-right">15</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">TRUE</td>
+<td class="org-left">19,26,32</td>
+<td class="org-right">16</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">TRUE</td>
+<td class="org-left">19,26,33</td>
+<td class="org-right">16</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">FALSE</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table></li>
+
+<li><p>
+Trace table
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">i</th>
+<th scope="col" class="org-right">x</th>
+<th scope="col" class="org-right">sum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">13</td>
+<td class="org-right">13</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">23</td>
+<td class="org-right">47</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">53</td>
+<td class="org-right">119</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">61</td>
+<td class="org-right">217</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Inner loop for <code>i = 0</code>
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">j</th>
+<th scope="col" class="org-right">x</th>
+<th scope="col" class="org-right">sum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">13</td>
+<td class="org-right">13</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Inner loop for <code>i = 1</code>
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">j</th>
+<th scope="col" class="org-right">x</th>
+<th scope="col" class="org-right">sum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">13</td>
+<td class="org-right">13</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">13</td>
+<td class="org-right">13</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">11</td>
+<td class="org-right">24</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">23</td>
+<td class="org-right">47</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Inner loop for <code>i = 2</code>
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">j</th>
+<th scope="col" class="org-right">x</th>
+<th scope="col" class="org-right">sum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">23</td>
+<td class="org-right">47</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">19</td>
+<td class="org-right">66</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">19</td>
+<td class="org-right">66</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">53</td>
+<td class="org-right">119</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Inner loop for <code>i = 3</code>
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">j</th>
+<th scope="col" class="org-right">x</th>
+<th scope="col" class="org-right">sum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">37</td>
+<td class="org-right">156</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-right">37</td>
+<td class="org-right">156</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-right">37</td>
+<td class="org-right">156</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-right">61</td>
+<td class="org-right">217</td>
+</tr>
+</tbody>
+</table></li>
+</ol>
+</div>
+</div>
+</div>
+</body>
+</html>
