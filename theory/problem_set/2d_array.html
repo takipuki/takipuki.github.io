@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2024-03-18 Mon 16:06 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2D Arrays</title>
+<meta name="generator" content="Org Mode" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/css/clean.css"/>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">2D Arrays</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgf574deb">01</a></li>
+<li><a href="#org5522c26">02</a></li>
+<li><a href="#org3f1d9df">03</a></li>
+<li><a href="#org435297f">04</a></li>
+<li><a href="#org6cdadb1">05</a></li>
+<li><a href="#org6e32e72">06</a></li>
+<li><a href="#org933eea6">07</a></li>
+<li><a href="#orgc9ecc2f">08</a></li>
+<li><a href="#orge4fe152">09</a></li>
+<li><a href="#orged4eb47">10</a></li>
+<li><a href="#org2e163c1">11</a></li>
+<li><a href="#orge392f10">12</a></li>
+<li><a href="#org2a35a72">13</a></li>
+<li><a href="#orga13beb8">14</a></li>
+<li><a href="#org67c3f82">15</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf574deb" class="outline-2">
+<h2 id="orgf574deb">01</h2>
+<div class="outline-text-2" id="text-orgf574deb">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">mat</span><span class="org-rainbow-delimiters-depth-2">[</span>3<span class="org-rainbow-delimiters-depth-2">][</span>3<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 5: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; 3; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 6: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; 3; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 7: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;mat<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 8: </span>
+<span class="linenr"> 9: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; 3; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">10: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; 3; j++<span class="org-rainbow-delimiters-depth-3">)</span>
+<span class="linenr">11: </span>            printf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"%d "</span>, mat<span class="org-rainbow-delimiters-depth-4">[</span>i<span class="org-rainbow-delimiters-depth-4">][</span>j<span class="org-rainbow-delimiters-depth-4">]</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">12: </span>        putchar<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">13: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">14: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org5522c26" class="outline-2">
+<h2 id="org5522c26">02</h2>
+<div class="outline-text-2" id="text-org5522c26">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">m</span>, <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d%d"</span>, &amp;m, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">mat</span><span class="org-rainbow-delimiters-depth-2">[</span>m<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 6: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 7: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 8: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;mat<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 9: </span>
+<span class="linenr">10: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Row-wise: "</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">11: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">12: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">13: </span>            printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d "</span>, mat<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">14: </span>    putchar<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">15: </span>
+<span class="linenr">16: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Col-wise: "</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">17: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">18: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">19: </span>            printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d "</span>, mat<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">20: </span>    putchar<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">21: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org3f1d9df" class="outline-2">
+<h2 id="org3f1d9df">03</h2>
+<div class="outline-text-2" id="text-org3f1d9df">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">mat</span><span class="org-rainbow-delimiters-depth-2">[</span>3<span class="org-rainbow-delimiters-depth-2">][</span>3<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 5: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; 3; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 6: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; 3; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 7: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;mat<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 8: </span>
+<span class="linenr"> 9: </span>    <span class="org-type">int</span> <span class="org-variable-name">determinant</span> =
+<span class="linenr">10: </span>          mat<span class="org-rainbow-delimiters-depth-2">[</span>0<span class="org-rainbow-delimiters-depth-2">][</span>0<span class="org-rainbow-delimiters-depth-2">]</span> * <span class="org-rainbow-delimiters-depth-2">(</span>mat<span class="org-rainbow-delimiters-depth-3">[</span>1<span class="org-rainbow-delimiters-depth-3">][</span>1<span class="org-rainbow-delimiters-depth-3">]</span>*mat<span class="org-rainbow-delimiters-depth-3">[</span>2<span class="org-rainbow-delimiters-depth-3">][</span>2<span class="org-rainbow-delimiters-depth-3">]</span> - mat<span class="org-rainbow-delimiters-depth-3">[</span>2<span class="org-rainbow-delimiters-depth-3">][</span>1<span class="org-rainbow-delimiters-depth-3">]</span>*mat<span class="org-rainbow-delimiters-depth-3">[</span>1<span class="org-rainbow-delimiters-depth-3">][</span>2<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">11: </span>        - mat<span class="org-rainbow-delimiters-depth-2">[</span>0<span class="org-rainbow-delimiters-depth-2">][</span>1<span class="org-rainbow-delimiters-depth-2">]</span> * <span class="org-rainbow-delimiters-depth-2">(</span>mat<span class="org-rainbow-delimiters-depth-3">[</span>1<span class="org-rainbow-delimiters-depth-3">][</span>0<span class="org-rainbow-delimiters-depth-3">]</span>*mat<span class="org-rainbow-delimiters-depth-3">[</span>2<span class="org-rainbow-delimiters-depth-3">][</span>2<span class="org-rainbow-delimiters-depth-3">]</span> - mat<span class="org-rainbow-delimiters-depth-3">[</span>2<span class="org-rainbow-delimiters-depth-3">][</span>0<span class="org-rainbow-delimiters-depth-3">]</span>*mat<span class="org-rainbow-delimiters-depth-3">[</span>1<span class="org-rainbow-delimiters-depth-3">][</span>2<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">12: </span>        + mat<span class="org-rainbow-delimiters-depth-2">[</span>0<span class="org-rainbow-delimiters-depth-2">][</span>2<span class="org-rainbow-delimiters-depth-2">]</span> * <span class="org-rainbow-delimiters-depth-2">(</span>mat<span class="org-rainbow-delimiters-depth-3">[</span>1<span class="org-rainbow-delimiters-depth-3">][</span>0<span class="org-rainbow-delimiters-depth-3">]</span>*mat<span class="org-rainbow-delimiters-depth-3">[</span>2<span class="org-rainbow-delimiters-depth-3">][</span>1<span class="org-rainbow-delimiters-depth-3">]</span> - mat<span class="org-rainbow-delimiters-depth-3">[</span>2<span class="org-rainbow-delimiters-depth-3">][</span>0<span class="org-rainbow-delimiters-depth-3">]</span>*mat<span class="org-rainbow-delimiters-depth-3">[</span>1<span class="org-rainbow-delimiters-depth-3">][</span>1<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">13: </span>
+<span class="linenr">14: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d\n"</span>, determinant<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">15: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org435297f" class="outline-2">
+<h2 id="org435297f">04</h2>
+<div class="outline-text-2" id="text-org435297f">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">mat</span><span class="org-rainbow-delimiters-depth-2">[</span>n<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 6: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 7: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 8: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;mat<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 9: </span>
+<span class="linenr">10: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Major diagonal: "</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">11: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">12: </span>        printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d "</span>, mat<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>i<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">13: </span>    putchar<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">14: </span>
+<span class="linenr">15: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Minor diagonal: "</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">16: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">17: </span>        printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d "</span>, mat<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>n-1-i<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">18: </span>    putchar<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">19: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6cdadb1" class="outline-2">
+<h2 id="org6cdadb1">05</h2>
+<div class="outline-text-2" id="text-org6cdadb1">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">mat</span><span class="org-rainbow-delimiters-depth-2">[</span>n<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 6: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 7: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 8: </span>            <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-2">(</span>i == j<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 9: </span>                mat<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">][</span>j<span class="org-rainbow-delimiters-depth-2">]</span> = 1;
+<span class="linenr">10: </span>            <span class="org-keyword">else</span>
+<span class="linenr">11: </span>                mat<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">][</span>j<span class="org-rainbow-delimiters-depth-2">]</span> = 0;
+<span class="linenr">12: </span>
+<span class="linenr">13: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">14: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-3">)</span>
+<span class="linenr">15: </span>            printf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"%d "</span>, mat<span class="org-rainbow-delimiters-depth-4">[</span>i<span class="org-rainbow-delimiters-depth-4">][</span>j<span class="org-rainbow-delimiters-depth-4">]</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">16: </span>        putchar<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">17: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">18: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6e32e72" class="outline-2">
+<h2 id="org6e32e72">06</h2>
+<div class="outline-text-2" id="text-org6e32e72">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">m</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;m<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 6: </span>    <span class="org-type">int</span> <span class="org-variable-name">A</span><span class="org-rainbow-delimiters-depth-2">[</span>m<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>, <span class="org-variable-name">B</span><span class="org-rainbow-delimiters-depth-2">[</span>m<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 9: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">10: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">11: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">12: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">13: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;B<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">14: </span>
+<span class="linenr">15: </span>    <span class="org-type">int</span> <span class="org-variable-name">C</span><span class="org-rainbow-delimiters-depth-2">[</span>m<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">16: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">17: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">18: </span>            C<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">][</span>j<span class="org-rainbow-delimiters-depth-2">]</span> = A<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">][</span>j<span class="org-rainbow-delimiters-depth-2">]</span> + B<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">][</span>j<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">19: </span>
+<span class="linenr">20: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">21: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-3">)</span>
+<span class="linenr">22: </span>            printf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"%d "</span>, C<span class="org-rainbow-delimiters-depth-4">[</span>i<span class="org-rainbow-delimiters-depth-4">][</span>j<span class="org-rainbow-delimiters-depth-4">]</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">23: </span>        putchar<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">24: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">25: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org933eea6" class="outline-2">
+<h2 id="org933eea6">07</h2>
+<div class="outline-text-2" id="text-org933eea6">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span> = 3;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">A</span><span class="org-rainbow-delimiters-depth-2">[</span>n<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>, <span class="org-variable-name">B</span><span class="org-rainbow-delimiters-depth-2">[</span>n<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 8: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 9: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">10: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">11: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">12: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;B<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">13: </span>
+<span class="linenr">14: </span>    <span class="org-type">int</span> <span class="org-variable-name">C</span><span class="org-rainbow-delimiters-depth-2">[</span>n<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">15: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">16: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">17: </span>            C<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span> = A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>0<span class="org-rainbow-delimiters-depth-3">]</span>*B<span class="org-rainbow-delimiters-depth-3">[</span>0<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span>
+<span class="linenr">18: </span>                    + A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>1<span class="org-rainbow-delimiters-depth-3">]</span>*B<span class="org-rainbow-delimiters-depth-3">[</span>1<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span>
+<span class="linenr">19: </span>                    + A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>2<span class="org-rainbow-delimiters-depth-3">]</span>*B<span class="org-rainbow-delimiters-depth-3">[</span>2<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span>;
+<span class="linenr">20: </span>        <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">21: </span>
+<span class="linenr">22: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">23: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-3">)</span>
+<span class="linenr">24: </span>            printf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"%2d "</span>, C<span class="org-rainbow-delimiters-depth-4">[</span>i<span class="org-rainbow-delimiters-depth-4">][</span>j<span class="org-rainbow-delimiters-depth-4">]</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">25: </span>        putchar<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">26: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">27: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc9ecc2f" class="outline-2">
+<h2 id="orgc9ecc2f">08</h2>
+<div class="outline-text-2" id="text-orgc9ecc2f">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">m</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;m<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 6: </span>    <span class="org-type">int</span> <span class="org-variable-name">A</span><span class="org-rainbow-delimiters-depth-2">[</span>m<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 9: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">10: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">11: </span>
+<span class="linenr">12: </span>    <span class="org-type">int</span> <span class="org-variable-name">max</span> = 0, <span class="org-variable-name">max_i</span> = 0, <span class="org-variable-name">max_j</span> = 0;
+<span class="linenr">13: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">14: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">15: </span>            <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-2">(</span>A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span> &gt; max<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">16: </span>                max = A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span>;
+<span class="linenr">17: </span>                max_i = i;
+<span class="linenr">18: </span>                max_j = j;
+<span class="linenr">19: </span>            <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">20: </span>
+<span class="linenr">21: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Max: %d\nLoc: [%d][%d]\n"</span>, max, max_i, max_j<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">22: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge4fe152" class="outline-2">
+<h2 id="orge4fe152">09</h2>
+<div class="outline-text-2" id="text-orge4fe152">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">A</span><span class="org-rainbow-delimiters-depth-2">[</span>n<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 8: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 9: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">10: </span>
+<span class="linenr">11: </span>    <span class="org-type">int</span> <span class="org-variable-name">sum</span> = 0;
+<span class="linenr">12: </span>    <span class="org-comment-delimiter">// </span><span class="org-comment">first row</span>
+<span class="linenr">13: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">14: </span>        sum += A<span class="org-rainbow-delimiters-depth-2">[</span>0<span class="org-rainbow-delimiters-depth-2">][</span>i<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">15: </span>    <span class="org-comment-delimiter">// </span><span class="org-comment">last row</span>
+<span class="linenr">16: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">17: </span>        sum += A<span class="org-rainbow-delimiters-depth-2">[</span>n-1<span class="org-rainbow-delimiters-depth-2">][</span>i<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">18: </span>
+<span class="linenr">19: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 1; i &lt; n-1; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">20: </span>        sum += A<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">][</span>i<span class="org-rainbow-delimiters-depth-2">]</span> + A<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">][</span>n-1-i<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">21: </span>
+<span class="linenr">22: </span>    sum -= A<span class="org-rainbow-delimiters-depth-2">[</span>n/2<span class="org-rainbow-delimiters-depth-2">][</span>n/2<span class="org-rainbow-delimiters-depth-2">]</span>; <span class="org-comment-delimiter">// </span><span class="org-comment">added twice on previous loop</span>
+<span class="linenr">23: </span>
+<span class="linenr">24: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d\n"</span>, sum<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">25: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orged4eb47" class="outline-2">
+<h2 id="orged4eb47">10</h2>
+<div class="outline-text-2" id="text-orged4eb47">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">A</span><span class="org-rainbow-delimiters-depth-2">[</span>n<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 8: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 9: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">10: </span>
+<span class="linenr">11: </span>    <span class="org-type">int</span> <span class="org-variable-name">sum</span> = 0;
+<span class="linenr">12: </span>
+<span class="linenr">13: </span>    <span class="org-comment-delimiter">// </span><span class="org-comment">first row</span>
+<span class="linenr">14: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt;= n/2; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">15: </span>        sum += A<span class="org-rainbow-delimiters-depth-2">[</span>0<span class="org-rainbow-delimiters-depth-2">][</span>i<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">16: </span>    sum += A<span class="org-rainbow-delimiters-depth-2">[</span>0<span class="org-rainbow-delimiters-depth-2">][</span>n-1<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">17: </span>
+<span class="linenr">18: </span>    <span class="org-comment-delimiter">// </span><span class="org-comment">last row</span>
+<span class="linenr">19: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = n/2; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">20: </span>        sum += A<span class="org-rainbow-delimiters-depth-2">[</span>n-1<span class="org-rainbow-delimiters-depth-2">][</span>i<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">21: </span>    sum += A<span class="org-rainbow-delimiters-depth-2">[</span>n-1<span class="org-rainbow-delimiters-depth-2">][</span>0<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">22: </span>
+<span class="linenr">23: </span>    <span class="org-comment-delimiter">// </span><span class="org-comment">middle row</span>
+<span class="linenr">24: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">25: </span>        sum += A<span class="org-rainbow-delimiters-depth-2">[</span>n/2<span class="org-rainbow-delimiters-depth-2">][</span>i<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">26: </span>
+<span class="linenr">27: </span>    <span class="org-comment-delimiter">// </span><span class="org-comment">top half</span>
+<span class="linenr">28: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 1; i &lt; n/2; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">29: </span>        sum += A<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">][</span>n/2<span class="org-rainbow-delimiters-depth-2">]</span> + A<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">][</span>n-1<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">30: </span>
+<span class="linenr">31: </span>    <span class="org-comment-delimiter">// </span><span class="org-comment">bottom half</span>
+<span class="linenr">32: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = n/2+1; i &lt; n-1; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">33: </span>        sum += A<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">][</span>0<span class="org-rainbow-delimiters-depth-2">]</span> + A<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">][</span>n/2<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">34: </span>
+<span class="linenr">35: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d\n"</span>, sum<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">36: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2e163c1" class="outline-2">
+<h2 id="org2e163c1">11</h2>
+<div class="outline-text-2" id="text-org2e163c1">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">A</span><span class="org-rainbow-delimiters-depth-2">[</span>n<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 8: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 9: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">10: </span>
+<span class="linenr">11: </span>    <span class="org-type">int</span> <span class="org-variable-name">sum</span> = 0;
+<span class="linenr">12: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">13: </span>        <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-2">(</span>i % 2 == 0<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>  <span class="org-comment-delimiter">// </span><span class="org-comment">even index row; sum only odd indices</span>
+<span class="linenr">14: </span>            <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 1; j &lt; n-1; j++<span class="org-rainbow-delimiters-depth-3">)</span>
+<span class="linenr">15: </span>                <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-3">(</span>j % 2<span class="org-rainbow-delimiters-depth-3">)</span>
+<span class="linenr">16: </span>                    sum += A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span>;
+<span class="linenr">17: </span>        <span class="org-rainbow-delimiters-depth-2">}</span> <span class="org-keyword">else</span> <span class="org-rainbow-delimiters-depth-2">{</span>  <span class="org-comment-delimiter">// </span><span class="org-comment">odd index row; sum all indices</span>
+<span class="linenr">18: </span>            <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-3">)</span>
+<span class="linenr">19: </span>                sum += A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span>;
+<span class="linenr">20: </span>        <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">21: </span>
+<span class="linenr">22: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d\n"</span>, sum<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">23: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge392f10" class="outline-2">
+<h2 id="orge392f10">12</h2>
+<div class="outline-text-2" id="text-orge392f10">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">m</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;m<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 6: </span>    <span class="org-type">int</span> <span class="org-variable-name">A</span><span class="org-rainbow-delimiters-depth-2">[</span>m<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 9: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">10: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">11: </span>
+<span class="linenr">12: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">13: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n/2; j++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">14: </span>            <span class="org-type">int</span> <span class="org-variable-name">tmp</span> = A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span>;
+<span class="linenr">15: </span>            A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span> = A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>n-1-j<span class="org-rainbow-delimiters-depth-3">]</span>;
+<span class="linenr">16: </span>            A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>n-1-j<span class="org-rainbow-delimiters-depth-3">]</span> = tmp;
+<span class="linenr">17: </span>        <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">18: </span>
+<span class="linenr">19: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">20: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-3">)</span>
+<span class="linenr">21: </span>            printf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"%d "</span>, A<span class="org-rainbow-delimiters-depth-4">[</span>i<span class="org-rainbow-delimiters-depth-4">][</span>j<span class="org-rainbow-delimiters-depth-4">]</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">22: </span>        putchar<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">23: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">24: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2a35a72" class="outline-2">
+<h2 id="org2a35a72">13</h2>
+<div class="outline-text-2" id="text-org2a35a72">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">A</span><span class="org-rainbow-delimiters-depth-2">[</span>n<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 6: </span>
+<span class="linenr"> 7: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; n; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 8: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 9: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">10: </span>
+<span class="linenr">11: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt;= n/2; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">12: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">13: </span>            <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-2">(</span>A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span> != A<span class="org-rainbow-delimiters-depth-3">[</span>j<span class="org-rainbow-delimiters-depth-3">][</span>i<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">14: </span>                printf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"No\n"</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">15: </span>                <span class="org-keyword">return</span> 0;
+<span class="linenr">16: </span>            <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">17: </span>
+<span class="linenr">18: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"Yes\n"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">19: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orga13beb8" class="outline-2">
+<h2 id="orga13beb8">14</h2>
+<div class="outline-text-2" id="text-orga13beb8">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">m</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;m<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 6: </span>    <span class="org-type">int</span> <span class="org-variable-name">A</span><span class="org-rainbow-delimiters-depth-2">[</span>m<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 9: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">10: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">11: </span>
+<span class="linenr">12: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">13: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">14: </span>            <span class="org-type">int</span> <span class="org-variable-name">curr</span> = A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span>;
+<span class="linenr">15: </span>            <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">k</span> = i; k &lt; m; k++<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
+<span class="linenr">16: </span>                <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-4">(</span><span class="org-type">int</span> <span class="org-variable-name">l</span> = <span class="org-rainbow-delimiters-depth-5">(</span>k==i<span class="org-rainbow-delimiters-depth-5">)</span>?j+1:0; l &lt; n; l++<span class="org-rainbow-delimiters-depth-4">)</span>
+<span class="linenr">17: </span>                    <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-4">(</span>A<span class="org-rainbow-delimiters-depth-5">[</span>k<span class="org-rainbow-delimiters-depth-5">][</span>l<span class="org-rainbow-delimiters-depth-5">]</span> == curr<span class="org-rainbow-delimiters-depth-4">)</span>
+<span class="linenr">18: </span>                        A<span class="org-rainbow-delimiters-depth-4">[</span>k<span class="org-rainbow-delimiters-depth-4">][</span>l<span class="org-rainbow-delimiters-depth-4">]</span> = -1;
+<span class="linenr">19: </span>            <span class="org-rainbow-delimiters-depth-3">}</span>
+<span class="linenr">20: </span>        <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">21: </span>
+<span class="linenr">22: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">23: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-3">)</span>
+<span class="linenr">24: </span>            printf<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">"%d "</span>, A<span class="org-rainbow-delimiters-depth-4">[</span>i<span class="org-rainbow-delimiters-depth-4">][</span>j<span class="org-rainbow-delimiters-depth-4">]</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">25: </span>        putchar<span class="org-rainbow-delimiters-depth-3">(</span><span class="org-string">'\n'</span><span class="org-rainbow-delimiters-depth-3">)</span>;
+<span class="linenr">26: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">27: </span>
+<span class="linenr">28: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org67c3f82" class="outline-2">
+<h2 id="org67c3f82">15</h2>
+<div class="outline-text-2" id="text-org67c3f82">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">m</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;m<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">int</span> <span class="org-variable-name">n</span>; scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;n<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 6: </span>    <span class="org-type">int</span> <span class="org-variable-name">A</span><span class="org-rainbow-delimiters-depth-2">[</span>m<span class="org-rainbow-delimiters-depth-2">][</span>n<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 7: </span>
+<span class="linenr"> 8: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr"> 9: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">10: </span>            scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d"</span>, &amp;A<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">][</span>j<span class="org-rainbow-delimiters-depth-3">]</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">11: </span>
+<span class="linenr">12: </span>    <span class="org-type">int</span> <span class="org-variable-name">sum</span> = 0;
+<span class="linenr">13: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; m; i++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">14: </span>        <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">j</span> = 0; j &lt; n; j++<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">15: </span>            sum += A<span class="org-rainbow-delimiters-depth-2">[</span>i<span class="org-rainbow-delimiters-depth-2">][</span>j<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">16: </span>
+<span class="linenr">17: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d\n"</span>, sum<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">18: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
