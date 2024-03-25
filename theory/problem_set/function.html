@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024-03-25 Mon 00:59 -->
+<!-- 2024-03-25 Mon 22:49 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Function</title>
@@ -412,24 +412,28 @@
 <span class="linenr"> 4: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span>; *a != <span class="org-string">'\0'</span>; a++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
 <span class="linenr"> 5: </span>        <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-3">(</span>*a == *b<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
 <span class="linenr"> 6: </span>            <span class="org-type">int</span> <span class="org-variable-name">flag</span> = 1;
-<span class="linenr"> 7: </span>            <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-4">(</span><span class="org-type">char</span> *<span class="org-variable-name">aa</span> = a+1, *<span class="org-variable-name">bb</span> = b+1; *aa != <span class="org-string">'\0'</span> &amp;&amp; *bb != <span class="org-string">'\0'</span>; aa++, bb++<span class="org-rainbow-delimiters-depth-4">)</span>
-<span class="linenr"> 8: </span>                <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-4">(</span>*aa != *bb<span class="org-rainbow-delimiters-depth-4">)</span> <span class="org-rainbow-delimiters-depth-4">{</span>
-<span class="linenr"> 9: </span>                    flag = 0;
-<span class="linenr">10: </span>                    <span class="org-keyword">break</span>;
-<span class="linenr">11: </span>                <span class="org-rainbow-delimiters-depth-4">}</span>
-<span class="linenr">12: </span>
-<span class="linenr">13: </span>            <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-4">(</span>flag<span class="org-rainbow-delimiters-depth-4">)</span> <span class="org-keyword">return</span> 1;
-<span class="linenr">14: </span>        <span class="org-rainbow-delimiters-depth-3">}</span>
-<span class="linenr">15: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
-<span class="linenr">16: </span>    <span class="org-keyword">return</span> 0;
-<span class="linenr">17: </span><span class="org-rainbow-delimiters-depth-1">}</span>
-<span class="linenr">18: </span>
-<span class="linenr">19: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
-<span class="linenr">20: </span>    <span class="org-type">char</span> <span class="org-variable-name">a</span><span class="org-rainbow-delimiters-depth-2">[</span>100<span class="org-rainbow-delimiters-depth-2">]</span>, <span class="org-variable-name">b</span><span class="org-rainbow-delimiters-depth-2">[</span>100<span class="org-rainbow-delimiters-depth-2">]</span>;
-<span class="linenr">21: </span>    scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%s"</span>, a<span class="org-rainbow-delimiters-depth-2">)</span>;
-<span class="linenr">22: </span>    scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%s"</span>, b<span class="org-rainbow-delimiters-depth-2">)</span>;
-<span class="linenr">23: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d\n"</span>, is_substr<span class="org-rainbow-delimiters-depth-3">(</span>a, b<span class="org-rainbow-delimiters-depth-3">)</span><span class="org-rainbow-delimiters-depth-2">)</span>;
-<span class="linenr">24: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="linenr"> 7: </span>            <span class="org-type">char</span> *<span class="org-variable-name">aa</span>, *<span class="org-variable-name">bb</span>;
+<span class="linenr"> 8: </span>            <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-4">(</span>aa = a+1, bb = b+1; *aa != <span class="org-string">'\0'</span> &amp;&amp; *bb != <span class="org-string">'\0'</span>; aa++, bb++<span class="org-rainbow-delimiters-depth-4">)</span>
+<span class="linenr"> 9: </span>                <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-4">(</span>*aa != *bb<span class="org-rainbow-delimiters-depth-4">)</span> <span class="org-rainbow-delimiters-depth-4">{</span>
+<span class="linenr">10: </span>                    flag = 0;
+<span class="linenr">11: </span>                    <span class="org-keyword">break</span>;
+<span class="linenr">12: </span>                <span class="org-rainbow-delimiters-depth-4">}</span>
+<span class="linenr">13: </span>            <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-4">(</span>*aa == <span class="org-string">'\0'</span> &amp;&amp; *bb != <span class="org-string">'\0'</span><span class="org-rainbow-delimiters-depth-4">)</span> <span class="org-comment-delimiter">// </span><span class="org-comment">reached end of a but not b</span>
+<span class="linenr">14: </span>                flag = 0;
+<span class="linenr">15: </span>
+<span class="linenr">16: </span>            <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-4">(</span>flag<span class="org-rainbow-delimiters-depth-4">)</span> <span class="org-keyword">return</span> 1;
+<span class="linenr">17: </span>        <span class="org-rainbow-delimiters-depth-3">}</span>
+<span class="linenr">18: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">19: </span>    <span class="org-keyword">return</span> 0;
+<span class="linenr">20: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="linenr">21: </span>
+<span class="linenr">22: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr">23: </span>    <span class="org-type">char</span> <span class="org-variable-name">a</span><span class="org-rainbow-delimiters-depth-2">[</span>100<span class="org-rainbow-delimiters-depth-2">]</span>, <span class="org-variable-name">b</span><span class="org-rainbow-delimiters-depth-2">[</span>100<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">24: </span>    scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%[^\n]%*c"</span>, a<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">25: </span>    scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%[^\n]%*c"</span>, b<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">26: </span>
+<span class="linenr">27: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d\n"</span>, is_substr<span class="org-rainbow-delimiters-depth-3">(</span>a, b<span class="org-rainbow-delimiters-depth-3">)</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">28: </span><span class="org-rainbow-delimiters-depth-1">}</span>
 </pre>
 </div>
 </div>
