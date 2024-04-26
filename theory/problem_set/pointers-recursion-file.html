@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024-04-03 Wed 05:16 -->
+<!-- 2024-04-26 Fri 15:13 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Pointers-Recursion-File</title>
@@ -33,6 +33,10 @@
 <li><a href="#org2f48847">15</a></li>
 <li><a href="#org2ad0834">16</a></li>
 <li><a href="#orgc1e4119">17</a></li>
+<li><a href="#orgf79c68f">18</a></li>
+<li><a href="#org87a7f2e">19</a></li>
+<li><a href="#orge193694">20</a></li>
+<li><a href="#org1655ec3">21</a></li>
 </ul>
 </div>
 </div>
@@ -391,6 +395,73 @@
 <span class="linenr">7: </span>    fprintf<span class="org-rainbow-delimiters-depth-2">(</span>fileptr, <span class="org-string">"3 Akif\n"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
 <span class="linenr">8: </span>    fclose<span class="org-rainbow-delimiters-depth-2">(</span>fileptr<span class="org-rainbow-delimiters-depth-2">)</span>;
 <span class="linenr">9: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf79c68f" class="outline-2">
+<h2 id="orgf79c68f">18</h2>
+<div class="outline-text-2" id="text-orgf79c68f">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr">1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr">2: </span>
+<span class="linenr">3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr">4: </span>    <span class="org-type">FILE</span> *<span class="org-variable-name">fileptr</span> = fopen<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"sample.txt"</span>, <span class="org-string">"r"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">5: </span>    <span class="org-type">char</span> <span class="org-variable-name">buf</span><span class="org-rainbow-delimiters-depth-2">[</span>100<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">6: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span>; fgets<span class="org-rainbow-delimiters-depth-3">(</span>buf, 100, fileptr<span class="org-rainbow-delimiters-depth-3">)</span>;<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">7: </span>    fclose<span class="org-rainbow-delimiters-depth-2">(</span>fileptr<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">8: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org87a7f2e" class="outline-2">
+<h2 id="org87a7f2e">19</h2>
+<div class="outline-text-2" id="text-org87a7f2e">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr">1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr">2: </span>
+<span class="linenr">3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr">4: </span>    <span class="org-type">FILE</span> *<span class="org-variable-name">fileptr</span> = fopen<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"sample.txt"</span>, <span class="org-string">"r"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">5: </span>    <span class="org-type">char</span> <span class="org-variable-name">buf</span><span class="org-rainbow-delimiters-depth-2">[</span>100<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr">6: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span>; fgets<span class="org-rainbow-delimiters-depth-3">(</span>buf, 100, fileptr<span class="org-rainbow-delimiters-depth-3">)</span>;<span class="org-rainbow-delimiters-depth-2">)</span>
+<span class="linenr">7: </span>        printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%s"</span>, buf<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">8: </span>    fclose<span class="org-rainbow-delimiters-depth-2">(</span>fileptr<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">9: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge193694" class="outline-2">
+<h2 id="orge193694">20</h2>
+<div class="outline-text-2" id="text-orge193694">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 2: </span>
+<span class="linenr"> 3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 4: </span>    <span class="org-type">FILE</span> *<span class="org-variable-name">fileptr</span> = fopen<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"sample.txt"</span>, <span class="org-string">"r"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 5: </span>    <span class="org-type">char</span> <span class="org-variable-name">buf</span><span class="org-rainbow-delimiters-depth-2">[</span>100<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 6: </span>    <span class="org-type">int</span> <span class="org-variable-name">count</span> = 0;
+<span class="linenr"> 7: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span>; fgets<span class="org-rainbow-delimiters-depth-3">(</span>buf, 100, fileptr<span class="org-rainbow-delimiters-depth-3">)</span>; count++<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 8: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d\n"</span>, count<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 9: </span>    fclose<span class="org-rainbow-delimiters-depth-2">(</span>fileptr<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">10: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1655ec3" class="outline-2">
+<h2 id="org1655ec3">21</h2>
+<div class="outline-text-2" id="text-org1655ec3">
+<div class="org-src-container">
+<pre class="src src-C"><span class="linenr">1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr">2: </span>
+<span class="linenr">3: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr">4: </span>    <span class="org-type">FILE</span> *<span class="org-variable-name">fileptr</span> = fopen<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"sample.txt"</span>, <span class="org-string">"a"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">5: </span>    fprintf<span class="org-rainbow-delimiters-depth-2">(</span>fileptr, <span class="org-string">"4 Shadman\n"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">6: </span>    fprintf<span class="org-rainbow-delimiters-depth-2">(</span>fileptr, <span class="org-string">"5 Miraz\n"</span><span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">7: </span>    fclose<span class="org-rainbow-delimiters-depth-2">(</span>fileptr<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">8: </span><span class="org-rainbow-delimiters-depth-1">}</span>
 </pre>
 </div>
 </div>
