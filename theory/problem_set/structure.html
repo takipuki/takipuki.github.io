@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024-04-26 Fri 17:22 -->
+<!-- 2024-04-26 Fri 17:26 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Structure</title>
@@ -385,43 +385,31 @@
 <span class="linenr"> 4: </span>    <span class="org-type">int</span> <span class="org-variable-name">h</span>, <span class="org-variable-name">m</span>, <span class="org-variable-name">s</span>;
 <span class="linenr"> 5: </span><span class="org-rainbow-delimiters-depth-1">}</span> <span class="org-type">time</span>;
 <span class="linenr"> 6: </span>
-<span class="linenr"> 7: </span><span class="org-type">float</span> <span class="org-function-name">h</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-type">time</span> <span class="org-variable-name">t</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
-<span class="linenr"> 8: </span>    <span class="org-keyword">return</span> t.h + <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">float</span><span class="org-rainbow-delimiters-depth-2">)</span>t.m/60 + <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">float</span><span class="org-rainbow-delimiters-depth-2">)</span>t.s/3600;
-<span class="linenr"> 9: </span><span class="org-rainbow-delimiters-depth-1">}</span>
-<span class="linenr">10: </span>
-<span class="linenr">11: </span><span class="org-type">float</span> <span class="org-function-name">m</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-type">time</span> <span class="org-variable-name">t</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
-<span class="linenr">12: </span>    <span class="org-keyword">return</span> t.h*60 + t.m + <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">float</span><span class="org-rainbow-delimiters-depth-2">)</span>t.s/60;
-<span class="linenr">13: </span><span class="org-rainbow-delimiters-depth-1">}</span>
-<span class="linenr">14: </span>
-<span class="linenr">15: </span><span class="org-type">int</span> <span class="org-function-name">s</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-type">time</span> <span class="org-variable-name">t</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
-<span class="linenr">16: </span>    <span class="org-keyword">return</span> t.h*3600 + t.m*60 + t.s;
-<span class="linenr">17: </span><span class="org-rainbow-delimiters-depth-1">}</span>
-<span class="linenr">18: </span>
-<span class="linenr">19: </span><span class="org-type">time</span> <span class="org-function-name">sub</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-type">time</span> <span class="org-variable-name">a</span>, <span class="org-type">time</span> <span class="org-variable-name">b</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
-<span class="linenr">20: </span>    <span class="org-type">time</span> <span class="org-variable-name">t</span> = <span class="org-rainbow-delimiters-depth-2">{</span>
-<span class="linenr">21: </span>        a.h - b.h,
-<span class="linenr">22: </span>        a.m - b.m,
-<span class="linenr">23: </span>        a.s - b.s
-<span class="linenr">24: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>;
-<span class="linenr">25: </span>    <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-2">(</span>t.s &lt; 0<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
-<span class="linenr">26: </span>        t.s += 60;
-<span class="linenr">27: </span>        t.m -= 1;
-<span class="linenr">28: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
-<span class="linenr">29: </span>    <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-2">(</span>t.m &lt; 0<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
-<span class="linenr">30: </span>        t.m += 60;
-<span class="linenr">31: </span>        t.h -= 1;
-<span class="linenr">32: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
-<span class="linenr">33: </span>    <span class="org-keyword">return</span> t;
-<span class="linenr">34: </span><span class="org-rainbow-delimiters-depth-1">}</span>
-<span class="linenr">35: </span>
-<span class="linenr">36: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
-<span class="linenr">37: </span>    <span class="org-type">time</span> <span class="org-variable-name">a</span>, <span class="org-variable-name">b</span>;
-<span class="linenr">38: </span>    scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d%d%d"</span>, &amp;a.h, &amp;a.m, &amp;a.s<span class="org-rainbow-delimiters-depth-2">)</span>;
-<span class="linenr">39: </span>    scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d%d%d"</span>, &amp;b.h, &amp;b.m, &amp;b.s<span class="org-rainbow-delimiters-depth-2">)</span>;
-<span class="linenr">40: </span>
-<span class="linenr">41: </span>    <span class="org-type">time</span> <span class="org-variable-name">c</span> = sub<span class="org-rainbow-delimiters-depth-2">(</span>a, b<span class="org-rainbow-delimiters-depth-2">)</span>;
-<span class="linenr">42: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d %d %d\n"</span>, c.h, c.m, c.s<span class="org-rainbow-delimiters-depth-2">)</span>;
-<span class="linenr">43: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="linenr"> 7: </span><span class="org-type">time</span> <span class="org-function-name">sub</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-type">time</span> <span class="org-variable-name">a</span>, <span class="org-type">time</span> <span class="org-variable-name">b</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 8: </span>    <span class="org-type">time</span> <span class="org-variable-name">t</span> = <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr"> 9: </span>        a.h - b.h,
+<span class="linenr">10: </span>        a.m - b.m,
+<span class="linenr">11: </span>        a.s - b.s
+<span class="linenr">12: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>;
+<span class="linenr">13: </span>    <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-2">(</span>t.s &lt; 0<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">14: </span>        t.s += 60;
+<span class="linenr">15: </span>        t.m -= 1;
+<span class="linenr">16: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">17: </span>    <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-2">(</span>t.m &lt; 0<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">18: </span>        t.m += 60;
+<span class="linenr">19: </span>        t.h -= 1;
+<span class="linenr">20: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">21: </span>    <span class="org-keyword">return</span> t;
+<span class="linenr">22: </span><span class="org-rainbow-delimiters-depth-1">}</span>
+<span class="linenr">23: </span>
+<span class="linenr">24: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr">25: </span>    <span class="org-type">time</span> <span class="org-variable-name">a</span>, <span class="org-variable-name">b</span>;
+<span class="linenr">26: </span>    scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d%d%d"</span>, &amp;a.h, &amp;a.m, &amp;a.s<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">27: </span>    scanf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d%d%d"</span>, &amp;b.h, &amp;b.m, &amp;b.s<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">28: </span>
+<span class="linenr">29: </span>    <span class="org-type">time</span> <span class="org-variable-name">c</span> = sub<span class="org-rainbow-delimiters-depth-2">(</span>a, b<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">30: </span>    printf<span class="org-rainbow-delimiters-depth-2">(</span><span class="org-string">"%d %d %d\n"</span>, c.h, c.m, c.s<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">31: </span><span class="org-rainbow-delimiters-depth-1">}</span>
 </pre>
 </div>
 </div>
