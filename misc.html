@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2024-03-25 Mon 13:31 -->
+<!-- 2024-04-28 Sun 01:29 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Miscellaneous</title>
@@ -136,36 +136,36 @@ margin-right: 1em;
 <div class="outline-text-3" id="text-org49ae567">
 <div class="org-src-container">
 <pre class="src src-C"><span class="linenr"> 1: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">stdio.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
-<span class="linenr"> 2: </span>
-<span class="linenr"> 3: </span><span class="org-type">void</span> <span class="org-function-name">rev_sen</span><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-type">char</span> *<span class="org-variable-name">src</span>, <span class="org-type">int</span> <span class="org-variable-name">len</span>, <span class="org-type">char</span> *<span class="org-variable-name">dst</span><span class="org-rainbow-delimiters-depth-1">)</span> <span class="org-rainbow-delimiters-depth-1">{</span>
-<span class="linenr"> 4: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = len-1; ; i--<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
-<span class="linenr"> 5: </span>        <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-3">(</span>src<span class="org-rainbow-delimiters-depth-4">[</span>i<span class="org-rainbow-delimiters-depth-4">]</span> == <span class="org-string">' '</span> || i &lt; 0<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
-<span class="linenr"> 6: </span>            <span class="org-type">int</span> <span class="org-variable-name">j</span>;
-<span class="linenr"> 7: </span>            <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-4">(</span>j = i+1; src<span class="org-rainbow-delimiters-depth-5">[</span>j<span class="org-rainbow-delimiters-depth-5">]</span> != <span class="org-string">'\0'</span>; j++<span class="org-rainbow-delimiters-depth-4">)</span> <span class="org-rainbow-delimiters-depth-4">{</span>
-<span class="linenr"> 8: </span>                *dst = src<span class="org-rainbow-delimiters-depth-5">[</span>j<span class="org-rainbow-delimiters-depth-5">]</span>;
-<span class="linenr"> 9: </span>                dst += 1;      <span class="org-comment-delimiter">// </span><span class="org-comment">moving the pointer forward</span>
-<span class="linenr">10: </span>            <span class="org-rainbow-delimiters-depth-4">}</span>
-<span class="linenr">11: </span>            *dst = <span class="org-string">' '</span>;
-<span class="linenr">12: </span>            dst += 1;
-<span class="linenr">13: </span>            src<span class="org-rainbow-delimiters-depth-4">[</span>i<span class="org-rainbow-delimiters-depth-4">]</span> = <span class="org-string">'\0'</span>;
-<span class="linenr">14: </span>        <span class="org-rainbow-delimiters-depth-3">}</span>
-<span class="linenr">15: </span>        <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-3">(</span>i &lt; 0<span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-keyword">break</span>;
-<span class="linenr">16: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
-<span class="linenr">17: </span>    *dst = <span class="org-string">'\0'</span>;
-<span class="linenr">18: </span><span class="org-rainbow-delimiters-depth-1">}</span>
-<span class="linenr">19: </span>
-<span class="linenr">20: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
-<span class="linenr">21: </span>    <span class="org-type">char</span> <span class="org-variable-name">s</span><span class="org-rainbow-delimiters-depth-2">[</span>100<span class="org-rainbow-delimiters-depth-2">]</span>;
-<span class="linenr">22: </span>    <span class="org-type">int</span> <span class="org-variable-name">len</span>;
-<span class="linenr">23: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span>len = 0; <span class="org-rainbow-delimiters-depth-3">(</span>s<span class="org-rainbow-delimiters-depth-4">[</span>len<span class="org-rainbow-delimiters-depth-4">]</span> = getchar<span class="org-rainbow-delimiters-depth-4">()</span><span class="org-rainbow-delimiters-depth-3">)</span> != <span class="org-string">'\n'</span>; len++<span class="org-rainbow-delimiters-depth-2">)</span>;
-<span class="linenr">24: </span>    s<span class="org-rainbow-delimiters-depth-2">[</span>len<span class="org-rainbow-delimiters-depth-2">]</span> = <span class="org-string">'\0'</span>;
-<span class="linenr">25: </span>
-<span class="linenr">26: </span>    <span class="org-type">char</span> <span class="org-variable-name">dup</span><span class="org-rainbow-delimiters-depth-2">[</span>100<span class="org-rainbow-delimiters-depth-2">]</span>; <span class="org-comment-delimiter">// </span><span class="org-comment">duplicate</span>
-<span class="linenr">27: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; <span class="org-rainbow-delimiters-depth-3">(</span>dup<span class="org-rainbow-delimiters-depth-4">[</span>i<span class="org-rainbow-delimiters-depth-4">]</span> = s<span class="org-rainbow-delimiters-depth-4">[</span>i<span class="org-rainbow-delimiters-depth-4">]</span><span class="org-rainbow-delimiters-depth-3">)</span> != <span class="org-string">'\0'</span>; i++<span class="org-rainbow-delimiters-depth-2">)</span>;
-<span class="linenr">28: </span>
-<span class="linenr">29: </span>    rev_sen<span class="org-rainbow-delimiters-depth-2">(</span>dup, len, s<span class="org-rainbow-delimiters-depth-2">)</span>;
-<span class="linenr">30: </span>
-<span class="linenr">31: </span>    puts<span class="org-rainbow-delimiters-depth-2">(</span>s<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 2: </span><span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">ctype.h</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="linenr"> 3: </span>
+<span class="linenr"> 4: </span><span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">()</span> <span class="org-rainbow-delimiters-depth-1">{</span>
+<span class="linenr"> 5: </span>    <span class="org-type">char</span> <span class="org-variable-name">str</span><span class="org-rainbow-delimiters-depth-2">[</span>50<span class="org-rainbow-delimiters-depth-2">]</span>;
+<span class="linenr"> 6: </span>    <span class="org-type">int</span> <span class="org-variable-name">len</span> = 0;
+<span class="linenr"> 7: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span>; <span class="org-rainbow-delimiters-depth-3">(</span>str<span class="org-rainbow-delimiters-depth-4">[</span>len<span class="org-rainbow-delimiters-depth-4">]</span> = getchar<span class="org-rainbow-delimiters-depth-4">()</span><span class="org-rainbow-delimiters-depth-3">)</span> != <span class="org-string">'\n'</span>; len++<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr"> 8: </span>    str<span class="org-rainbow-delimiters-depth-2">[</span>len<span class="org-rainbow-delimiters-depth-2">]</span> = 0;
+<span class="linenr"> 9: </span>
+<span class="linenr">10: </span>    <span class="org-comment-delimiter">// </span><span class="org-comment">reverse string</span>
+<span class="linenr">11: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0; i &lt; len/2; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">12: </span>        <span class="org-type">char</span> <span class="org-variable-name">tmp</span> = str<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">]</span>;
+<span class="linenr">13: </span>        str<span class="org-rainbow-delimiters-depth-3">[</span>i<span class="org-rainbow-delimiters-depth-3">]</span> = str<span class="org-rainbow-delimiters-depth-3">[</span>len-1 - i<span class="org-rainbow-delimiters-depth-3">]</span>;
+<span class="linenr">14: </span>        str<span class="org-rainbow-delimiters-depth-3">[</span>len-1 - i<span class="org-rainbow-delimiters-depth-3">]</span> = tmp;
+<span class="linenr">15: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">16: </span>    puts<span class="org-rainbow-delimiters-depth-2">(</span>str<span class="org-rainbow-delimiters-depth-2">)</span>;
+<span class="linenr">17: </span>
+<span class="linenr">18: </span>    <span class="org-comment-delimiter">// </span><span class="org-comment">reverse word by word</span>
+<span class="linenr">19: </span>    <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span> <span class="org-variable-name">i</span> = 0, <span class="org-variable-name">j</span> = 0; i &lt;= len; i++<span class="org-rainbow-delimiters-depth-2">)</span> <span class="org-rainbow-delimiters-depth-2">{</span>
+<span class="linenr">20: </span>        <span class="org-keyword">if</span> <span class="org-rainbow-delimiters-depth-3">(</span><span class="org-rainbow-delimiters-depth-4">(</span>str<span class="org-rainbow-delimiters-depth-5">[</span>i<span class="org-rainbow-delimiters-depth-5">]</span> == <span class="org-string">' '</span> || str<span class="org-rainbow-delimiters-depth-5">[</span>i<span class="org-rainbow-delimiters-depth-5">]</span> == 0<span class="org-rainbow-delimiters-depth-4">)</span> &amp;&amp; isalpha<span class="org-rainbow-delimiters-depth-4">(</span>str<span class="org-rainbow-delimiters-depth-5">[</span>i-1<span class="org-rainbow-delimiters-depth-5">]</span><span class="org-rainbow-delimiters-depth-4">)</span><span class="org-rainbow-delimiters-depth-3">)</span> <span class="org-rainbow-delimiters-depth-3">{</span>
+<span class="linenr">21: </span>            <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-4">(</span><span class="org-type">int</span> <span class="org-variable-name">k</span> = 0, <span class="org-variable-name">l</span> = i-j; k &lt; l/2; k++<span class="org-rainbow-delimiters-depth-4">)</span> <span class="org-rainbow-delimiters-depth-4">{</span>
+<span class="linenr">22: </span>                <span class="org-type">char</span> <span class="org-variable-name">tmp</span> = str<span class="org-rainbow-delimiters-depth-5">[</span>j+k<span class="org-rainbow-delimiters-depth-5">]</span>;
+<span class="linenr">23: </span>                str<span class="org-rainbow-delimiters-depth-5">[</span>j+k<span class="org-rainbow-delimiters-depth-5">]</span> = str<span class="org-rainbow-delimiters-depth-5">[</span>i-1 - k<span class="org-rainbow-delimiters-depth-5">]</span>;
+<span class="linenr">24: </span>                str<span class="org-rainbow-delimiters-depth-5">[</span>i-1 - k<span class="org-rainbow-delimiters-depth-5">]</span> = tmp;
+<span class="linenr">25: </span>            <span class="org-rainbow-delimiters-depth-4">}</span>
+<span class="linenr">26: </span>            <span class="org-comment-delimiter">// </span><span class="org-comment">skipping extra spaces</span>
+<span class="linenr">27: </span>            <span class="org-keyword">for</span> <span class="org-rainbow-delimiters-depth-4">(</span>; str<span class="org-rainbow-delimiters-depth-5">[</span>i<span class="org-rainbow-delimiters-depth-5">]</span> == <span class="org-string">' '</span>; i++<span class="org-rainbow-delimiters-depth-4">)</span>;
+<span class="linenr">28: </span>            j = i;
+<span class="linenr">29: </span>        <span class="org-rainbow-delimiters-depth-3">}</span>
+<span class="linenr">30: </span>    <span class="org-rainbow-delimiters-depth-2">}</span>
+<span class="linenr">31: </span>    puts<span class="org-rainbow-delimiters-depth-2">(</span>str<span class="org-rainbow-delimiters-depth-2">)</span>;
 <span class="linenr">32: </span><span class="org-rainbow-delimiters-depth-1">}</span>
 </pre>
 </div>
