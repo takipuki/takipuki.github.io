@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a1 as n}from"./chunks/framework.C0QrXM2i.js";const F=JSON.parse('{"title":"Lab","description":"","frontmatter":{},"headers":[],"relativePath":"spl/lab.md","filePath":"spl/lab.md"}'),h={name:"spl/lab.md"},l=n("",18),k=[l];function p(t,e,E,r,d,g){return a(),i("div",null,k)}const c=s(h,[["render",p]]);export{F as __pageData,c as default};
