@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+
 /* .vitepress/theme/custom.css */
 :root {
-  --vp-font-family-mono: IBM Plex Mono
+  --vp-code-font-size: 1em;
+  --vp-font-family-mono: "Noto Sans Mono", monospace;
 }
