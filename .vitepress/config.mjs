@@ -62,6 +62,7 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: '23 Fall',   link: '/spl/solve-fin/23fa' },
+              { text: '23 Summer', link: '/spl/solve-fin/23su' },
             ]
           },
           {
