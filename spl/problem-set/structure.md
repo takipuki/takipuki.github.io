@@ -228,7 +228,7 @@ int main() {
     print_complex(b);
     putchar('=');
     print_complex(div(a, b));
-    putchar(\n);
+    putchar('\n');
 }
 ```
 
