@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitepress'
 
+//import mathjax from 'markdown-it-mathjax';
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "takipuki",
@@ -63,6 +65,7 @@ export default defineConfig({
             items: [
               { text: '23 Fall',   link: '/spl/solve-fin/23fa' },
               { text: '23 Summer', link: '/spl/solve-fin/23su' },
+              { text: '23 Spring', link: '/spl/solve-fin/23sp' },
             ]
           },
           {
@@ -86,5 +89,10 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/takipuki' }
     ],
-  }
+  },
+
+  // markdown: {
+  //   math: true,
+  // },
+
 })
