@@ -75,8 +75,16 @@ export default defineConfig({
             items: [
               {
                 text: 'Assignments',
-                link: '/spl/lab'
-              }
+                link: '/spl/lab/assignment.md'
+              },
+              {
+                  text: 'Solve Fin',
+                  collapsed: true,
+                  items: [
+                    { text: '23 Spring - A', link: '/spl/lab/solve-fin/23sp-A' },
+                    { text: '23 Spring - B', link: '/spl/lab/solve-fin/23sp-B' },
+                  ]
+              },
             ]
           },
           {
