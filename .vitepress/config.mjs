@@ -67,6 +67,7 @@ export default defineConfig({
               { text: '23 Summer', link: '/spl/solve-fin/23su' },
               { text: '23 Spring', link: '/spl/solve-fin/23sp' },
               { text: '22 Fall',   link: '/spl/solve-fin/22fa' },
+              { text: '22 Summer', link: '/spl/solve-fin/22su' },
             ]
           },
           {
