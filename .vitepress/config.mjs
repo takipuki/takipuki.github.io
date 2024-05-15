@@ -85,6 +85,7 @@ export default defineConfig({
                   items: [
                     { text: '23 Spring - A', link: '/spl/lab/solve-fin/23sp-A' },
                     { text: '23 Spring - B', link: '/spl/lab/solve-fin/23sp-B' },
+                    { text: '22 Fall',       link: '/spl/lab/solve-fin/22fa' },
                   ]
               },
             ]
