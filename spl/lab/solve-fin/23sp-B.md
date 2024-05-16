@@ -48,9 +48,10 @@ struct card {
 };
 
 int ends_with(char *input, char letter) {
-    for (; *input != letter && *input; input++)
+    if (!*input) return 0;
+    for (; *input; input++)
         ;
-    return *input;
+    return *(input-1) == letter;
 }
 
 int main() {
