@@ -51,7 +51,8 @@ int Multiple_of_5(int n) {
 
 int onlyAlphabet(char *input) {
     for (; *input; input++) {
-        if ((*input < 'a' || *input > 'z') && (*input < 'A' || *input > 'Z'))
+        if ((*input < 'a' || *input > 'z')
+            && (*input < 'A' || *input > 'Z'))
             return 0;
     }
     return 1;
@@ -64,7 +65,8 @@ int main() {
     for (int i = 0; i < n; i++) {
         scanf(" %[^\n]", ar[i].name);
         scanf("%d", &ar[i].power);
-        if (Multiple_of_5(ar[i].power) && onlyAlphabet(ar[i].name))
+        if (Multiple_of_5(ar[i].power)
+            && onlyAlphabet(ar[i].name))
             count++;
     }
 

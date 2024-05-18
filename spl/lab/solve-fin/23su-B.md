@@ -57,7 +57,8 @@ int DivisibleBy_7(int n) {
 
 int atleastOne(char *input) {
     for (; *input; input++) {
-        if ((*input < 'a' || *input > 'z') && (*input < 'A' || *input > 'Z'))
+        if ((*input < 'a' || *input > 'z')
+            && (*input < 'A' || *input > 'Z'))
             return 1;
     }
     return 0;
@@ -70,7 +71,8 @@ int main() {
     for (int i = 0; i < n; i++) {
         scanf(" %[^\n]", ar[i].name);
         scanf("%d", &ar[i].power);
-        if (DivisibleBy_7(ar[i].power) || atleastOne(ar[i].name))
+        if (DivisibleBy_7(ar[i].power) ||
+            atleastOne(ar[i].name))
             count++;
     }
 

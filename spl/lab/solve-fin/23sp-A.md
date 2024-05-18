@@ -56,7 +56,8 @@ int main() {
         scanf("%d", &ar[i].total_memory);
         scanf("%d", &ar[i].used_memory);
 
-        if (ar[i].used_memory >= ar[i].total_memory && all_caps(ar[i].name))
+        if (ar[i].used_memory >= ar[i].total_memory
+            && all_caps(ar[i].name))
             virs[count++] = i;
     }
 
