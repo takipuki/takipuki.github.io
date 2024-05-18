@@ -8,14 +8,10 @@ prev: false
 
 ```c:line-numbers
 #include <stdio.h>
-
-char* mystrcpy(char *dst, const char *src) {
-    for (; *src; src++, dst++) *dst = *src;
-    return dst;
-}
+#include <string.h>
 
 const char *numbers[10] = {
-    "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"
+    "zero ", "one ", "two ", "three ", "four ", "five ", "six ", "seven ", "eight ", "nine"
 };
 
 int rev(int n) {
@@ -26,14 +22,9 @@ int rev(int n) {
 }
 
 void toSpelledOut(int n, char *str) {
-    if (n == 0) {
-        *str = 0;
-        return;
-    }
+    if (n == 0) return;
 
-    str = mystrcpy(str, numbers[n % 10]);
-    *str = ' ';
-    str++;
+    strcat(str, numbers[n % 10]);
     toSpelledOut(n / 10, str);
 }
 
@@ -48,7 +39,7 @@ int main() {
     puts("For uppercase press 1");
     puts("For lowercase press 2");
     int c; scanf("%d", &c);
-    char s[100];
+    char s[100] = {0};
     toSpelledOut(rev(n), s);
     if (c == 1) upperCase(s);
     puts(s);
