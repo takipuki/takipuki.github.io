@@ -1,6 +1,3 @@
----
-prev: false
----
 
 # 23 Spring - A
 
