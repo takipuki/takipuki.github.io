@@ -101,15 +101,22 @@ export default defineConfig({
           },
         ]
       },
+      {
+        text: 'OOP',
+        items: [
+          {
+            text: 'Solve Mid',
+            collapsed: true,
+            items: [
+              { text: '23 Summer', link: '/oop/solve-mid/23su' },
+            ]
+          },
+        ]
+      }
     ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/takipuki' }
     ],
   },
-
-  // markdown: {
-  //   math: true,
-  // },
-
 })
