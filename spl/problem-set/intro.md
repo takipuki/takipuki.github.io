@@ -5,6 +5,7 @@ prev: false
 # Intro
 
 ## 09
+![amulet](amulet.png)
 ```c:line-numbers
 #include <stdio.h>
 
