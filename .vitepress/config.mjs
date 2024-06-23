@@ -13,6 +13,9 @@ export default defineConfig({
     //   light: '/light.png',
     //   dark: '/dark.png'
     // },
+    // search: {
+    //   provider: 'local'
+    // },
 
     nav: [
       { text: 'About', link: '/about' },
