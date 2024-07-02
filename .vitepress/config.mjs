@@ -111,6 +111,7 @@ export default defineConfig({
             text: 'Solve Mid',
             collapsed: true,
             items: [
+              { text: '24 Spring', link: '/oop/solve-mid/24sp' },
               { text: '23 Summer', link: '/oop/solve-mid/23su' },
               { text: '23 Spring', link: '/oop/solve-mid/23sp' },
             ]
