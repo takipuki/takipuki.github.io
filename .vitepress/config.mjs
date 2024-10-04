@@ -119,6 +119,13 @@ export default defineConfig({
               { text: '17 Fall',   link: '/oop/solve-mid/17fa' },
             ]
           },
+          {
+            text: 'Solve Fin',
+            collapsed: true,
+            items: [
+              { text: '23 Fall', link: '/oop/solve-fin/23fa' },
+            ]
+          },
         ]
       }
     ],
