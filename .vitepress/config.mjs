@@ -123,7 +123,8 @@ export default defineConfig({
             text: 'Solve Fin',
             collapsed: true,
             items: [
-              { text: '23 Fall', link: '/oop/solve-fin/23fa' },
+              { text: '23 Fall',   link: '/oop/solve-fin/23fa' },
+              { text: '23 Spring', link: '/oop/solve-fin/23sp' },
             ]
           },
         ]
