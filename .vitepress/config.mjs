@@ -30,15 +30,17 @@ export default defineConfig({
 				{ rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
 			],
 
-			[ 'script',
-				{
-					async: true,
-					src: 'https://www.googletagmanager.com/gtag/js?id=G-YBHS5CY3EG',
-				},
+			[
+				'script',
+				{ async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-YBHS5CY3EG' }
 			],
-			[ 'script',
+			[
+				'script',
 				{},
-				"window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-YBHS5CY3EG');",
+				`window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', 'G-YBHS5CY3EG');`
 			],
 		],
 
