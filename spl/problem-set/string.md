@@ -203,7 +203,7 @@ int main() {
 			;
 		if (*r == '\0') {
 			puts("Substring");
-			return;
+			return 0;
 		}
 	}
 
