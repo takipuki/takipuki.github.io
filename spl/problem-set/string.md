@@ -4,7 +4,7 @@
 ## 01
 ```c:line-numbers
 #include <stdio.h>
- 
+
 int main() {
     char ch = getchar();
     if (ch >= 'A' && ch <= 'Z')
@@ -17,10 +17,10 @@ int main() {
 ## 02
 ```c:line-numbers
 #include <stdio.h>
- 
+
 int main() {
     char ch = getchar();
- 
+
     if (ch >= 'A' && ch <= 'Z')
         printf("%c\n", ch + ' ');
     else if (ch >= 'a' && ch <= 'z')
@@ -33,10 +33,10 @@ int main() {
 ## 03
 ```c:line-numbers
 #include <stdio.h>
- 
+
 int main() {
     char ch = getchar();
- 
+
     if (ch >= '0' && ch <= '9')
         printf("%d\n", ch - '0');
     else
@@ -187,36 +187,27 @@ int main() {
 #include <stdio.h>
 
 int main() {
-    char a[100], b[100];
-    int alen;
-    for (alen = 0; (a[alen] = getchar()) != '\n'; alen++);
-    a[alen] = '\0';
+	char s[100], t[100];
+	int sn, tn;
+	for (sn = 0; (s[sn] = getchar()) != '\n'; sn++)
+		;
+	s[sn] = '\0';
 
-    int blen;
-    for (blen = 0; (b[blen] = getchar()) != '\n'; blen++);
-    b[blen] = '\0';
+	for (tn = 0; (t[tn] = getchar()) != '\n'; tn++)
+		;
+	t[tn] = '\0';
 
-    if (alen < blen) {
-        puts("Not substring");
-        return 0;
-    }
+	for (char *p = s; *p; p++) {
+		char *q, *r;
+		for (q = p, r = t; *q && *r && *q == *r; q++, r++)
+			;
+		if (*r == '\0') {
+			puts("Substring");
+			return;
+		}
+	}
 
-    for (int i = 0; i < alen - (blen-1); i++) {
-        if (a[i] == b[0]) {
-            int flag = 1;
-            for (int j = 1; j < blen; j++) {
-                if (a[i+j] != b[j]) {
-                    flag = 0;
-                    break;
-                }
-            }
-            if (flag) {
-                puts("Substring");
-                return 0;
-            }
-        }
-    }
-    puts("Not substring");
+	puts("Not substring");
 }
 ```
 
@@ -229,7 +220,7 @@ int main() {
     int alen;
     for (alen = 0; (a[alen] = getchar()) != '\n'; alen++);
     a[alen] = '\0';
-    
+
     for (int i = 0; i < alen; i++)
         if (a[i] == ' ')
             putchar('\n');
