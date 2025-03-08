@@ -120,6 +120,7 @@ export interface SiteData<ThemeConfig = any> {
     | boolean
     | 'dark'
     | 'force-dark'
+    | 'force-auto'
     | (Omit<UseDarkOptions, 'initialValue'> & { initialValue?: 'dark' })
   themeConfig: ThemeConfig
   scrollOffset:
@@ -146,6 +147,8 @@ export interface PageDataPayload {
 
 export interface SSGContext extends SSRContext {
   content: string
+  /** @experimental */
+  vpSocialIcons: Set<string>
 }
 
 export interface LocaleSpecificConfig<ThemeConfig = any> {

@@ -23,19 +23,6 @@ export default defineConfig({
 			[ 'link',
 				{ rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
 			],
-
-			[
-				'script',
-				{ async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-YBHS5CY3EG' }
-			],
-			[
-				'script',
-				{},
-				`window.dataLayer = window.dataLayer || [];
-				function gtag(){dataLayer.push(arguments);}
-				gtag('js', new Date());
-				gtag('config', 'G-YBHS5CY3EG');`
-			],
 		],
 
 		sidebar: [
@@ -47,9 +34,9 @@ export default defineConfig({
 						text: 'Solve Fin',
 						items: [
 							{ text: '22 Spring', link: '/courses/dm/solve-fin/22sp.pdf' },
-							{ text: '21 Fall', link: '/courses/dm/solve-fin/21fa.pdf' },
-							{ text: '20 Fall', link: '/courses/dm/solve-fin/20fa.pdf' },
-							{ text: '19 Fall', link: '/courses/dm/solve-fin/19fa.pdf' },
+							{ text: '21 Fall',   link: '/courses/dm/solve-fin/21fa.pdf' },
+							{ text: '20 Fall',   link: '/courses/dm/solve-fin/20fa.pdf' },
+							{ text: '19 Fall',   link: '/courses/dm/solve-fin/19fa.pdf' },
 							{ text: '23 Summer', link: '/courses/dm/solve-fin/23su.pdf' },
 							{ text: '23 Spring', link: '/courses/dm/solve-fin/23sp.pdf' },
 							{ text: '21 Spring', link: '/courses/dm/solve-fin/21sp.pdf' },
@@ -132,9 +119,9 @@ export default defineConfig({
 					{
 						text: 'Solve Fin',
 						items: [
-							{ text: '23 Fall', link: '/courses/calc/solve-fin/23fa.pdf' },
+							{ text: '23 Fall',   link: '/courses/calc/solve-fin/23fa.pdf' },
 							{ text: '23 Summer', link: '/courses/calc/solve-fin/23su.pdf' },
-							{ text: '22 Fall', link: '/courses/calc/solve-fin/22fa.pdf' },
+							{ text: '22 Fall',   link: '/courses/calc/solve-fin/22fa.pdf' },
 							{ text: '22 Summer', link: '/courses/calc/solve-fin/22su.pdf' },
 						]
 					},
@@ -180,7 +167,7 @@ export default defineConfig({
 							{ text: '24 Spring', link: '/courses/linear/solve-fin/24sp.pdf' },
 							{ text: '23 Summer', link: '/courses/linear/solve-fin/23su.pdf' },
 							{ text: '23 Spring', link: '/courses/linear/solve-fin/23sp.pdf' },
-							{ text: '22 Fall', link: '/courses/linear/solve-fin/22fa.pdf' },
+							{ text: '22 Fall',   link: '/courses/linear/solve-fin/22fa.pdf' },
 						]
 					},
 				]
@@ -193,7 +180,7 @@ export default defineConfig({
 					{
 						text: 'Solve Fin',
 						items: [
-							{ text: '23 Fall', link: '/courses/dld/solve-fin/23fa.pdf' },
+							{ text: '23 Fall',   link: '/courses/dld/solve-fin/23fa.pdf' },
 							{ text: '24 Spring', link: '/courses/dld/solve-fin/24sp.pdf' },
 							{ text: '23 Summer', link: '/courses/dld/solve-fin/23su.pdf' },
 							{ text: '23 Spring', link: '/courses/dld/solve-fin/23sp.pdf' },
@@ -213,13 +200,13 @@ export default defineConfig({
 							{ text: '24 Spring', link: '/courses/ec/solve-mid/24sp.pdf' },
 							{ text: '23 Summer', link: '/courses/ec/solve-mid/23su.pdf' },
 							{ text: '23 Spring', link: '/courses/ec/solve-mid/23sp.pdf' },
-							{ text: '22 Fall', link: '/courses/ec/solve-mid/22fa.pdf' },
+							{ text: '22 Fall',   link: '/courses/ec/solve-mid/22fa.pdf' },
 						]
 					},
 					{
 						text: 'Solve Fin',
 						items: [
-							{ text: '23 Fall', link: '/courses/ec/solve-fin/23fa.pdf' },
+							{ text: '23 Fall',   link: '/courses/ec/solve-fin/23fa.pdf' },
 							{ text: '24 Summer', link: '/courses/ec/solve-fin/24su.pdf' },
 							{ text: '24 Spring', link: '/courses/ec/solve-fin/24sp.pdf' },
 							{ text: '23 Summer', link: '/courses/ec/solve-fin/23su.pdf' },
@@ -235,7 +222,7 @@ export default defineConfig({
 					{
 						text: 'Solve Mid',
 						items: [
-							{ text: '23 Fall', link: '/courses/phy/solve-mid/23fa.pdf' },
+							{ text: '23 Fall',   link: '/courses/phy/solve-mid/23fa.pdf' },
 							{ text: '24 Spring', link: '/courses/phy/solve-mid/24sp.pdf' },
 						]
 					},
@@ -249,7 +236,7 @@ export default defineConfig({
 					{
 						text: 'Solve Mid',
 						items: [
-							{ text: '23 Fall', link: '/courses/vector/solve-mid/23fa.pdf' },
+							{ text: '23 Fall',   link: '/courses/vector/solve-mid/23fa.pdf' },
 							{ text: '24 Spring', link: '/courses/vector/solve-mid/24sp.pdf' },
 							{ text: '23 Summer', link: '/courses/vector/solve-mid/23su.pdf' },
 							{ text: '21 Summer', link: '/courses/vector/solve-mid/21su.pdf' },
@@ -258,7 +245,7 @@ export default defineConfig({
 					{
 						text: 'Solve Fin',
 						items: [
-							{ text: '23 Fall', link: '/courses/vector/solve-fin/23fa.pdf' },
+							{ text: '23 Fall',   link: '/courses/vector/solve-fin/23fa.pdf' },
 							{ text: '24 Summer', link: '/courses/vector/solve-fin/24su.pdf' },
 							{ text: '24 Spring', link: '/courses/vector/solve-fin/24sp.pdf' },
 							{ text: '23 Summer', link: '/courses/vector/solve-fin/23su.pdf' },
@@ -274,7 +261,7 @@ export default defineConfig({
 					{
 						text: 'Solve Mid',
 						items: [
-							{ text: '23 Fall', link: '/courses/toc/solve-mid/23fa.pdf' },
+							{ text: '23 Fall',   link: '/courses/toc/solve-mid/23fa.pdf' },
 							{ text: '24 Spring', link: '/courses/toc/solve-mid/24sp.pdf' },
 							{ text: '23 Summer', link: '/courses/toc/solve-mid/23su.pdf' },
 						]
@@ -282,11 +269,19 @@ export default defineConfig({
 					{
 						text: 'Solve Fin',
 						items: [
-							{ text: '23 Fall', link: '/courses/toc/solve-fin/23fa.pdf' },
+							{ text: '23 Fall',   link: '/courses/toc/solve-fin/23fa.pdf' },
 							{ text: '24 Summer', link: '/courses/toc/solve-fin/24su.pdf' },
 							{ text: '24 Spring', link: '/courses/toc/solve-fin/24sp.pdf' },
 						]
 					},
+				]
+			},
+
+			{
+				text: 'DSA',
+				collapsed: true,
+				items: [
+					{ text: 'Assingment - 01', link: '/dsa/ass01.md', },
 				]
 			},
 		],
