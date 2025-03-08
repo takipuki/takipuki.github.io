@@ -5,7 +5,7 @@ next: false
 # Pointers-Recursion-File
 
 ## 01
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -17,7 +17,7 @@ int main() {
 
 
 ## 02
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -29,7 +29,7 @@ int main() {
 
 
 ## 03
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -44,7 +44,7 @@ int main() {
 
 
 ## 04
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -58,7 +58,7 @@ int main() {
 
 
 ## 05
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -74,7 +74,7 @@ int main() {
 
 
 ## 06
-```c:line-numbers
+```c
 #include <stdio.h>
 
 char* str_chr(char *s, char c) {
@@ -103,7 +103,7 @@ int main() {
 
 
 ## 07
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -121,7 +121,7 @@ int main() {
 
 
 ## 08
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -138,7 +138,7 @@ int main() {
 
 
 ## 09
-```c:line-numbers
+```c
 #include <stdio.h>
 
 void solve(int n) {
@@ -155,7 +155,7 @@ int main() {
 
 
 ## 10
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int sum(int n) {
@@ -171,7 +171,7 @@ int main() {
 
 
 ## 11
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int fib(int n) {
@@ -195,7 +195,7 @@ int main() {
 
 
 ## 12
-```c:line-numbers
+```c
 #include <stdio.h>
 
 void print_arr(int *ar, int n) {
@@ -217,7 +217,7 @@ int main() {
 
 
 ## 13
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int digs(int n) {
@@ -233,7 +233,7 @@ int main() {
 
 
 ## 14
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int max(int a, int b) {
@@ -257,7 +257,7 @@ int main() {
 
 
 ## 15
-```c:line-numbers
+```c
 #include <stdio.h>
 
 void print_every_other(int n) {
@@ -275,7 +275,7 @@ int main() {
 
 
 ## 16
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int is_pal(char *s, int len) {
@@ -298,7 +298,7 @@ int main() {
 
 
 ## 17
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -312,7 +312,7 @@ int main() {
 
 
 ## 18
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -325,7 +325,7 @@ int main() {
 
 
 ## 19
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -339,7 +339,7 @@ int main() {
 
 
 ## 20
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -354,7 +354,7 @@ int main() {
 
 
 ## 21
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {

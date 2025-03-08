@@ -2,7 +2,7 @@
 # Operator
 
 ## 01
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -18,7 +18,7 @@ int main() {
 ```
 
 ## 02
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -29,7 +29,7 @@ int main() {
 ```
 
 ## 03
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -40,7 +40,7 @@ int main() {
 ```
 
 ## 04
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -59,7 +59,7 @@ int main() {
 ```
 
 ## 05
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -74,7 +74,7 @@ int main() {
 ```
 
 ## 06
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -89,7 +89,7 @@ int main() {
 ```
 
 ## 07
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -109,7 +109,7 @@ int main() {
 ```
 
 ## 08
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -120,7 +120,7 @@ int main() {
 ```
 
 ## 09
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -133,7 +133,7 @@ int main() {
 ```
 
 ## 10
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -147,7 +147,7 @@ int main() {
 ```
 
 ## 11
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -162,7 +162,7 @@ int main() {
 ```
 
 ## 12
-```c:line-numbers
+```c
 #include <stdio.h>
 #include <math.h>
 
@@ -183,7 +183,7 @@ int main() {
 ```
 
 ## 13
-```c:line-numbers
+```c
 #include <stdio.h>
 #include <math.h>
 
@@ -199,7 +199,7 @@ int main() {
 ```
 
 ## 14
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -221,7 +221,7 @@ int main() {
 ```
 
 ## 15
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {

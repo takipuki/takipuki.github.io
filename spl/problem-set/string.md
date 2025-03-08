@@ -2,7 +2,7 @@
 # String
 
 ## 01
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -15,7 +15,7 @@ int main() {
 ```
 
 ## 02
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -31,7 +31,7 @@ int main() {
 ```
 
 ## 03
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -45,7 +45,7 @@ int main() {
 ```
 
 ## 04
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -57,7 +57,7 @@ int main() {
 ```
 
 ## 05
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -75,7 +75,7 @@ int main() {
 ```
 
 ## 06
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -95,7 +95,7 @@ int main() {
 ```
 
 ## 07
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -119,7 +119,7 @@ int main() {
 Disclaimer: Sample output does not match the instructions given. The code
 follows the sample output.
 
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int strcmpp(char *a, char *b) {
@@ -143,7 +143,7 @@ int main() {
 ```
 
 ## 09
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -161,7 +161,7 @@ int main() {
 ```
 
 ## 10
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -183,7 +183,7 @@ int main() {
 ```
 
 ## 11
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -212,7 +212,7 @@ int main() {
 ```
 
 ## 12
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {

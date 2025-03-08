@@ -5,7 +5,7 @@ prev: false
 # Intro
 
 ## 09
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -17,7 +17,7 @@ int main() {
 ```
 
 ## 10
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -37,7 +37,7 @@ int main() {
 ```
 
 ## 11
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -57,7 +57,7 @@ int main() {
 ```
 
 ## 12
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {
@@ -67,7 +67,7 @@ int main() {
 ```
 
 ## 13
-```c:line-numbers
+```c
 #include <stdio.h>
 
 #define PI 3.14195
@@ -78,7 +78,7 @@ int main() {
 ```
 
 ## 14
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int a = 10;
@@ -96,7 +96,7 @@ int main() {
 ```
 
 ## 15
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int main() {

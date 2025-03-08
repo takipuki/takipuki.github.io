@@ -3,7 +3,7 @@
 
 ## 01
 
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int is_palindrome(int n) {
@@ -43,7 +43,7 @@ int main() {
 
 ## 02
 
-```c:line-numbers
+```c
 #include <stdio.h>
 
 struct demons {

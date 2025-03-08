@@ -3,6 +3,15 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
 	title: "takipuki",
 	description: "UIU solution bank",
+
+	markdown: {
+		lineNumbers: true,
+		theme: {
+			light: 'catppuccin-latte',
+			dark: 'catppuccin-frappe',
+		},
+	},
+
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
 
@@ -26,8 +35,7 @@ export default defineConfig({
 		],
 
 		sidebar: [
-			{
-				text: 'DM',
+			{ text: 'DM',
 				collapsed: true,
 				items: [
 					{
@@ -47,12 +55,10 @@ export default defineConfig({
 				]
 			},
 
-			{
-				text: 'SPL',
+			{ text: 'SPL',
 				collapsed: true,
 				items: [
-					{
-						text: 'Problem Set',
+					{ text: 'Problem Set',
 						collapsed: true,
 						items: [
 							{ text: 'Intro',                   link: '/spl/problem-set/intro' },
@@ -68,8 +74,7 @@ export default defineConfig({
 							{ text: 'Pointers-Recursion-File', link: '/spl/problem-set/pointers-recursion-file' }
 						]
 					},
-					{
-						text: 'Solve Mid',
+					{ text: 'Solve Mid',
 						collapsed: true,
 						items: [
 							{ text: '24 Spring', link: '/spl/solve-mid/24sp' },
@@ -78,8 +83,7 @@ export default defineConfig({
 							{ text: '22 Summer', link: '/spl/solve-mid/22su' }
 						]
 					},
-					{
-						text: 'Solve Fin',
+					{ text: 'Solve Fin',
 						collapsed: true,
 						items: [
 							{ text: '24 Spring', link: '/spl/solve-fin/24sp' },
@@ -90,12 +94,10 @@ export default defineConfig({
 							{ text: '22 Summer', link: '/spl/solve-fin/22su' },
 						]
 					},
-					{
-						text: 'Lab',
+					{ text: 'Lab',
 						collapsed: true,
 						items: [
-							{
-								text: 'Solve Fin',
+							{ text: 'Solve Fin',
 										items: [
 											{ text: '23 Fall - A',   link: '/spl/lab/solve-fin/23fa-A' },
 											{ text: '23 Fall - B',   link: '/spl/lab/solve-fin/23fa-B' },
@@ -116,8 +118,7 @@ export default defineConfig({
 				text: 'CALC',
 				collapsed: true,
 				items: [
-					{
-						text: 'Solve Fin',
+					{ text: 'Solve Fin',
 						items: [
 							{ text: '23 Fall',   link: '/courses/calc/solve-fin/23fa.pdf' },
 							{ text: '23 Summer', link: '/courses/calc/solve-fin/23su.pdf' },
@@ -132,8 +133,7 @@ export default defineConfig({
 				text: 'OOP',
 				collapsed: true,
 				items: [
-					{
-						text: 'Solve Mid',
+					{ text: 'Solve Mid',
 						items: [
 							{ text: '24 Summer', link: '/oop/solve-mid/24su' },
 							{ text: '24 Spring', link: '/oop/solve-mid/24sp' },
@@ -143,8 +143,7 @@ export default defineConfig({
 							{ text: '17 Fall',   link: '/oop/solve-mid/17fa' },
 						]
 					},
-					{
-						text: 'Solve Fin',
+					{ text: 'Solve Fin',
 						items: [
 							{ text: '24 Spring', link: '/oop/solve-fin/24sp' },
 							{ text: '23 Fall',   link: '/oop/solve-fin/23fa' },
@@ -160,8 +159,7 @@ export default defineConfig({
 				text: 'LINEAR',
 				collapsed: true,
 				items: [
-					{
-						text: 'Solve Fin',
+					{ text: 'Solve Fin',
 						items: [
 							{ text: '22 Spring', link: '/courses/linear/solve-fin/22sp.pdf' },
 							{ text: '24 Spring', link: '/courses/linear/solve-fin/24sp.pdf' },
@@ -177,8 +175,7 @@ export default defineConfig({
 				text: 'DLD',
 				collapsed: true,
 				items: [
-					{
-						text: 'Solve Fin',
+					{ text: 'Solve Fin',
 						items: [
 							{ text: '23 Fall',   link: '/courses/dld/solve-fin/23fa.pdf' },
 							{ text: '24 Spring', link: '/courses/dld/solve-fin/24sp.pdf' },
@@ -193,8 +190,7 @@ export default defineConfig({
 				text: 'EC',
 				collapsed: true,
 				items: [
-					{
-						text: 'Solve Mid',
+					{ text: 'Solve Mid',
 						items: [
 							{ text: '24 Summer', link: '/courses/ec/solve-mid/24su.pdf' },
 							{ text: '24 Spring', link: '/courses/ec/solve-mid/24sp.pdf' },
@@ -203,8 +199,7 @@ export default defineConfig({
 							{ text: '22 Fall',   link: '/courses/ec/solve-mid/22fa.pdf' },
 						]
 					},
-					{
-						text: 'Solve Fin',
+					{ text: 'Solve Fin',
 						items: [
 							{ text: '23 Fall',   link: '/courses/ec/solve-fin/23fa.pdf' },
 							{ text: '24 Summer', link: '/courses/ec/solve-fin/24su.pdf' },
@@ -215,12 +210,10 @@ export default defineConfig({
 				]
 			},
 
-			{
-				text: 'PHY',
+			{ text: 'PHY',
 				collapsed: true,
 				items: [
-					{
-						text: 'Solve Mid',
+					{ text: 'Solve Mid',
 						items: [
 							{ text: '23 Fall',   link: '/courses/phy/solve-mid/23fa.pdf' },
 							{ text: '24 Spring', link: '/courses/phy/solve-mid/24sp.pdf' },
@@ -229,12 +222,10 @@ export default defineConfig({
 				]
 			},
 
-			{
-				text: 'VECTOR',
+			{ text: 'VECTOR',
 				collapsed: true,
 				items: [
-					{
-						text: 'Solve Mid',
+					{ text: 'Solve Mid',
 						items: [
 							{ text: '23 Fall',   link: '/courses/vector/solve-mid/23fa.pdf' },
 							{ text: '24 Spring', link: '/courses/vector/solve-mid/24sp.pdf' },
@@ -242,8 +233,7 @@ export default defineConfig({
 							{ text: '21 Summer', link: '/courses/vector/solve-mid/21su.pdf' },
 						]
 					},
-					{
-						text: 'Solve Fin',
+					{ text: 'Solve Fin',
 						items: [
 							{ text: '23 Fall',   link: '/courses/vector/solve-fin/23fa.pdf' },
 							{ text: '24 Summer', link: '/courses/vector/solve-fin/24su.pdf' },
@@ -254,20 +244,17 @@ export default defineConfig({
 				]
 			},
 
-			{
-				text: 'TOC',
+			{ text: 'TOC',
 				collapsed: true,
 				items: [
-					{
-						text: 'Solve Mid',
+					{ text: 'Solve Mid',
 						items: [
 							{ text: '23 Fall',   link: '/courses/toc/solve-mid/23fa.pdf' },
 							{ text: '24 Spring', link: '/courses/toc/solve-mid/24sp.pdf' },
 							{ text: '23 Summer', link: '/courses/toc/solve-mid/23su.pdf' },
 						]
 					},
-					{
-						text: 'Solve Fin',
+					{ text: 'Solve Fin',
 						items: [
 							{ text: '23 Fall',   link: '/courses/toc/solve-fin/23fa.pdf' },
 							{ text: '24 Summer', link: '/courses/toc/solve-fin/24su.pdf' },
@@ -277,11 +264,16 @@ export default defineConfig({
 				]
 			},
 
-			{
-				text: 'DSA',
+			{ text: 'DSA',
 				collapsed: true,
 				items: [
-					{ text: 'Assingment - 01', link: '/dsa/ass01.md', },
+					{ text: 'Sort', link: '/dsa/sort.md' },
+					{ text: 'Lab',
+						collapsed: true,
+						items: [
+							{ text: 'Assingment - 01', link: '/dsa/lab/ass01.md', },
+						]
+					},
 				]
 			},
 		],

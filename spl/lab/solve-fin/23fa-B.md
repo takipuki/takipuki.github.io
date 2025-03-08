@@ -3,7 +3,7 @@
 
 ## 01
 
-```c:line-numbers
+```c
 #include <stdio.h>
 
 void encoder(char *p, int shift) {
@@ -25,7 +25,7 @@ int main() {
 
 ## 02
 
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int funtorial(int n, int i) {
