@@ -6,7 +6,7 @@ prev: false
 
 ## 01
 
-```c:line-numbers
+```c
 #include <stdio.h>
 #include <string.h>
 
@@ -49,7 +49,7 @@ int main() {
 
 ## 02
 
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int is_even_sum_greater(int n, int evenSum, int oddSum) {

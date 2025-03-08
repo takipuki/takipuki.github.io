@@ -3,7 +3,7 @@
 
 ## 01
 
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int is_prime(int x) {
@@ -38,7 +38,7 @@ The question says to add 70 for stage 2 pokemons but the sample adds 70.
 The solution follows the question.
 :::
 
-```c:line-numbers
+```c
 #include <stdio.h>
 
 struct card {

@@ -2,7 +2,7 @@
 # Function
 
 ## 01
-```c:line-numbers
+```c
 #include <stdio.h>
 
 void message() {
@@ -15,7 +15,7 @@ int main() {
 ```
 
 ## 02
-```c:line-numbers
+```c
 #include <stdio.h>
 
 void character(char ch) {
@@ -29,7 +29,7 @@ int main() {
 ```
 
 ## 03
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int sum_of(int n) {
@@ -50,7 +50,7 @@ int main() {
 ```
 
 ## 04
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int sum_of_arr(int arr[], int size) {
@@ -71,7 +71,7 @@ int main() {
 ```
 
 ## 05
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int swap(int a, int b) {
@@ -89,7 +89,7 @@ int main() {
 ```
 
 ## 06
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int swap(int *a, int *b) {
@@ -107,7 +107,7 @@ int main() {
 ```
 
 ## 07
-```c:line-numbers
+```c
 #include <stdio.h>
 
 void print_evens(int arr[], int size) {
@@ -126,7 +126,7 @@ int main() {
 ```
 
 ## 08
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int min(int arr[], int size) {
@@ -147,7 +147,7 @@ int main() {
 ```
 
 ## 09
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int* doub(int *arr, int size) {
@@ -167,7 +167,7 @@ int main() {
 ```
 
 ## 10
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int* sort(int *arr, int size) {
@@ -201,7 +201,7 @@ int main() {
 ```
 
 ## 11
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int is_prime(int n) {
@@ -221,7 +221,7 @@ int main() {
 ```
 
 ## 12
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int is_prime(int n) {
@@ -247,7 +247,7 @@ int main() {
 ```
 
 ## 13
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int is_prime(int n) {
@@ -274,7 +274,7 @@ int main() {
 ```
 
 ## 14
-```c:line-numbers
+```c
 #include <stdio.h>
 #include <math.h>
 
@@ -308,7 +308,7 @@ int main() {
 ```
 
 ## 15
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int is_substr(char *a, char *b) {
@@ -340,7 +340,7 @@ int main() {
 ```
 
 ## 16
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int str_len(char *a) {
@@ -379,7 +379,7 @@ int main() {
 ```
 
 ## 17
-```c:line-numbers
+```c
 #include <stdio.h>
 
 int gcd(int a, int b) {
@@ -412,7 +412,7 @@ int main() {
 ```
 
 ## 18
-```c:line-numbers
+```c
 #include <stdio.h>
 
 void input_matrix(int *mat, int m, int n) {
@@ -450,7 +450,7 @@ int main() {
 ```
 
 ## 19
-```c:line-numbers
+```c
 #include <stdio.h>
 
 void input_matrix(int *mat, int m, int n) {
@@ -488,7 +488,7 @@ int main() {
 ```
 
 ## 20
-```c:line-numbers
+```c
 #include <stdio.h>
 #include <math.h>
 
