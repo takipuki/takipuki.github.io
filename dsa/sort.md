@@ -44,15 +44,12 @@ using namespace std;
 
 void sort(int *ar, int size) {
 	if (!size) return;
-	for (int i = 1; i < size; i++) {
-		for (int j = 0; j < i; j++) {
-			if (ar[i] < ar[j]) {
-				int tmp = ar[i];
-				for (int k = i; k > j; k--)
-					ar[k] = ar[k-1];
-				ar[j] = tmp;
-			}
-		}
+	for (int i = 0; i < size-1; i++) {
+		int k = ar[i+1];
+		int j;
+		for (j = i; j >= 0 and ar[j] > k; j--)
+			ar[j+1] = ar[j];
+		ar[j+1] = k;
 	}
 }
 
