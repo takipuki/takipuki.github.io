@@ -2,15 +2,16 @@
 # Assignment - 01
 
 ## 01
-```cpp
+```c
 #include <stdio.h>
 
-int *binary_search(int *a, int *b, int k) {
-	int *i = a;
-	for (int j = (b-a)/2; j >= 1; j /= 2) { // half jump distance
-		while (i+j < b && *(i+j) <= k) i += j; // keep jumping forward
+int *lower_bound(int *begin, int *end, int k) {
+	begin -= 1;
+	for (int j = (end-begin)/2; j; j /= 2) {
+		for (; begin+j < end && begin[j] < k; )
+			begin += j;
 	}
-	return *i == k ? i : i+1;
+	return begin + 1;
 }
 
 int main() {
@@ -20,31 +21,31 @@ int main() {
 		scanf("%d", ar+i);
 	int k; scanf("%d", &k);
 
-	printf("%d\n", binary_search(ar, ar+n, k) - ar);
+	printf("%d\n", lower_bound(ar, ar+n, k) - ar);
 }
 ```
 
 
 ## 02
-```cpp
+```c
 #include <stdio.h>
 
-int *lower_bound(int *a, int *b, int k) {
-	int *mid = a + (b-a)/2;
-	for (; a < b; mid = a + (b-a)/2) {
-		if (k <= *mid) b = mid;
-		else if (k > *mid) a = mid+1;
+int *lower_bound(int *begin, int *end, int k) {
+	begin -= 1;
+	for (int j = (end-begin)/2; j; j /= 2) {
+		for (; begin+j < end && begin[j] < k; )
+			begin += j;
 	}
-	return mid;
+	return begin + 1;
 }
 
-int *upper_bound(int *a, int *b, int k) {
-	int *mid = a + (b-a)/2;
-	for (; a < b; mid = a + (b-a)/2) {
-		if (k < *mid) b = mid;
-		else if (k >= *mid) a = mid+1;
+int *upper_bound(int *begin, int *end, int k) {
+	begin -= 1;
+	for (int j = (end-begin)/2; j; j /= 2) {
+		for (; begin+j < end && begin[j] <= k; )
+			begin += j;
 	}
-	return mid;
+	return begin + 1;
 }
 
 int main() {
@@ -56,45 +57,50 @@ int main() {
 
 	int *a = lower_bound(ar, ar+n, k);
 	int *b = upper_bound(ar, ar+n, k);
-	if (a == b) printf("-1 -1\n");
-	else printf("%d %d\n", a-ar, b-1-ar);
+	if (a == ar+n || *a != k)
+		printf("-1 -1\n");
+	else
+		printf("%d %d\n", a-ar,  b-ar-1);
 }
 ```
 
 
 ## 03
-```cpp
+```c
 #include <stdio.h>
 
 int main() {
-	int ar[26] = {0}, br[26] = {0};
+	int s[26] = {0}, t[26] = {0};
 	for (char ch; (ch = getchar()) != '\n' && ch != EOF; ) {
-		ar[ch - 'a']++;
+		s[ch - 'a']++;
 	}
-
 	for (char ch; (ch = getchar()) != '\n' && ch != EOF; ) {
-		br[ch - 'a']++;
+		t[ch - 'a']++;
 	}
 
 	for (int i = 0; i < 26; i++) {
-		if (ar[i] != br[i]) {
-			puts("NO");
+		if (s[i] != t[i]) {
+			printf("NO\n");
 			return 0;
 		}
 	}
-	puts("YES");
+	printf("YES\n");
 }
 ```
 
 
 ## 04
-```cpp
+```c
 #include <stdio.h>
 
 int main() {
 	int n; scanf("%d", &n);
-	int ar[n+1] = {0}, a;
-	for (int i = 0; i < n; i++) {
+	int ar[n+1];
+	for (int i = 0; i <= n; i++) {
+		ar[i] = 0;
+	}
+
+	for (int i = 0, a; i < n; i++) {
 		scanf("%d", &a);
 		ar[a]++;
 	}
@@ -110,59 +116,66 @@ int main() {
 
 
 ## 05
-```cpp
+```c
 #include <stdio.h>
+
+int solve(int *ar, int n) {
+	int i = -1;
+	for (int j = n/2; j; j /= 2) {
+		for (; i+j < n && ar[i+j] == i+j; )
+			i += j;
+	}
+	return i+1;
+}
 
 int main() {
 	int n; scanf("%d", &n);
 	int ar[n];
-	for (int i = 0; i < n; i++)
+	for (int i = 0, a; i < n; i++) {
 		scanf("%d", ar+i);
-
-	int i = -1;
-	for (int j = n-1; j >= 1; j /= 2) {
-		while (i+j < n && ar[i+j] == i+j) i += j;
 	}
 
-	printf("%d\n", i+1);
+	printf("%d\n", solve(ar, n));
 }
 ```
 
 
 ## 06
-```cpp
+```c
 #include <stdio.h>
+
+int is_square(int n) {
+	int i = 0;
+	for (int j = n/2 + (n&1); j; j /= 2) {
+		for (; (i+j)*(i+j) <= n; )
+			i += j;
+	}
+	return i*i == n;
+}
 
 int main() {
 	int n; scanf("%d", &n);
-
-	int i = 1;
-	for (int j = n/2; j >= 1; j /= 2) {
-		while ((i+j)*(i+j) <= n) i += j;
-	}
-
-	puts(i*i == n ? "YES" : "NO");
+	printf("%s\n", is_square(n) ? "YES" : "NO");
 }
 ```
 
 
 ## 07
-```cpp
+```c
 #include <stdio.h>
 
-float abs(float f) {
+float Abs(float f) {
 	return f < 0 ? -f : f;
 }
 
-float sqrt(float n, float guess) {
-	if (abs(guess*guess - n) <= 10e-4)
-		return guess;
-	return sqrt(n, (guess + n/guess)/2);
+float Sqrt(int n, float guess) {
+	if (Abs(n - guess*guess) <= 1e-4) return guess;
+	return Sqrt(n, (n/guess + guess)/2);
 }
 
 int main() {
-	float n; scanf("%f", &n);
-	printf("%.3f\n", sqrt(n, n/2));
+	int n; scanf("%d", &n);
+	printf("%.3f\n", Sqrt(n, (float)n/2));
 }
 ```
 
