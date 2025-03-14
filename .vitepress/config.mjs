@@ -5,6 +5,7 @@ export default defineConfig({
 	description: "UIU solution bank",
 
 	markdown: {
+		math: true,
 		lineNumbers: true,
 		theme: {
 			light: 'catppuccin-latte',
