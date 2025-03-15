@@ -13,6 +13,18 @@ export default defineConfig({
 		},
 	},
 
+	head: [
+		[ 'script',
+			{ async: true,
+				src: 'https://www.googletagmanager.com/gtag/js?id=G-YBHS5CY3EG',
+			},
+		],
+		[ 'script',
+			{},
+			"window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-YBHS5CY3EG');",
+		],
+	],
+
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
 
@@ -32,19 +44,6 @@ export default defineConfig({
 			],
 			[ 'link',
 				{ rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
-			],
-
-			[
-				'script',
-				{
-					async: true,
-					src: 'https://www.googletagmanager.com/gtag/js?id=G-YBHS5CY3EG',
-				},
-			],
-			[
-				'script',
-				{},
-				"window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-YBHS5CY3EG');",
 			],
 		],
 
@@ -285,7 +284,7 @@ export default defineConfig({
 					{ text: 'Lab',
 						collapsed: true,
 						items: [
-							{ text: 'Assingment - 01', link: '/dsa/lab/ass01.md', },
+							{ text: 'Problem Set - 01', link: '/dsa/lab/pset01.md', },
 						]
 					},
 				]
