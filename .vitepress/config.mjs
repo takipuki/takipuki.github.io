@@ -284,7 +284,8 @@ export default defineConfig({
 					{ text: 'Lab',
 						collapsed: true,
 						items: [
-							{ text: 'Problem Set - 01', link: '/dsa/lab/pset01.md', },
+							{ text: 'Singly Linked List', link: '/dsa/lab/sll.md', },
+							{ text: 'Problem Set - 01  ', link: '/dsa/lab/pset01.md', },
 						]
 					},
 				]
