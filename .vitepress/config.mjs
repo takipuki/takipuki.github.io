@@ -48,26 +48,6 @@ export default defineConfig({
 		],
 
 		sidebar: [
-			{ text: 'DM',
-				collapsed: true,
-				items: [
-					{
-						text: 'Solve Fin',
-						items: [
-							{ text: '22 Spring', link: '/courses/dm/solve-fin/22sp.pdf' },
-							{ text: '21 Fall',   link: '/courses/dm/solve-fin/21fa.pdf' },
-							{ text: '20 Fall',   link: '/courses/dm/solve-fin/20fa.pdf' },
-							{ text: '19 Fall',   link: '/courses/dm/solve-fin/19fa.pdf' },
-							{ text: '23 Summer', link: '/courses/dm/solve-fin/23su.pdf' },
-							{ text: '23 Spring', link: '/courses/dm/solve-fin/23sp.pdf' },
-							{ text: '21 Spring', link: '/courses/dm/solve-fin/21sp.pdf' },
-							{ text: '21 Summer', link: '/courses/dm/solve-fin/21su.pdf' },
-							{ text: '22 Summer', link: '/courses/dm/solve-fin/22su.pdf' },
-						]
-					},
-				]
-			},
-
 			{ text: 'SPL',
 				collapsed: true,
 				items: [
@@ -128,21 +108,6 @@ export default defineConfig({
 			},
 
 			{
-				text: 'CALC',
-				collapsed: true,
-				items: [
-					{ text: 'Solve Fin',
-						items: [
-							{ text: '23 Fall',   link: '/courses/calc/solve-fin/23fa.pdf' },
-							{ text: '23 Summer', link: '/courses/calc/solve-fin/23su.pdf' },
-							{ text: '22 Fall',   link: '/courses/calc/solve-fin/22fa.pdf' },
-							{ text: '22 Summer', link: '/courses/calc/solve-fin/22su.pdf' },
-						]
-					},
-				]
-			},
-
-			{
 				text: 'OOP',
 				collapsed: true,
 				items: [
@@ -163,115 +128,6 @@ export default defineConfig({
 							{ text: '23 Spring', link: '/oop/solve-fin/23sp' },
 							{ text: '22 Summer', link: '/oop/solve-fin/22su' },
 							{ text: '22 Spring', link: '/oop/solve-fin/22sp' },
-						]
-					},
-				]
-			},
-
-			{
-				text: 'LINEAR',
-				collapsed: true,
-				items: [
-					{ text: 'Solve Fin',
-						items: [
-							{ text: '22 Spring', link: '/courses/linear/solve-fin/22sp.pdf' },
-							{ text: '24 Spring', link: '/courses/linear/solve-fin/24sp.pdf' },
-							{ text: '23 Summer', link: '/courses/linear/solve-fin/23su.pdf' },
-							{ text: '23 Spring', link: '/courses/linear/solve-fin/23sp.pdf' },
-							{ text: '22 Fall',   link: '/courses/linear/solve-fin/22fa.pdf' },
-						]
-					},
-				]
-			},
-
-			{
-				text: 'DLD',
-				collapsed: true,
-				items: [
-					{ text: 'Solve Fin',
-						items: [
-							{ text: '23 Fall',   link: '/courses/dld/solve-fin/23fa.pdf' },
-							{ text: '24 Spring', link: '/courses/dld/solve-fin/24sp.pdf' },
-							{ text: '23 Summer', link: '/courses/dld/solve-fin/23su.pdf' },
-							{ text: '23 Spring', link: '/courses/dld/solve-fin/23sp.pdf' },
-						]
-					},
-				]
-			},
-
-			{
-				text: 'EC',
-				collapsed: true,
-				items: [
-					{ text: 'Solve Mid',
-						items: [
-							{ text: '24 Summer', link: '/courses/ec/solve-mid/24su.pdf' },
-							{ text: '24 Spring', link: '/courses/ec/solve-mid/24sp.pdf' },
-							{ text: '23 Summer', link: '/courses/ec/solve-mid/23su.pdf' },
-							{ text: '23 Spring', link: '/courses/ec/solve-mid/23sp.pdf' },
-							{ text: '22 Fall',   link: '/courses/ec/solve-mid/22fa.pdf' },
-						]
-					},
-					{ text: 'Solve Fin',
-						items: [
-							{ text: '23 Fall',   link: '/courses/ec/solve-fin/23fa.pdf' },
-							{ text: '24 Summer', link: '/courses/ec/solve-fin/24su.pdf' },
-							{ text: '24 Spring', link: '/courses/ec/solve-fin/24sp.pdf' },
-							{ text: '23 Summer', link: '/courses/ec/solve-fin/23su.pdf' },
-						]
-					},
-				]
-			},
-
-			{ text: 'PHY',
-				collapsed: true,
-				items: [
-					{ text: 'Solve Mid',
-						items: [
-							{ text: '23 Fall',   link: '/courses/phy/solve-mid/23fa.pdf' },
-							{ text: '24 Spring', link: '/courses/phy/solve-mid/24sp.pdf' },
-						]
-					},
-				]
-			},
-
-			{ text: 'VECTOR',
-				collapsed: true,
-				items: [
-					{ text: 'Solve Mid',
-						items: [
-							{ text: '23 Fall',   link: '/courses/vector/solve-mid/23fa.pdf' },
-							{ text: '24 Spring', link: '/courses/vector/solve-mid/24sp.pdf' },
-							{ text: '23 Summer', link: '/courses/vector/solve-mid/23su.pdf' },
-							{ text: '21 Summer', link: '/courses/vector/solve-mid/21su.pdf' },
-						]
-					},
-					{ text: 'Solve Fin',
-						items: [
-							{ text: '23 Fall',   link: '/courses/vector/solve-fin/23fa.pdf' },
-							{ text: '24 Summer', link: '/courses/vector/solve-fin/24su.pdf' },
-							{ text: '24 Spring', link: '/courses/vector/solve-fin/24sp.pdf' },
-							{ text: '23 Summer', link: '/courses/vector/solve-fin/23su.pdf' },
-						]
-					},
-				]
-			},
-
-			{ text: 'TOC',
-				collapsed: true,
-				items: [
-					{ text: 'Solve Mid',
-						items: [
-							{ text: '23 Fall',   link: '/courses/toc/solve-mid/23fa.pdf' },
-							{ text: '24 Spring', link: '/courses/toc/solve-mid/24sp.pdf' },
-							{ text: '23 Summer', link: '/courses/toc/solve-mid/23su.pdf' },
-						]
-					},
-					{ text: 'Solve Fin',
-						items: [
-							{ text: '23 Fall',   link: '/courses/toc/solve-fin/23fa.pdf' },
-							{ text: '24 Summer', link: '/courses/toc/solve-fin/24su.pdf' },
-							{ text: '24 Spring', link: '/courses/toc/solve-fin/24sp.pdf' },
 						]
 					},
 				]
