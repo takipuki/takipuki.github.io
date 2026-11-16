@@ -1,4 +1,4 @@
-// https://d3js.org/d3-scale/ v4.0.2 Copyright 2010-2021 Mike Bostock
+// https://d3js.org/d3-scale/ v4.0.3 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-array'), require('d3-interpolate'), require('d3-format'), require('d3-time'), require('d3-time-format')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-array', 'd3-interpolate', 'd3-format', 'd3-time', 'd3-time-format'], factory) :
@@ -866,7 +866,7 @@ function date(t) {
 }
 
 function number(t) {
-  return t instanceof Date ? +t : +new Date(+t);
+  return t instanceof Date ? +t : Math.round(t);
 }
 
 function calendar(ticks, tickInterval, year, month, week, day, hour, minute, second, format) {
@@ -894,7 +894,7 @@ function calendar(ticks, tickInterval, year, month, week, day, hour, minute, sec
   }
 
   scale.invert = function(y) {
-    return new Date(invert(y));
+    return new Date(Math.round(invert(y)));
   };
 
   scale.domain = function(_) {
@@ -1082,7 +1082,7 @@ function transformer() {
       unknown;
 
   function scale(x) {
-    return isNaN(x = +x) ? unknown : (x = 0.5 + ((x = +transform(x)) - t1) * (s * x < s * t1 ? k10 : k21), interpolator(clamp ? Math.max(0, Math.min(1, x)) : x));
+    return x == null || isNaN(x = +x) ? unknown : (x = 0.5 + ((x = +transform(x)) - t1) * (s * x < s * t1 ? k10 : k21), interpolator(clamp ? Math.max(0, Math.min(1, x)) : x));
   }
 
   scale.domain = function(_) {
@@ -1190,7 +1190,5 @@ exports.scaleThreshold = threshold;
 exports.scaleTime = time;
 exports.scaleUtc = utcTime;
 exports.tickFormat = tickFormat;
-
-Object.defineProperty(exports, '__esModule', { value: true });
 
 }));

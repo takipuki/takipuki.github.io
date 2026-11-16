@@ -1,4 +1,4 @@
-// https://d3js.org/d3-array/ v3.2.4 Copyright 2010-2023 Mike Bostock
+// https://d3js.org/d3-array/ v3.2.5 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -96,7 +96,6 @@ const ascendingBisect = bisector(ascending);
 const bisectRight = ascendingBisect.right;
 const bisectLeft = ascendingBisect.left;
 const bisectCenter = bisector(number).center;
-var bisect = bisectRight;
 
 function blur(values, r) {
   if (!((r = +r) >= 0)) throw new RangeError("invalid r");
@@ -653,11 +652,16 @@ function nice(start, stop, count) {
     if (step === prestep || step === 0 || !isFinite(step)) {
       return [start, stop];
     } else if (step > 0) {
-      start = Math.floor(start / step) * step;
-      stop = Math.ceil(stop / step) * step;
+      const i = Math.ceil(start / step);
+      const j = Math.floor(stop / step);
+      start = (i - (i * step > start)) * step;
+      stop = (j + (j * step < stop)) * step;
     } else if (step < 0) {
-      start = Math.ceil(start * step) / step;
-      stop = Math.floor(stop * step) / step;
+      const s = -step;
+      const i = Math.ceil(start * s);
+      const j = Math.floor(stop * s);
+      start = (i - (i / s > start)) / s;
+      stop = (j + (j / s < stop)) / s;
     }
     prestep = step;
   }
@@ -761,7 +765,7 @@ function bin() {
     } else {
       for (i = 0; i < n; ++i) {
         if ((x = values[i]) != null && x0 <= x && x <= x1) {
-          bins[bisect(tz, x, 0, m)].push(data[i]);
+          bins[bisectRight(tz, x, 0, m)].push(data[i]);
         }
       }
     }
@@ -1377,7 +1381,7 @@ exports.InternMap = InternMap;
 exports.InternSet = InternSet;
 exports.ascending = ascending;
 exports.bin = bin;
-exports.bisect = bisect;
+exports.bisect = bisectRight;
 exports.bisectCenter = bisectCenter;
 exports.bisectLeft = bisectLeft;
 exports.bisectRight = bisectRight;

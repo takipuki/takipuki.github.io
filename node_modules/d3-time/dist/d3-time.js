@@ -1,4 +1,4 @@
-// https://d3js.org/d3-time/ v3.1.0 Copyright 2010-2022 Mike Bostock
+// https://d3js.org/d3-time/ v3.1.1 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-array')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-array'], factory) :
@@ -49,7 +49,7 @@ function timeInterval(floori, offseti, count, field) {
         if (step < 0) while (++step <= 0) {
           while (offseti(date, -1), !test(date)) {} // eslint-disable-line no-empty
         } else while (--step >= 0) {
-          while (offseti(date, +1), !test(date)) {} // eslint-disable-line no-empty
+          while (offseti(date, 1), !test(date)) {} // eslint-disable-line no-empty
         }
       }
     });

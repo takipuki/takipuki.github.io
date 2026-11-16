@@ -1,4 +1,4 @@
-// https://d3js.org/d3-hierarchy/ v3.1.2 Copyright 2010-2021 Mike Bostock
+// https://d3js.org/d3-hierarchy/ v3.1.3 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -1404,7 +1404,5 @@ exports.treemapResquarify = resquarify;
 exports.treemapSlice = treemapSlice;
 exports.treemapSliceDice = sliceDice;
 exports.treemapSquarify = squarify;
-
-Object.defineProperty(exports, '__esModule', { value: true });
 
 }));

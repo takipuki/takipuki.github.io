@@ -1,9 +1,9 @@
-// https://d3js.org/d3-chord/ v3.0.1 Copyright 2010-2021 Mike Bostock
+// https://d3js.org/d3-chord/ v3.0.2 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-path')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-path'], factory) :
 (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.d3 = global.d3 || {}, global.d3));
-}(this, (function (exports, d3Path) { 'use strict';
+})(this, (function (exports, d3Path) { 'use strict';
 
 var abs = Math.abs;
 var cos = Math.cos;
@@ -27,19 +27,19 @@ function compareValue(compare) {
   };
 }
 
-function chord() {
-  return chord$1(false, false);
+function chord_default() {
+  return chord(false, false);
 }
 
 function chordTranspose() {
-  return chord$1(false, true);
+  return chord(false, true);
 }
 
 function chordDirected() {
-  return chord$1(true, false);
+  return chord(true, false);
 }
 
-function chord$1(directed, transpose) {
+function chord(directed, transpose) {
   var padAngle = 0,
       sortGroups = null,
       sortSubgroups = null,
@@ -265,7 +265,7 @@ function ribbon(headRadius) {
   return ribbon;
 }
 
-function ribbon$1() {
+function ribbon_default() {
   return ribbon();
 }
 
@@ -273,12 +273,10 @@ function ribbonArrow() {
   return ribbon(defaultArrowheadRadius);
 }
 
-exports.chord = chord;
+exports.chord = chord_default;
 exports.chordDirected = chordDirected;
 exports.chordTranspose = chordTranspose;
-exports.ribbon = ribbon$1;
+exports.ribbon = ribbon_default;
 exports.ribbonArrow = ribbonArrow;
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+}));

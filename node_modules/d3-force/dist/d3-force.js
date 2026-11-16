@@ -1,9 +1,9 @@
-// https://d3js.org/d3-force/ v3.0.0 Copyright 2010-2021 Mike Bostock
+// https://d3js.org/d3-force/ v3.0.1 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-quadtree'), require('d3-dispatch'), require('d3-timer')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-quadtree', 'd3-dispatch', 'd3-timer'], factory) :
 (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.d3 = global.d3 || {}, global.d3, global.d3, global.d3));
-}(this, (function (exports, d3Quadtree, d3Dispatch, d3Timer) { 'use strict';
+})(this, (function (exports, d3Quadtree, d3Dispatch, d3Timer) { 'use strict';
 
 function center(x, y) {
   var nodes, strength = 1;
@@ -688,6 +688,4 @@ exports.forceSimulation = simulation;
 exports.forceX = x;
 exports.forceY = y;
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+}));

@@ -1,4 +1,4 @@
-// https://d3js.org/d3-contour/ v4.0.2 Copyright 2012-2023 Mike Bostock
+// https://d3js.org/d3-contour/ v4.0.3 Copyright 2012-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-array')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-array'], factory) :

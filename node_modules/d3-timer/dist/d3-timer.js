@@ -1,9 +1,9 @@
-// https://d3js.org/d3-timer/ v3.0.1 Copyright 2010-2021 Mike Bostock
+// https://d3js.org/d3-timer/ v3.0.2 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 typeof define === 'function' && define.amd ? define(['exports'], factory) :
 (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.d3 = global.d3 || {}));
-}(this, (function (exports) { 'use strict';
+})(this, (function (exports) { 'use strict';
 
 var frame = 0, // is an animation frame pending?
     timeout$1 = 0, // is a timeout pending?
@@ -108,7 +108,7 @@ function sleep(time) {
   if (timeout$1) timeout$1 = clearTimeout(timeout$1);
   var delay = time - clockNow; // Strictly less than if we recomputed clockNow.
   if (delay > 24) {
-    if (time < Infinity) timeout$1 = setTimeout(wake, time - clock.now() - clockSkew);
+    if (time < Infinity) timeout$1 = setTimeout(wake, Math.ceil(time - clock.now() - clockSkew) + 1);
     if (interval$1) interval$1 = clearInterval(interval$1);
   } else {
     if (!interval$1) clockLast = clock.now(), interval$1 = setInterval(poke, pokeDelay);
@@ -148,6 +148,4 @@ exports.timeout = timeout;
 exports.timer = timer;
 exports.timerFlush = timerFlush;
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+}));

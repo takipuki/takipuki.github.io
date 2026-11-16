@@ -1,9 +1,9 @@
-// https://d3js.org/d3-random/ v3.0.1 Copyright 2010-2021 Mike Bostock
+// https://d3js.org/d3-random/ v3.0.2 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 typeof define === 'function' && define.amd ? define(['exports'], factory) :
 (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.d3 = global.d3 || {}));
-}(this, (function (exports) { 'use strict';
+})(this, (function (exports) { 'use strict';
 
 var defaultSource = Math.random;
 
@@ -353,6 +353,4 @@ exports.randomPoisson = poisson;
 exports.randomUniform = uniform;
 exports.randomWeibull = weibull;
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+}));

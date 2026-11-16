@@ -1,4 +1,4 @@
-// https://d3js.org/d3-scale-chromatic/ v3.1.0 Copyright 2010-2024 Mike Bostock; 2002 Cynthia Brewer, Mark Harrower, and The Pennsylvania State University
+// https://d3js.org/d3-scale-chromatic/ v3.1.1 Copyright 2010-2026 Mike Bostock; 2002 Cynthia Brewer, Mark Harrower, and The Pennsylvania State University
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-interpolate'), require('d3-color')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-interpolate', 'd3-color'], factory) :
@@ -516,7 +516,5 @@ exports.schemeYlGn = scheme$8;
 exports.schemeYlGnBu = scheme$9;
 exports.schemeYlOrBr = scheme$7;
 exports.schemeYlOrRd = scheme$6;
-
-Object.defineProperty(exports, '__esModule', { value: true });
 
 }));

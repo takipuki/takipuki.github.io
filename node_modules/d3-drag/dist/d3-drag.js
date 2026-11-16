@@ -1,9 +1,9 @@
-// https://d3js.org/d3-drag/ v3.0.0 Copyright 2010-2021 Mike Bostock
+// https://d3js.org/d3-drag/ v3.0.1 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-dispatch'), require('d3-selection')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-dispatch', 'd3-selection'], factory) :
 (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.d3 = global.d3 || {}, global.d3, global.d3));
-}(this, (function (exports, d3Dispatch, d3Selection) { 'use strict';
+})(this, (function (exports, d3Dispatch, d3Selection) { 'use strict';
 
 // These are typically used in conjunction with noevent to ensure that we can
 // preventDefault on the event.
@@ -268,6 +268,4 @@ exports.drag = drag;
 exports.dragDisable = nodrag;
 exports.dragEnable = yesdrag;
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+}));

@@ -1,9 +1,9 @@
-// https://d3js.org/d3-brush/ v3.0.0 Copyright 2010-2021 Mike Bostock
+// https://d3js.org/d3-brush/ v3.0.1 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-dispatch'), require('d3-drag'), require('d3-interpolate'), require('d3-selection'), require('d3-transition')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-dispatch', 'd3-drag', 'd3-interpolate', 'd3-selection', 'd3-transition'], factory) :
 (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.d3 = global.d3 || {}, global.d3, global.d3, global.d3, global.d3, global.d3));
-}(this, (function (exports, d3Dispatch, d3Drag, d3Interpolate, d3Selection, d3Transition) { 'use strict';
+})(this, (function (exports, d3Dispatch, d3Drag, d3Interpolate, d3Selection, d3Transition) { 'use strict';
 
 var constant = x => () => x;
 
@@ -101,29 +101,29 @@ var flipY = {
 };
 
 var signsX = {
-  overlay: +1,
-  selection: +1,
+  overlay: 1,
+  selection: 1,
   n: null,
-  e: +1,
+  e: 1,
   s: null,
   w: -1,
   nw: -1,
-  ne: +1,
-  se: +1,
+  ne: 1,
+  se: 1,
   sw: -1
 };
 
 var signsY = {
-  overlay: +1,
-  selection: +1,
+  overlay: 1,
+  selection: 1,
   n: -1,
   e: null,
-  s: +1,
+  s: 1,
   w: null,
   nw: -1,
   ne: -1,
-  se: +1,
-  sw: +1
+  se: 1,
+  sw: 1
 };
 
 function type(t) {
@@ -165,18 +165,18 @@ function brushSelection(node) {
 }
 
 function brushX() {
-  return brush$1(X);
+  return brush(X);
 }
 
 function brushY() {
-  return brush$1(Y);
+  return brush(Y);
 }
 
-function brush() {
-  return brush$1(XY);
+function brush_default() {
+  return brush(XY);
 }
 
-function brush$1(dim) {
+function brush(dim) {
   var extent = defaultExtent,
       filter = defaultFilter,
       touchable = defaultTouchable,
@@ -646,11 +646,9 @@ function brush$1(dim) {
   return brush;
 }
 
-exports.brush = brush;
+exports.brush = brush_default;
 exports.brushSelection = brushSelection;
 exports.brushX = brushX;
 exports.brushY = brushY;
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+}));

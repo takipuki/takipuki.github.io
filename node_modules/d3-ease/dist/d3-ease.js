@@ -1,9 +1,9 @@
-// https://d3js.org/d3-ease/ v3.0.1 Copyright 2010-2021 Mike Bostock, 2001 Robert Penner
+// https://d3js.org/d3-ease/ v3.0.2 Copyright 2010-2026 Mike Bostock, 2001 Robert Penner
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 typeof define === 'function' && define.amd ? define(['exports'], factory) :
 (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.d3 = global.d3 || {}));
-}(this, (function (exports) { 'use strict';
+})(this, (function (exports) { 'use strict';
 
 const linear = t => +t;
 
@@ -257,6 +257,4 @@ exports.easeSinIn = sinIn;
 exports.easeSinInOut = sinInOut;
 exports.easeSinOut = sinOut;
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+}));

@@ -1,9 +1,9 @@
-// https://d3js.org/d3-quadtree/ v3.0.1 Copyright 2010-2021 Mike Bostock
+// https://d3js.org/d3-quadtree/ v3.0.2 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 typeof define === 'function' && define.amd ? define(['exports'], factory) :
 (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.d3 = global.d3 || {}));
-}(this, (function (exports) { 'use strict';
+})(this, (function (exports) { 'use strict';
 
 function tree_add(d) {
   const x = +this._x.call(null, d),
@@ -55,19 +55,18 @@ function add(tree, x, y, d) {
 }
 
 function addAll(data) {
-  var d, i, n = data.length,
-      x,
-      y,
-      xz = new Array(n),
-      yz = new Array(n),
-      x0 = Infinity,
-      y0 = Infinity,
-      x1 = -Infinity,
-      y1 = -Infinity;
+  if (!Array.isArray(data)) data = Array.from(data);
+  const n = data.length;
+  const xz = new Float64Array(n);
+  const yz = new Float64Array(n);
+  let x0 = Infinity, y0 = x0, x1 = -x0, y1 = x1;
 
   // Compute the points and their extent.
-  for (i = 0; i < n; ++i) {
-    if (isNaN(x = +this._x.call(null, d = data[i])) || isNaN(y = +this._y.call(null, d))) continue;
+  for (let i = 0, d, x, y; i < n; ++i) {
+    if (isNaN(x = +this._x.call(null, d = data[i])) || isNaN(y = +this._y.call(null, d))) {
+      xz[i] = NaN;
+      continue;
+    }
     xz[i] = x;
     yz[i] = y;
     if (x < x0) x0 = x;
@@ -83,7 +82,7 @@ function addAll(data) {
   this.cover(x0, y0).cover(x1, y1);
 
   // Add the new points.
-  for (i = 0; i < n; ++i) {
+  for (let i = 0; i < n; ++i) {
     add(this, xz[i], yz[i], data[i]);
   }
 
@@ -414,6 +413,4 @@ treeProto.y = tree_y;
 
 exports.quadtree = quadtree;
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+}));

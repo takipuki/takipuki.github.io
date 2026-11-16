@@ -1,9 +1,9 @@
-// https://d3js.org/d3-interpolate/ v3.0.1 Copyright 2010-2021 Mike Bostock
+// https://d3js.org/d3-interpolate/ v3.0.2 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-color')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-color'], factory) :
 (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.d3 = global.d3 || {}, global.d3));
-}(this, (function (exports, d3Color) { 'use strict';
+})(this, (function (exports, d3Color) { 'use strict';
 
 function basis(t1, v0, v1, v2, v3) {
   var t2 = t1 * t1, t3 = t2 * t1;
@@ -449,7 +449,7 @@ var zoom = (function zoomRho(rho, rho2, rho4) {
       };
     }
 
-    i.duration = S * 1000 * rho / Math.SQRT2;
+    i.duration = Math.abs(S) * 1000 * rho / Math.SQRT2;
 
     return i;
   }
@@ -478,7 +478,7 @@ function hsl(hue) {
   }
 }
 
-var hsl$1 = hsl(hue$1);
+var hsl_default = hsl(hue$1);
 var hslLong = hsl(nogamma);
 
 function lab(start, end) {
@@ -511,7 +511,7 @@ function hcl(hue) {
   }
 }
 
-var hcl$1 = hcl(hue$1);
+var hcl_default = hcl(hue$1);
 var hclLong = hcl(nogamma);
 
 function cubehelix(hue) {
@@ -538,7 +538,7 @@ function cubehelix(hue) {
   })(1);
 }
 
-var cubehelix$1 = cubehelix(hue$1);
+var cubehelix_default = cubehelix(hue$1);
 var cubehelixLong = cubehelix(nogamma);
 
 function piecewise(interpolate, values) {
@@ -561,13 +561,13 @@ exports.interpolate = value;
 exports.interpolateArray = array;
 exports.interpolateBasis = basis$1;
 exports.interpolateBasisClosed = basisClosed;
-exports.interpolateCubehelix = cubehelix$1;
+exports.interpolateCubehelix = cubehelix_default;
 exports.interpolateCubehelixLong = cubehelixLong;
 exports.interpolateDate = date;
 exports.interpolateDiscrete = discrete;
-exports.interpolateHcl = hcl$1;
+exports.interpolateHcl = hcl_default;
 exports.interpolateHclLong = hclLong;
-exports.interpolateHsl = hsl$1;
+exports.interpolateHsl = hsl_default;
 exports.interpolateHslLong = hslLong;
 exports.interpolateHue = hue;
 exports.interpolateLab = lab;
@@ -585,6 +585,4 @@ exports.interpolateZoom = zoom;
 exports.piecewise = piecewise;
 exports.quantize = quantize;
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+}));

@@ -1,4 +1,4 @@
-// https://d3js.org/d3-time-format/ v4.1.0 Copyright 2010-2021 Mike Bostock
+// https://d3js.org/d3-time-format/ v4.1.1 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-time')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-time'], factory) :
@@ -739,7 +739,5 @@ exports.isoFormat = formatIso;
 exports.isoParse = parseIso;
 exports.timeFormatDefaultLocale = defaultLocale;
 exports.timeFormatLocale = formatLocale;
-
-Object.defineProperty(exports, '__esModule', { value: true });
 
 }));

@@ -1,4 +1,4 @@
-// https://d3js.org/d3-shape/ v3.2.0 Copyright 2010-2022 Mike Bostock
+// https://d3js.org/d3-shape/ v3.2.1 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-path')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-path'], factory) :
@@ -653,7 +653,7 @@ function lineRadial(l) {
   return l;
 }
 
-function lineRadial$1() {
+function lineRadial_default() {
   return lineRadial(line().curve(curveRadialLinear));
 }
 
@@ -2098,7 +2098,7 @@ exports.curveStep = step;
 exports.curveStepAfter = stepAfter;
 exports.curveStepBefore = stepBefore;
 exports.line = line;
-exports.lineRadial = lineRadial$1;
+exports.lineRadial = lineRadial_default;
 exports.link = link;
 exports.linkHorizontal = linkHorizontal;
 exports.linkRadial = linkRadial;
@@ -2106,7 +2106,7 @@ exports.linkVertical = linkVertical;
 exports.pie = pie;
 exports.pointRadial = pointRadial;
 exports.radialArea = areaRadial;
-exports.radialLine = lineRadial$1;
+exports.radialLine = lineRadial_default;
 exports.stack = stack;
 exports.stackOffsetDiverging = diverging;
 exports.stackOffsetExpand = expand;

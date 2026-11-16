@@ -1,4 +1,4 @@
-// https://d3js.org/d3-color/ v3.1.0 Copyright 2010-2022 Mike Bostock
+// https://d3js.org/d3-color/ v3.1.1 Copyright 2010-2026 Mike Bostock
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -535,10 +535,10 @@ define(Hcl, hcl, extend(Color, {
 }));
 
 var A = -0.14861,
-    B = +1.78277,
+    B = 1.78277,
     C = -0.29227,
     D = -0.90649,
-    E = +1.97294,
+    E = 1.97294,
     ED = E * D,
     EB = E * B,
     BC_DA = B * C - D * A;
@@ -600,7 +600,5 @@ exports.hsl = hsl;
 exports.lab = lab;
 exports.lch = lch;
 exports.rgb = rgb;
-
-Object.defineProperty(exports, '__esModule', { value: true });
 
 }));

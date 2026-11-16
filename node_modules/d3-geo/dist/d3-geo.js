@@ -1,4 +1,4 @@
-// https://d3js.org/d3-geo/ v3.1.1 Copyright 2010-2024 Mike Bostock, 2008-2012 Charles Karney
+// https://d3js.org/d3-geo/ v3.1.2 Copyright 2010-2026 Mike Bostock, 2008-2012 Charles Karney, HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-array')) :
 typeof define === 'function' && define.amd ? define(['exports', 'd3-array'], factory) :
@@ -2108,7 +2108,7 @@ class PathString {
           const r = this._radius;
           const s = this._;
           this._ = ""; // stash the old string so we can cache the circle path fragment
-          this._append`m0,${r}a${r},${r} 0 1,1 0,${-2 * r}a${r},${r} 0 1,1 0,${2 * r}z`;
+          this._append`m0,${r}a${r},${r} 0 1,1 0,${ -2 * r}a${r},${r} 0 1,1 0,${2 * r}z`;
           cacheRadius = r;
           cacheAppend = this._append;
           cacheCircle = this._;

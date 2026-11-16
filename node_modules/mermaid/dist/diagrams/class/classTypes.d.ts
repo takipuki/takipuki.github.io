@@ -2,7 +2,7 @@ export interface ClassNode {
     id: string;
     type: string;
     label: string;
-    shape: string;
+    shape: 'classBox';
     text: string;
     cssClasses: string;
     methods: ClassMember[];
@@ -56,6 +56,8 @@ export interface ClassNote {
     id: string;
     class: string;
     text: string;
+    index: number;
+    parent?: string;
 }
 export interface ClassRelation {
     id1: string;
@@ -79,9 +81,18 @@ export interface Interface {
 }
 export interface NamespaceNode {
     id: string;
+    label: string;
     domId: string;
     classes: ClassMap;
+    notes: ClassNoteMap;
     children: NamespaceMap;
+    parent?: string;
+    /**
+     * True if this namespace was explicitly declared by the user (e.g. `namespace A.B { ... }`).
+     * False for intermediate ancestors auto-created when parsing a dotted name.
+     * Used by compact (non-hierarchical) rendering mode to only emit declared namespaces.
+     */
+    explicit: boolean;
 }
 export interface StyleClass {
     id: string;
@@ -89,4 +100,5 @@ export interface StyleClass {
     textStyles: string[];
 }
 export type ClassMap = Map<string, ClassNode>;
+export type ClassNoteMap = Map<string, ClassNote>;
 export type NamespaceMap = Map<string, NamespaceNode>;

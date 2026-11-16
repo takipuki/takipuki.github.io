@@ -4,6 +4,8 @@ export default defineConfig({
 	title: "takipuki",
 	description: "UIU solution bank",
 
+	ignoreDeadLinks: true,
+
 	markdown: {
 		math: true,
 		lineNumbers: true,

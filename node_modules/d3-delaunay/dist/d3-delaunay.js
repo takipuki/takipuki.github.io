@@ -1,15 +1,15 @@
-// https://github.com/d3/d3-delaunay v6.0.4 Copyright 2018-2021 Observable, Inc., 2021 Mapbox
+// https://github.com/d3/d3-delaunay v6.0.6 Copyright 2018-2026 Observable, Inc., 2021 Mapbox
 (function (global, factory) {
 typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 typeof define === 'function' && define.amd ? define(['exports'], factory) :
 (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.d3 = global.d3 || {}));
-}(this, (function (exports) { 'use strict';
+})(this, (function (exports) { 'use strict';
 
 const epsilon$1 = 1.1102230246251565e-16;
 const splitter = 134217729;
 const resulterrbound = (3 + 8 * epsilon$1) * epsilon$1;
 
-// fast_expansion_sum_zeroelim routine from oritinal code
+// fast_expansion_sum_zeroelim routine from original code
 function sum(elen, e, flen, f, h) {
     let Q, Qnew, hh, bvirt;
     let enow = e[0];
@@ -265,19 +265,134 @@ function orient2d(ax, ay, bx, by, cx, cy) {
     const detright = (ax - cx) * (by - cy);
     const det = detleft - detright;
 
-    if (detleft === 0 || detright === 0 || (detleft > 0) !== (detright > 0)) return det;
-
     const detsum = Math.abs(detleft + detright);
     if (Math.abs(det) >= ccwerrboundA * detsum) return det;
 
     return -orient2dadapt(ax, ay, bx, by, cx, cy, detsum);
 }
 
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(8);
+vec(8);
+vec(8);
+vec(4);
+
+vec(8);
+vec(8);
+vec(16);
+vec(12);
+
+vec(192);
+vec(192);
+
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(8);
+vec(8);
+vec(8);
+vec(8);
+vec(8);
+vec(8);
+vec(8);
+vec(8);
+vec(8);
+vec(4);
+vec(4);
+vec(4);
+
+vec(8);
+vec(16);
+vec(16);
+vec(16);
+vec(32);
+vec(32);
+vec(48);
+vec(64);
+
+vec(1152);
+vec(1152);
+
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+vec(4);
+
+vec(24);
+vec(24);
+vec(24);
+vec(24);
+vec(24);
+vec(24);
+vec(24);
+vec(24);
+vec(24);
+vec(24);
+
+vec(1152);
+vec(1152);
+vec(1152);
+vec(1152);
+vec(1152);
+vec(2304);
+vec(2304);
+vec(3456);
+vec(5760);
+
+vec(8);
+vec(8);
+vec(8);
+vec(16);
+vec(24);
+vec(48);
+vec(48);
+vec(96);
+vec(192);
+vec(384);
+vec(384);
+vec(384);
+vec(768);
+
+vec(96);
+vec(96);
+vec(96);
+vec(1152);
+
 const EPSILON = Math.pow(2, -52);
 const EDGE_STACK = new Uint32Array(512);
 
+/** @template {ArrayLike<number>} T */
 class Delaunator {
 
+    /**
+     * Constructs a delaunay triangulation object given an array of points (`[x, y]` by default).
+     * `getX` and `getY` are optional functions of the form `(point) => value` for custom point formats.
+     *
+     * @template P
+     * @param {P[]} points
+     * @param {(p: P) => number} [getX]
+     * @param {(p: P) => number} [getY]
+     */
+    // @ts-expect-error TS2322
     static from(points, getX = defaultGetX, getY = defaultGetY) {
         const n = points.length;
         const coords = new Float64Array(n * 2);
@@ -291,6 +406,12 @@ class Delaunator {
         return new Delaunator(coords);
     }
 
+    /**
+     * Constructs a delaunay triangulation object given an array of point coordinates of the form:
+     * `[x0, y0, x1, y1, ...]` (use a typed array for best performance). Duplicate points are skipped.
+     *
+     * @param {T} coords
+     */
     constructor(coords) {
         const n = coords.length >> 1;
         if (n > 0 && typeof coords[0] !== 'number') throw new Error('Expected coords to contain numbers.');
@@ -299,23 +420,44 @@ class Delaunator {
 
         // arrays that will store the triangulation graph
         const maxTriangles = Math.max(2 * n - 5, 0);
-        this._triangles = new Uint32Array(maxTriangles * 3);
-        this._halfedges = new Int32Array(maxTriangles * 3);
+        /** @private */ this._triangles = new Uint32Array(maxTriangles * 3);
+        /** @private */ this._halfedges = new Int32Array(maxTriangles * 3);
 
         // temporary arrays for tracking the edges of the advancing convex hull
-        this._hashSize = Math.ceil(Math.sqrt(n));
-        this._hullPrev = new Uint32Array(n); // edge to prev edge
-        this._hullNext = new Uint32Array(n); // edge to next edge
-        this._hullTri = new Uint32Array(n); // edge to adjacent triangle
-        this._hullHash = new Int32Array(this._hashSize).fill(-1); // angular edge hash
+        /** @private */ this._hashSize = Math.ceil(Math.sqrt(n));
+        /** @private */ this._hullPrev = new Uint32Array(n); // edge to prev edge
+        /** @private */ this._hullNext = new Uint32Array(n); // edge to next edge
+        /** @private */ this._hullTri = new Uint32Array(n); // edge to adjacent triangle
+        /** @private */ this._hullHash = new Int32Array(this._hashSize); // angular edge hash
 
         // temporary arrays for sorting points
-        this._ids = new Uint32Array(n);
-        this._dists = new Float64Array(n);
+        /** @private */ this._ids = new Uint32Array(n);
+        /** @private */ this._dists = new Float64Array(n);
+
+        /** @private */ this.trianglesLen = 0;
+        /** @private */ this._cx = 0;
+        /** @private */ this._cy = 0;
+        /** @private */ this._hullStart = 0;
+
+
+        /** A `Uint32Array` array of indices that reference points on the convex hull of the input data, counter-clockwise. */
+        this.hull = this._triangles;
+        /** A `Uint32Array` array of triangle vertex indices (each group of three numbers forms a triangle). All triangles are directed counterclockwise. */
+        this.triangles = this._triangles;
+        /**
+         * A `Int32Array` array of triangle half-edge indices that allows you to traverse the triangulation.
+         * `i`-th half-edge in the array corresponds to vertex `triangles[i]` the half-edge is coming from.
+         * `halfedges[i]` is the index of a twin half-edge in an adjacent triangle (or `-1` for outer half-edges on the convex hull).
+         */
+        this.halfedges = this._halfedges;
 
         this.update();
     }
 
+    /**
+     * Updates the triangulation if you modified `delaunay.coords` values in place, avoiding expensive memory allocations.
+     * Useful for iterative relaxation algorithms such as Lloyd's.
+     */
     update() {
         const {coords, _hullPrev: hullPrev, _hullNext: hullNext, _hullTri: hullTri, _hullHash: hullHash} =  this;
         const n = coords.length >> 1;
@@ -338,11 +480,10 @@ class Delaunator {
         const cx = (minX + maxX) / 2;
         const cy = (minY + maxY) / 2;
 
-        let minDist = Infinity;
-        let i0, i1, i2;
+        let i0 = 0, i1 = 0, i2 = 0;
 
         // pick a seed point close to the center
-        for (let i = 0; i < n; i++) {
+        for (let i = 0, minDist = Infinity; i < n; i++) {
             const d = dist(cx, cy, coords[2 * i], coords[2 * i + 1]);
             if (d < minDist) {
                 i0 = i;
@@ -352,10 +493,8 @@ class Delaunator {
         const i0x = coords[2 * i0];
         const i0y = coords[2 * i0 + 1];
 
-        minDist = Infinity;
-
         // find the point closest to the seed
-        for (let i = 0; i < n; i++) {
+        for (let i = 0, minDist = Infinity; i < n; i++) {
             if (i === i0) continue;
             const d = dist(i0x, i0y, coords[2 * i], coords[2 * i + 1]);
             if (d < minDist && d > 0) {
@@ -391,14 +530,15 @@ class Delaunator {
             let j = 0;
             for (let i = 0, d0 = -Infinity; i < n; i++) {
                 const id = this._ids[i];
-                if (this._dists[id] > d0) {
+                const d = this._dists[id];
+                if (d > d0) {
                     hull[j++] = id;
-                    d0 = this._dists[id];
+                    d0 = d;
                 }
             }
             this.hull = hull.subarray(0, j);
             this.triangles = new Uint32Array(0);
-            this.halfedges = new Uint32Array(0);
+            this.halfedges = new Int32Array(0);
             return;
         }
 
@@ -446,7 +586,7 @@ class Delaunator {
         this.trianglesLen = 0;
         this._addTriangle(i0, i1, i2, -1, -1, -1);
 
-        for (let k = 0, xp, yp; k < this._ids.length; k++) {
+        for (let k = 0, xp = 0, yp = 0; k < this._ids.length; k++) {
             const i = this._ids[k];
             const x = coords[2 * i];
             const y = coords[2 * i + 1];
@@ -528,10 +668,23 @@ class Delaunator {
         this.halfedges = this._halfedges.subarray(0, this.trianglesLen);
     }
 
+    /**
+     * Calculate an angle-based key for the edge hash used for advancing convex hull.
+     *
+     * @param {number} x
+     * @param {number} y
+     * @private
+     */
     _hashKey(x, y) {
         return Math.floor(pseudoAngle(x - this._cx, y - this._cy) * this._hashSize) % this._hashSize;
     }
 
+    /**
+     * Flip an edge in a pair of triangles if it doesn't satisfy the Delaunay condition.
+     *
+     * @param {number} a
+     * @private
+     */
     _legalize(a) {
         const {_triangles: triangles, _halfedges: halfedges, coords} = this;
 
@@ -587,7 +740,7 @@ class Delaunator {
 
                 const hbl = halfedges[bl];
 
-                // edge swapped on the other side of the hull (rare); fix the halfedge reference
+                // edge swapped on the other side of the hull (rare); fix the half-edge reference
                 if (hbl === -1) {
                     let e = this._hullStart;
                     do {
@@ -617,12 +770,28 @@ class Delaunator {
         return ar;
     }
 
+    /**
+     * Link two half-edges to each other.
+     * @param {number} a
+     * @param {number} b
+     * @private
+     */
     _link(a, b) {
         this._halfedges[a] = b;
         if (b !== -1) this._halfedges[b] = a;
     }
 
-    // add a new triangle given vertex indices and adjacent half-edge ids
+    /**
+     * Add a new triangle given vertex indices and adjacent half-edge ids.
+     *
+     * @param {number} i0
+     * @param {number} i1
+     * @param {number} i2
+     * @param {number} a
+     * @param {number} b
+     * @param {number} c
+     * @private
+     */
     _addTriangle(i0, i1, i2, a, b, c) {
         const t = this.trianglesLen;
 
@@ -640,18 +809,43 @@ class Delaunator {
     }
 }
 
-// monotonically increases with real angle, but doesn't need expensive trigonometry
+/**
+ * Monotonically increases with real angle, but doesn't need expensive trigonometry.
+ *
+ * @param {number} dx
+ * @param {number} dy
+ */
 function pseudoAngle(dx, dy) {
     const p = dx / (Math.abs(dx) + Math.abs(dy));
     return (dy > 0 ? 3 - p : 1 + p) / 4; // [0..1]
 }
 
+/**
+ * Squared distance between two points.
+ *
+ * @param {number} ax
+ * @param {number} ay
+ * @param {number} bx
+ * @param {number} by
+ */
 function dist(ax, ay, bx, by) {
     const dx = ax - bx;
     const dy = ay - by;
     return dx * dx + dy * dy;
 }
 
+/**
+ * Check whether point P is inside a circle formed by points A, B, C.
+ *
+ * @param {number} ax
+ * @param {number} ay
+ * @param {number} bx
+ * @param {number} by
+ * @param {number} cx
+ * @param {number} cy
+ * @param {number} px
+ * @param {number} py
+ */
 function inCircle(ax, ay, bx, by, cx, cy, px, py) {
     const dx = ax - px;
     const dy = ay - py;
@@ -669,6 +863,16 @@ function inCircle(ax, ay, bx, by, cx, cy, px, py) {
            ap * (ex * fy - ey * fx) < 0;
 }
 
+/**
+ * Squared radius of the circle formed by points A, B, C.
+ *
+ * @param {number} ax
+ * @param {number} ay
+ * @param {number} bx
+ * @param {number} by
+ * @param {number} cx
+ * @param {number} cy
+ */
 function circumradius(ax, ay, bx, by, cx, cy) {
     const dx = bx - ax;
     const dy = by - ay;
@@ -685,6 +889,16 @@ function circumradius(ax, ay, bx, by, cx, cy) {
     return x * x + y * y;
 }
 
+/**
+ * Get coordinates of a circumcenter for points A, B, C.
+ *
+ * @param {number} ax
+ * @param {number} ay
+ * @param {number} bx
+ * @param {number} by
+ * @param {number} cx
+ * @param {number} cy
+ */
 function circumcenter(ax, ay, bx, by, cx, cy) {
     const dx = bx - ax;
     const dy = by - ay;
@@ -701,6 +915,14 @@ function circumcenter(ax, ay, bx, by, cx, cy) {
     return {x, y};
 }
 
+/**
+ * Sort points by distance via an array of point indices and an array of calculated distances.
+ *
+ * @param {Uint32Array} ids
+ * @param {Float64Array} dists
+ * @param {number} left
+ * @param {number} right
+ */
 function quicksort(ids, dists, left, right) {
     if (right - left <= 20) {
         for (let i = left + 1; i <= right; i++) {
@@ -740,15 +962,22 @@ function quicksort(ids, dists, left, right) {
     }
 }
 
+/**
+ * @param {Uint32Array} arr
+ * @param {number} i
+ * @param {number} j
+ */
 function swap(arr, i, j) {
     const tmp = arr[i];
     arr[i] = arr[j];
     arr[j] = tmp;
 }
 
+/** @param {[number, number]} p */
 function defaultGetX(p) {
     return p[0];
 }
+/** @param {[number, number]} p */
 function defaultGetY(p) {
     return p[1];
 }
@@ -1149,7 +1378,7 @@ function pointY(p) {
   return p[1];
 }
 
-// A triangulation is collinear if all its triangles have a non-null area
+// A triangulation is collinear if all its triangles have a null area
 function collinear(d) {
   const {triangles, coords} = d;
   for (let i = 0; i < triangles.length; i += 3) {
@@ -1190,7 +1419,7 @@ class Delaunay {
 
     // check for collinear
     if (d.hull && d.hull.length > 2 && collinear(d)) {
-      this.collinear = Int32Array.from({length: points.length/2}, (_,i) => i)
+      this.collinear = Int32Array.from({length: points.length / 2}, (_, i) => i)
         .sort((i, j) => points[2 * i] - points[2 * j] || points[2 * i + 1] - points[2 * j + 1]); // for exact neighbors
       const e = this.collinear[0], f = this.collinear[this.collinear.length - 1],
         bounds = [ points[2 * e], points[2 * e + 1], points[2 * f], points[2 * f + 1] ],
@@ -1273,7 +1502,8 @@ class Delaunay {
   }
   _step(i, x, y) {
     const {inedges, hull, _hullIndex, halfedges, triangles, points} = this;
-    if (inedges[i] === -1 || !points.length) return (i + 1) % (points.length >> 1);
+    if (points.length < 2) return -1;
+    if (inedges[i] === -1) return (i + 1) % (points.length >> 1);
     let c = i;
     let dc = pow(x - points[i * 2], 2) + pow(y - points[i * 2 + 1], 2);
     const e0 = inedges[i];
@@ -1314,7 +1544,7 @@ class Delaunay {
     r = r == undefined ? 2 : +r;
     const buffer = context == null ? context = new Path : undefined;
     const {points} = this;
-    for (let i = 0, n = points.length; i < n; i += 2) {
+    for (let i = 0, n = points.length & -2; i < n; i += 2) { // round down if points has odd length
       const x = points[i], y = points[i + 1];
       context.moveTo(x + r, y);
       context.arc(x, y, r, 0, tau);
@@ -1386,6 +1616,4 @@ function* flatIterable(points, fx, fy, that) {
 exports.Delaunay = Delaunay;
 exports.Voronoi = Voronoi;
 
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+}));
